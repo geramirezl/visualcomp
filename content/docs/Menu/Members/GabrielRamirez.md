@@ -2,8 +2,9 @@
 title: Gabriel Ramirez
 type: docs
 ---
+# Gabriel Ramirez Leon
 
-# Hola
+## Hola
 
 Welcome to the [gohugo](https://gohugo.io/) template to create rich content [academic reports](https://www.wordy.com/writers-workshop/writing-an-academic-report/) having [p5.js](https://p5js.org/) sketches.
 
@@ -25,10 +26,6 @@ Deploy with `$git push` after redefined `baseURL` in `config.toml` which should 
 even so if you decided to rename the repo anyways, say to `newreponame`, don't forget to update all url references of the markdown and js file sources, to reflect that change, i.e., look within all [content folder](https://github.com/VisualComputing/showcase/tree/main/content) files for `showcase` occurrences and replace them by `newreponame`, which btw should easily be doable in any recent open source code editor, e.g., 🔎 in [kate](https://kate-editor.org/) or [vs-codium](https://vscodium.com/).
 {{< /hint >}}
 
-### Ilusion visual
+## Ilusion visual
 
-{{< details title="p5-iframe markdown" open=false >}}
-{{< highlight html >}}
-{{</* p5-iframe sketch="/visualcomp/sketches/colors.js" width="725" height="425 */>}}
-{{< /highlight >}}
-{{< /details >}}
+{{< p5-iframe sketch="/visualcomp/sketches/colors.js" width="725" height="425" >}}
