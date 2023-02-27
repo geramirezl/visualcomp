@@ -7,13 +7,18 @@ type: docs
 
 ## Team members
 
-- Juan Guillermo Sierra Agreda
-- Fabian Montes
-- Gabriel Ramirez
+- [Juan Guillermo Sierra Agreda]()
+- [Fabian Montes]()
+- [Gabriel Ramirez]()
 
-## Hacking
+## Cortes
 
-Install the [gohugo](https://gohugo.io/) [static site generator](https://jamstack.org/generators/) then:
+{{< details "Title" open >}}
+## Markdown content
+Lorem markdownum insigne...
+{{< /details >}}
+
+
 
 ```sh
 $git clone https://github.com/VisualComputing/showcase
