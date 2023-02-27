@@ -18,11 +18,11 @@ Look at this [brief explanation](https://p5js.org/examples/color-relativity.html
 
 {{< details title="p5-iframe markdown" open=false >}}
 {{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/colors.js" width="725" height="425 */>}}
+{{</* p5-iframe sketch="/visualcomp/sketches/colors.js" width="725" height="425 */>}}
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/colors.js" width="725" height="425" >}}
+{{< p5-iframe sketch="/visualcomp/sketches/colors.js" width="725" height="425" >}}
 
 ## Third party libraries
 
@@ -30,11 +30,11 @@ Example adapted from [p5.EasyCam](https://github.com/freshfork/p5.EasyCam/blob/m
 
 {{< details title="p5-iframe markdown" open=false >}}
 {{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/quick_easycam.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="525" height="525" */>}}
+{{</* p5-iframe sketch="/visualcomp/sketches/quick_easycam.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="525" height="525" */>}}
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/quick_easycam.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="525" height="525" >}}
+{{< p5-iframe sketch="/visualcomp/sketches/quick_easycam.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="525" height="525" >}}
 
 ## Sound
 
@@ -42,11 +42,11 @@ Example took from the [p5 examples](https://p5js.org/examples/sound-sound-effect
 
 {{< details title="p5-iframe markdown" open=false >}}
 {{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/sound.js" width="225" height="225" */>}}
+{{</* p5-iframe sketch="/visualcomp/sketches/sound.js" width="225" height="225" */>}}
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/sound.js" width="225" height="225" >}}
+{{< p5-iframe sketch="/visualcomp/sketches/sound.js" width="225" height="225" >}}
 
 # p5-global-iframe
 
