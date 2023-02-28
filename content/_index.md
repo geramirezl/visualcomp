@@ -7,9 +7,9 @@ type: docs
 
 ## Team members
 
-- [Juan Guillermo Sierra Agreda]()
-- [Fabian Montes]()
-- [Gabriel Ramirez]()
+- [Juan Guillermo Sierra Agreda]({{< relref "/docs/Menu/Members/JuanSierra" >}})
+- [Fabian Montes]({{< relref "/docs/Menu/Members/FabianMontes" >}})
+- [Gabriel Ramirez]({{< relref "/docs/Menu/Members/GabrielRamirez" >}})
 
 ## Cortes
 
