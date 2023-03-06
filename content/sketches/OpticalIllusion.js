@@ -5,7 +5,6 @@ function setup() {
   function draw() {
     background(220);
       
-    // Do you notice any patterns here?
       line(0, 0, 50, 400);
       line(0, 50, 100, 400);
       line(0, 100, 150, 400);
