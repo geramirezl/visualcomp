@@ -2,7 +2,7 @@ var angs,lines,xx,yy,len,cLen,moves,speeds,alphass,figse,figso;
 
 function setup() {
   createCanvas(400, 400);
-  
+  createCanvas(windowWidth, windowHeight);
   moves=0;
   way=false;
   angs=0;
@@ -155,4 +155,8 @@ function texti(){
   textSize(13);
   fill(255);
   text('Color', width-alphass.size().width,height- alphass.size().height);
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
 }
