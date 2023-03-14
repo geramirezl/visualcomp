@@ -15,3 +15,5 @@ Amante de las historias de fantasia.
 Un pequeño movimiento crea una percepcion de diversas figuras usando solo lineas
 
 {{< p5-div sketch="/visualcomp/sketches/FMil.js" >}}
+
+.
