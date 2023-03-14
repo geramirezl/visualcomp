@@ -2,7 +2,6 @@ var angs,lines,xx,yy,len,cLen,moves,speeds,alphass,figse,figso;
 
 function setup() {
   createCanvas(500, 500);
-  createCanvas(windowWidth, windowHeight);
   moves=0;
   way=false;
   angs=0;
@@ -51,7 +50,7 @@ function draw() {
   }else{
     noStroke()
   }
-  noFill()
+  noFill();
   for(var i=0;i<lines*2;i++){
     if(lines==1){
       break;
@@ -156,8 +155,4 @@ function texti(){
   textSize(13);
   fill(255);
   text('Color', width-alphass.size().width,height- alphass.size().height);
-}
-
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
 }
