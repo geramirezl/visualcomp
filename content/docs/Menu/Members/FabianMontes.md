@@ -14,6 +14,6 @@ Amante de las historias de fantasia.
 ## Ilusion visual
 Un pequeño movimiento crea una percepcion de diversas figuras usando solo lineas
 
-{{< p5-frame sketch="/visualcomp/sketches/FMil.js"  width="450" height="450">}}
+{{< p5-iframe sketch="/visualcomp/sketches/FMil.js"  width="450" height="450">}}
 
 .
