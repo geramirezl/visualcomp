@@ -151,8 +151,8 @@ function Figso(){
 function texti(){
   noStroke()
   fill(50);
-  rect(width-alphass.size().width,height- alphass.size().height*2,alphass.size().width,alphass.size().height*2)
+  rect(width-alphass.size().width,height- alphass.size().height*2,alphass.size().width,alphass.size().height*3)
   textSize(13);
   fill(255);
-  text('Color', width-alphass.size().width,height- alphass.size().height);
+  text('Color', width-alphass.size().width,height- alphass.size().height*2);
 }
