@@ -1,7 +1,7 @@
 var angs,lines,xx,yy,len,cLen,moves,speeds,alphass,figse,figso;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(500, 500);
   createCanvas(windowWidth, windowHeight);
   moves=0;
   way=false;
@@ -51,6 +51,7 @@ function draw() {
   }else{
     noStroke()
   }
+  noFill()
   for(var i=0;i<lines*2;i++){
     if(lines==1){
       break;
