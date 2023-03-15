@@ -1,72 +1,129 @@
-// color mapping from https://www.nature.com/articles/nmeth.1618
-// check https://github.com/remistura/p5.palette
-// https://www.youtube.com/watch?app=desktop&v=HDS0FLYwoG4 for ideas
 
-// let colorSlider
+// https://dl.acm.org/doi/10.1145/1240624.1240855
+// https://sci-hub.se/10.1145/1240624.1240855
+// https://www.irjet.net/archives/V7/i5/IRJET-V7I5687.pdf
+// http://vision.psychol.cam.ac.uk/jdmollon/papers/colourmaps.pdf
 
-let colorPicker;
-let button;
- let black;
-  let orange;
-  let skyBlue;
-  let bluishGreen;
-  let yellow;
-  let blue;
-  let vermillion;
-  let reddishPurple;
+  /*
+Color.Vision.Daltonize : v0.1
+------------------------------
+"Analysis of Color Blindness" by Onur Fidaner, Poliang Lin and Nevran Ozguven.
+http://scien.stanford.edu/class/psych221/projects/05/ofidaner/project_report.pdf
+"Digital Video Colourmaps for Checking the Legibility of Displays by Dichromats" by FranÃ§oise
+ViÃ©not, Hans Brettel and John D. Mollon
+http://vision.psychol.cam.ac.uk/jdmollon/papers/colourmaps.pdf
+*/
+
+let type;
+let amount;
+
+let CVDMatrix;
+
+let cvdi;
+let cvdi_a;
+let cvdi_b;
+let cvdi_c;
+let cvdi_d;
+let cvdi_e;
+let cvdi_f;
+let cvdi_g;
+let cvdi_h;
+let cvdi_i;
+
+let myImage;
+
+let L, M, S, Si, l, m, s, R, G, B, RR, GG, BB;
+
+function preload() {
+  myImage = loadImage('assets/welsh-flag.png');
+}
 
 function setup() {
-  let black = color(0,0,0)
-  let orange = color(230, 159, 0)
-  let skyBlue = color(86, 180, 233)
-  let bluishGreen = color(0, 158, 115)
-  let yellow =  color(240, 228, 66)
-  let blue = color(0, 114, 178)
-  let vermillion = color(213, 94, 0)
-  let reddishPurple = color(204, 121, 167)
   
-  createCanvas(400, 400);
+  CVDMatrix = {
+  // Color Vision Deficiency
+  "Protanope": [
+    // reds are greatly reduced (1% men)
+    0.0, 2.02344, -2.52581, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0,
+  ],
+  "Deuteranope": [
+    // greens are greatly reduced (1% men)
+    1.0, 0.0, 0.0, 0.494207, 0.0, 1.24827, 0.0, 0.0, 1.0,
+  ],
+  "Tritanope": [
+    // blues are greatly reduced (0.003% population)
+    1.0, 0.0, 0.0, 0.0, 1.0, 0.0, -0.395913, 0.801109, 0.0,
+  ],
+};
   
-  colorPicker = createColorPicker('#ed225d');
-  colorPicker.position(0, height + 5);
-  //fill(black)
-  //rect(0, height + 10, 20, 20)
+  type = 'Protanope';
+  amount = 1.0;
   
-  button = createButton('To color blind');
-  button.position(0, 0);
-  // button.mousePressed(changeBG);
+  cvdi = CVDMatrix[type];
+  cvdi_a = cvdi[0];
+  cvdi_b = cvdi[1];
+  cvdi_c = cvdi[2];
+  cvdi_d = cvdi[3];
+  cvdi_e = cvdi[4];
+  cvdi_f = cvdi[5];
+  cvdi_g = cvdi[6];
+  cvdi_h = cvdi[7];
+  cvdi_i = cvdi[8];
+  
+  myImage.loadPixels();
+  createCanvas(600, 800);
+  image(myImage, 0, 0);
+  
+  for (var i = 0; i < myImage.pixels.length; i += 4) {
+    
+      var r = myImage.pixels[i];
+      var g = myImage.pixels[i + 1];
+      var b = myImage.pixels[i + 2];
+      
+      // RGB to LMS matrix conversion
+      L = (17.8824 * r) + (43.5161 * g) + (4.11935 * b); 
+      M = 3.45565 * r + 27.1554 * g + 3.86714 * b;
+      S = 0.0299566 * r + 0.184309 * g + 1.46709 * b;
+    
+      l = cvdi_a * L + cvdi_b * M + cvdi_c * S;
+      m = cvdi_d * L + cvdi_e * M + cvdi_f * S;
+      s = cvdi_g * L + cvdi_h * M + cvdi_i * S;
+    
+      // LMS to RGB matrix conversion
+      R = 0.0809444479 * l + -0.130504409 * m + 0.116721066 * s;
+      G = -0.0102485335 * l + 0.0540193266 * m + -0.113614708 * s;
+      B = -0.000365296938 * l + -0.00412161469 * m + 0.693511405 * s;
+    
+      // Isolate invisible colors to color vision deficiency (calculate error matrix)
+      R = r - R;
+      G = g - G;
+      B = b - B;
+    
+      // Shift colors towards visible spectrum (apply error modification)
+      RR = 0.0 * R + 0.0 * G + 0.0 * B;
+      GG = 0.7 * R + 1.0 * G + 0.0 * B;
+      BB = 0.7 * R + 0.0 * G + 1.0 * B;
+    
+      // Add compensation to original values
+      R = RR + r;
+      G = GG + g;
+      B = BB + b;
+    
+      // Clamp values
+      if (R < 0) R = 0;
+      if (R > 255) R = 255;
+      if (G < 0) G = 0;
+      if (G > 255) G = 255;
+      if (B < 0) B = 0;
+      if (B > 255) B = 255;
+    
+      // Record color wtf
+      myImage.pixels[i] = R >> 0;
+      myImage.pixels[i + 1] = G >> 0;
+      myImage.pixels[i + 2] = B >> 0;  
+  }
+  myImage.updatePixels();
+  image(myImage, 0, 400);
 }
 
-function brightnessByColor(color) {
-    color = "" + color, isHEX = color.indexOf("#") == 0, isRGB = color.indexOf("rgb") == 0;
-    if (isHEX) {
-        const hasFullSpec = color.length == 7;
-        var m = color.substr(1).match(hasFullSpec ? /(\S{2})/g : /(\S{1})/g);
-        if (m) var r = parseInt(m[0] + (hasFullSpec ? '' : m[0]), 16), g = parseInt(m[1] + (hasFullSpec ? '' : m[1]), 16), b = parseInt(m[2] + (hasFullSpec ? '' : m[2]), 16);
-    }
-    if (isRGB) {
-        var m = color.match(/(\d+){3}/g);
-        if (m) var r = m[0], g = m[1], b = m[2];
-    }
-    if (typeof r != "undefined") return ((r * 299) + (g * 587) + (b * 114)) / 1000;
-}
 
-
-function draw() {
-  
-  background(colorPicker.color());
-  
-  // const v = colorSlider.value();
-  // the idea is to color something by the color selected 
-  //const brightness = brightnessByColor(`rgb(${v},${v},${v}`)/255
-  
-  // fill(brightness >= .5 ? "black" : "white");
-  
-  text("test text", width/2, height/2)
-}
-
-
-function toColorBlind(){
-  
-  
-}
