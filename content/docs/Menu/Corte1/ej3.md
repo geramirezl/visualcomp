@@ -11,8 +11,8 @@ Cada color pixelado se calcula con el promedio de los colores en el rectangulo d
 ### Espacio Coherente
 Cada color pixelado se toma de un color único arbitrario encontrado en cada rectangulo de la imagen original.
 
-{{< details title="codigo" open=false >}}
-{{< highlight html >}}
+{{< details title="Código" open=false >}}
+{{< highlight js >}}
 let video;
 let mode = 'colorAvg';
 let stepSize = 50;
@@ -132,4 +132,4 @@ function spatialCoherenceMode() {
 
 {{< /highlight >}}
 {{< /details >}}
-{{< p5-iframe sketch="/visualcomp/sketches/pixelator.js" width="650" height="650" >}}
+{{< p5-iframe sketch="/visualcomp/sketches/pixelator.js" width="700" height="700" >}}
