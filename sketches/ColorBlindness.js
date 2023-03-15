@@ -78,6 +78,7 @@ function setup() {
 
 function draw(){
   if(myImage && !flag){
+    background(255);
      // resizeCanvas(myImage.width, myImage.height * 2, false);
      myImage.loadPixels();
      image(myImage, 0, 0);
