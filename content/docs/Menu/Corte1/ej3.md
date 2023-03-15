@@ -5,11 +5,14 @@ Implement a pixelator video application and perform a benchmark of the results (
 
 
 En este ejemplo, implementamos una aplicación de pixelator para video, usando la captura de la videocamara.
-Para pixelar se usaron las dos diferentes formas o técnicas que se planteaban (promedio de color y espacio coherente).
+Para pixelar se usaron las dos diferentes formas o técnicas que se planteaban (promedio de color y coherencia espacial).
 ### Color AVG
-Cada color pixelado se calcula con el promedio de los colores en el rectangulo de la imagen original.
-### Espacio Coherente
-Cada color pixelado se toma de un color único arbitrario encontrado en cada rectangulo de la imagen original.
+Cada color pixelado se calcula con el promedio de los colores en el grupo de la imagen original.
+### Coherencia espacial
+Cada color pixelado se toma de un color único arbitrario encontrado en cada grupo de la imagen original.
+Se buscan agrupar pixeles que tengan que ver entre ellos (cercanía y características visuales similares).
+### Diferencia
+La principal diferencia entre ambas técnicas es que la técnica de coherencia espacial genera bloques de píxeles que son visualmente más coherentes que los bloques generados por la técnica de promedio de color, lo que puede resultar en una imagen más nítida y definida. Sin embargo, la técnica de coherencia espacial puede ser más compleja y computacionalmente mayor que la técnica de promedio de color, por lo que puede requerir más tiempo de procesamiento.
 
 {{< details title="Código" open=false >}}
 {{< highlight js >}}
