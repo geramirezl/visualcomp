@@ -1,7 +1,7 @@
 var angs,lines,xx,yy,len,cLen,moves,speeds,figse,figso,alphass,figui,figguis,lineU,lineD;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+   createCanvas(windowWidth, windowHeight);
   
   moves=0;
   way=false;
