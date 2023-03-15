@@ -35,7 +35,7 @@ let myImage;
 let L, M, S, Si, l, m, s, R, G, B, RR, GG, BB;
 
 function preload() {
-  myImage = loadImage('assets/welsh-flag.png');
+  myImage = loadImage('./assets/welsh-flag.png');
 }
 
 function setup() {
