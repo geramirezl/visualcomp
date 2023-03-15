@@ -31,14 +31,15 @@ let cvdi_h;
 let cvdi_i;
 
 let myImage;
+let input;
+let flag; // to verify if it already made the calculations
 
 let L, M, S, Si, l, m, s, R, G, B, RR, GG, BB;
 
-function preload() {
-  myImage = loadImage('/visualcomp/sketches/assets/welsh-flag.png');
-}
 
 function setup() {
+  
+  flag = false;
   
   CVDMatrix = {
   // Color Vision Deficiency
@@ -70,60 +71,74 @@ function setup() {
   cvdi_h = cvdi[7];
   cvdi_i = cvdi[8];
   
-  myImage.loadPixels();
+  input = createFileInput(handleFile);
+  input.position(0, 0);
   createCanvas(600, 800);
-  image(myImage, 0, 0);
-  
-  for (var i = 0; i < myImage.pixels.length; i += 4) {
-    
-      var r = myImage.pixels[i];
-      var g = myImage.pixels[i + 1];
-      var b = myImage.pixels[i + 2];
-      
-      // RGB to LMS matrix conversion
-      L = (17.8824 * r) + (43.5161 * g) + (4.11935 * b); 
-      M = 3.45565 * r + 27.1554 * g + 3.86714 * b;
-      S = 0.0299566 * r + 0.184309 * g + 1.46709 * b;
-    
-      l = cvdi_a * L + cvdi_b * M + cvdi_c * S;
-      m = cvdi_d * L + cvdi_e * M + cvdi_f * S;
-      s = cvdi_g * L + cvdi_h * M + cvdi_i * S;
-    
-      // LMS to RGB matrix conversion
-      R = 0.0809444479 * l + -0.130504409 * m + 0.116721066 * s;
-      G = -0.0102485335 * l + 0.0540193266 * m + -0.113614708 * s;
-      B = -0.000365296938 * l + -0.00412161469 * m + 0.693511405 * s;
-    
-      // Isolate invisible colors to color vision deficiency (calculate error matrix)
-      R = r - R;
-      G = g - G;
-      B = b - B;
-    
-      // Shift colors towards visible spectrum (apply error modification)
-      RR = 0.0 * R + 0.0 * G + 0.0 * B;
-      GG = 0.7 * R + 1.0 * G + 0.0 * B;
-      BB = 0.7 * R + 0.0 * G + 1.0 * B;
-    
-      // Add compensation to original values
-      R = RR + r;
-      G = GG + g;
-      B = BB + b;
-    
-      // Clamp values
-      if (R < 0) R = 0;
-      if (R > 255) R = 255;
-      if (G < 0) G = 0;
-      if (G > 255) G = 255;
-      if (B < 0) B = 0;
-      if (B > 255) B = 255;
-    
-      // Record color wtf
-      myImage.pixels[i] = R >> 0;
-      myImage.pixels[i + 1] = G >> 0;
-      myImage.pixels[i + 2] = B >> 0;  
-  }
-  myImage.updatePixels();
-  image(myImage, 0, 400);
 }
 
+function draw(){
+  if(myImage && !flag){
+     myImage.loadPixels();
+     image(myImage, 0, 0);
+     for (var i = 0; i < myImage.pixels.length; i += 4) {
+    
+        var r = myImage.pixels[i];
+        var g = myImage.pixels[i + 1];
+        var b = myImage.pixels[i + 2];
 
+        // RGB to LMS matrix conversion
+        L = (17.8824 * r) + (43.5161 * g) + (4.11935 * b); 
+        M = 3.45565 * r + 27.1554 * g + 3.86714 * b;
+        S = 0.0299566 * r + 0.184309 * g + 1.46709 * b;
+
+        l = cvdi_a * L + cvdi_b * M + cvdi_c * S;
+        m = cvdi_d * L + cvdi_e * M + cvdi_f * S;
+        s = cvdi_g * L + cvdi_h * M + cvdi_i * S;
+
+        // LMS to RGB matrix conversion
+        R = 0.0809444479 * l + -0.130504409 * m + 0.116721066 * s;
+        G = -0.0102485335 * l + 0.0540193266 * m + -0.113614708 * s;
+        B = -0.000365296938 * l + -0.00412161469 * m + 0.693511405 * s;
+
+        // Isolate invisible colors to color vision deficiency (calculate error matrix)
+        R = r - R;
+        G = g - G;
+        B = b - B;
+
+        // Shift colors towards visible spectrum (apply error modification)
+        RR = 0.0 * R + 0.0 * G + 0.0 * B;
+        GG = 0.7 * R + 1.0 * G + 0.0 * B;
+        BB = 0.7 * R + 0.0 * G + 1.0 * B;
+
+        // Add compensation to original values
+        R = RR + r;
+        G = GG + g;
+        B = BB + b;
+
+        // Clamp values
+        if (R < 0) R = 0;
+        if (R > 255) R = 255;
+        if (G < 0) G = 0;
+        if (G > 255) G = 255;
+        if (B < 0) B = 0;
+        if (B > 255) B = 255;
+
+        // Record color wtf
+        myImage.pixels[i] = R >> 0;
+        myImage.pixels[i + 1] = G >> 0;
+        myImage.pixels[i + 2] = B >> 0;  
+    }
+    myImage.updatePixels();
+    image(myImage, 0, 400);
+    flag = true;
+  }
+}
+
+function handleFile(file) {
+  print(file);
+  if (file.type === 'image') {
+    myImage = loadImage(file.data);
+  } else {
+    myImage = null;
+  }
+}
