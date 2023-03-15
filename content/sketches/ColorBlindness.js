@@ -73,12 +73,12 @@ function setup() {
   
   input = createFileInput(handleFile);
   input.position(0, 0);
-  createCanvas(600, 800);
+  createCanvas(2000, 2000);
 }
 
 function draw(){
   if(myImage && !flag){
-     background(255)
+     // resizeCanvas(myImage.width, myImage.height * 2, false);
      myImage.loadPixels();
      image(myImage, 0, 0);
      for (var i = 0; i < myImage.pixels.length; i += 4) {
@@ -130,7 +130,7 @@ function draw(){
         myImage.pixels[i + 2] = B >> 0;  
     }
     myImage.updatePixels();
-    image(myImage, 0, 400);
+    image(myImage, 0, myImage.height);
     flag = true;
   }
 }
@@ -142,6 +142,7 @@ function handleFile(file) {
     myImage = null;
   }
   flag = false;
+  
 }
 
 
