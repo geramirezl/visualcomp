@@ -78,6 +78,7 @@ function setup() {
 
 function draw(){
   if(myImage && !flag){
+     background(255)
      myImage.loadPixels();
      image(myImage, 0, 0);
      for (var i = 0; i < myImage.pixels.length; i += 4) {
@@ -135,10 +136,12 @@ function draw(){
 }
 
 function handleFile(file) {
-  print(file);
   if (file.type === 'image') {
     myImage = loadImage(file.data);
   } else {
     myImage = null;
   }
+  flag = false;
 }
+
+
