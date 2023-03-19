@@ -14,13 +14,13 @@ Los KeyFrames, o frames clave son puntos en la animacion que marcan el inicio y 
 teniendo una figura que comienza en el keyFrame 0, se movera a travez de la linea del tiempo variando sus caracteristicas para igualar las determinadas en los keyframes siguientes. Utilizar el boton Run permite mostrar como se ve las transiciones permanentemente
 
 {{< hint warning >}}
-** Run y Botones l**  
+**Run y Botones l**  
 No se recomienda realizar cambios a la figura mientras la animacion esta corriendo, debido a que no sera facil de controlar o percibir los mismos
 tambien se a de mencionar los botones l+ y l- varian la figura que se esta animando, siendo constante durante toda la animacion.
 {{< /hint >}}
 
 {{< hint danger >}}
-** Valores Perdidos**  
+**Valores Perdidos**  
 Notece que cuando se realizan modificaciones en un frame que no es keyFrame y nos desplazamos a otro frame, estos cambios se pierden debido a que no hay ninguna transicion que ocurra con esos datos, si en cambio modificamos un keyFrame o creamos uno nuevo con los cambios, estas modificaciones seran notables con sus transiciones en la linea del tiempo
 {{< /hint >}}
 
@@ -58,45 +58,45 @@ function setup() {
   linee=0;
   
   figi = new Fig(50,50,75,75,PI/2,3);
-  figi.keyFrames.push([25,200,200,100,50,0]);
-  figi.keyFrames.push([50,50,300,50,100,0]);
-  figi.keyFrames.push([75,300,50,50,100,2*PI]);
-  figi.keyFrames.push([100,50,50,75,75,PI/2]);
+  figi.keyFrames.push([25,200,200,100,50,0])
+  figi.keyFrames.push([50,50,300,50,100,0])
+  figi.keyFrames.push([75,300,50,50,100,2*PI])
+  figi.keyFrames.push([100,50,50,75,75,PI/2])
   
   fill(255);
   Ation = false;
-  divv = 1;
+  divv = 0.5
   timeline = new Slider('',0,height-60,0,100,0,divv);
-  timeline.colore = color(255,255,255);
+  timeline.colore = color(255,255,255)
   timeline.mousePressed(chaTime);
-  timeline.w=width;
-  keyFrma = [0,25,50,75,100];
+  timeline.w=width
+  keyFrma = [0,25,50,75,100]
   rot = new Button('Rot',0,height-20);
-  rot.mousePressed(rota);
+  rot.mousePressed(rota)
   rot.w=width/7;
   esc= new Button('Esc',width/7,height-20);
-  esc.mousePressed(esca);
+  esc.mousePressed(esca)
   esc.w=width/7;
   pos= new Button('Pos',width/7*2,height-20);
-  pos.mousePressed(posa);
+  pos.mousePressed(posa)
   pos.w=width/7;
   del= new Button('Del',width/7*3,height-20);
   del.w=width/7;
-  del.mousePressed(deleKF);
+  del.mousePressed(deleKF)
   addw= new Button('Add',width/7*4,height-20);
   addw.w=width/7;
-  addw.mousePressed(addKF);
+  addw.mousePressed(addKF)
   runn= new Button('run',width/7*5,height-20);
-  runn.mousePressed(runche);
+  runn.mousePressed(runche)
   runn.w=width/7;
   
   lma= new Button('l+',width/7*6,height-20);
   lma.w=width/14;
-  lma.mousePressed(lm);
+  lma.mousePressed(lm)
   lme= new Button('l-',width/14*13,height-20);
   lme.w=width/14;
-  lme.mousePressed(ln);
-  modes = 'position';
+  lme.mousePressed(ln)
+  modes = 'position'
   xref=0;
   yref=0;
   
@@ -105,9 +105,10 @@ function setup() {
 function draw() {
   
   background(0);
-  fill(255);
-  figi.draw();
-  Mode();
+  fill(255)
+  figi.draw()
+  //Timinggg()
+  Mode()
   runni();
 }
 
@@ -120,19 +121,21 @@ class Fig{
     this.h=h;
     this.rotation=rotation;
     this.keyFrames=[[0,x,y,w,h,rotation]];
-    this.sides=sides;
-    this.escalats=0.5;
-    this.left=false;
-    this.up=false;
-    this.time=0;
+    //print(this.keyFrames[0])
+    this.sides=sides
+    this.escalats=0.5
+    this.left=false
+    this.up=false
+    this.time=0
   }
   
   draw(){
-    translate(this.x,this.y);
-    fill(255);
-    rotate(this.rotation);
-    noStroke();
-    beginShape();
+    translate(this.x,this.y)
+    fill(255)
+    rotate(this.rotation)
+    noStroke()
+    beginShape()
+    
 
     switch(this.sides){
       case 2:
@@ -381,7 +384,7 @@ function Mode(){
   for(var i = 0; i<keyFrma.length;i++){
     let col = map(keyFrma[i],0,100,0,255)
     let xx = map(keyFrma[i],0,100,0,width)
-    fill(255-col,0,col)
+    fill(255-col,255,col)
     rect(xx-divv/2,height-40,divv,20)
   }
   noStroke()
@@ -661,7 +664,7 @@ function addKF(){
     keyFrma.sort()
   }
 }
- 
+
 
 {{< /highlight >}}
 {{< /details >}}
