@@ -10,45 +10,45 @@ function setup() {
   linee=0;
   
   figi = new Fig(50,50,75,75,PI/2,3);
-  figi.keyFrames.push([25,200,200,100,50,0])
-  figi.keyFrames.push([50,50,300,50,100,0])
-  figi.keyFrames.push([75,300,50,50,100,2*PI])
-  figi.keyFrames.push([100,50,50,75,75,PI/2])
+  figi.keyFrames.push([25,200,200,100,50,0]);
+  figi.keyFrames.push([50,50,300,50,100,0]);
+  figi.keyFrames.push([75,300,50,50,100,2*PI]);
+  figi.keyFrames.push([100,50,50,75,75,PI/2]);
   
   fill(255);
   Ation = false;
-  divv = 1
+  divv = 1;
   timeline = new Slider('',0,height-60,0,100,0,divv);
-  timeline.colore = color(255,255,255)
+  timeline.colore = color(255,255,255);
   timeline.mousePressed(chaTime);
-  timeline.w=width
-  keyFrma = [0,25,50,75,100]
+  timeline.w=width;
+  keyFrma = [0,25,50,75,100];
   rot = new Button('Rot',0,height-20);
-  rot.mousePressed(rota)
+  rot.mousePressed(rota);
   rot.w=width/7;
   esc= new Button('Esc',width/7,height-20);
-  esc.mousePressed(esca)
+  esc.mousePressed(esca);
   esc.w=width/7;
   pos= new Button('Pos',width/7*2,height-20);
-  pos.mousePressed(posa)
+  pos.mousePressed(posa);
   pos.w=width/7;
   del= new Button('Del',width/7*3,height-20);
   del.w=width/7;
-  del.mousePressed(deleKF)
+  del.mousePressed(deleKF);
   addw= new Button('Add',width/7*4,height-20);
   addw.w=width/7;
-  addw.mousePressed(addKF)
+  addw.mousePressed(addKF);
   runn= new Button('run',width/7*5,height-20);
-  runn.mousePressed(runche)
+  runn.mousePressed(runche);
   runn.w=width/7;
   
   lma= new Button('l+',width/7*6,height-20);
   lma.w=width/14;
-  lma.mousePressed(lm)
+  lma.mousePressed(lm);
   lme= new Button('l-',width/14*13,height-20);
   lme.w=width/14;
-  lme.mousePressed(ln)
-  modes = 'position'
+  lme.mousePressed(ln);
+  modes = 'position';
   xref=0;
   yref=0;
   
@@ -57,10 +57,9 @@ function setup() {
 function draw() {
   
   background(0);
-  fill(255)
-  figi.draw()
-  //Timinggg()
-  Mode()
+  fill(255);
+  figi.draw();
+  Mode();
   runni();
 }
 
@@ -73,21 +72,19 @@ class Fig{
     this.h=h;
     this.rotation=rotation;
     this.keyFrames=[[0,x,y,w,h,rotation]];
-    //print(this.keyFrames[0])
-    this.sides=sides
-    this.escalats=0.5
-    this.left=false
-    this.up=false
-    this.time=0
+    this.sides=sides;
+    this.escalats=0.5;
+    this.left=false;
+    this.up=false;
+    this.time=0;
   }
   
   draw(){
-    translate(this.x,this.y)
-    fill(255)
-    rotate(this.rotation)
-    noStroke()
-    beginShape()
-    
+    translate(this.x,this.y);
+    fill(255);
+    rotate(this.rotation);
+    noStroke();
+    beginShape();
 
     switch(this.sides){
       case 2:
