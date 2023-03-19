@@ -668,4 +668,4 @@ function addKF(){
 
 {{< /highlight >}}
 {{< /details >}}
-{{< p5-iframe sketch="/visualcomp/sketches/KeyFrames.js" width="500" height="700" >}}
+{{< p5-iframe sketch="/visualcomp/sketches/KeyFrames.js" width="420" height="620" >}}
