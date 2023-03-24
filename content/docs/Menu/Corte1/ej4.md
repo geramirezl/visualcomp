@@ -22,7 +22,7 @@ Las Bandas de Mach funcionan por asociacion, asi como el ojo tiende a agrupar lo
 Para fines practicos se creo un programa que ejemplifica la ilusion.
 
 {{< columns >}} <!-- begin columns block -->
-{{< details title="Ilusion Bandas" open=True >}}
+{{< details title="Ilusion Bandas,Code" open=True >}}
 ### Codigo utilizado
 {{< highlight js >}}
  function setup() {
@@ -45,9 +45,10 @@ Para fines practicos se creo un programa que ejemplifica la ilusion.
 {{< /highlight >}}
 {{< /details >}}
 <---> <!-- magic separator, between columns -->
+{{< details title="Ilusion Bandas" open=True >}}
 {{< p5-global-iframe id="breath" width="440" height="440" >}}
   function setup() {
-    createCanvas(windowWidth-40, windowHeight-40);
+    createCanvas(400, 400);
     noStroke();
   } 
 
@@ -64,6 +65,8 @@ Para fines practicos se creo un programa que ejemplifica la ilusion.
   rect(mouseX,mouseY,width/10,height/10);
   }
 {{< /p5-global-iframe >}}
+{{< /details >}}
+
 {{< /columns >}}
 
 
