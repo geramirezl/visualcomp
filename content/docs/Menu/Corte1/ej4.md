@@ -45,7 +45,6 @@ Para fines practicos se creo un programa que ejemplifica la ilusion.
 {{< /highlight >}}
 {{< /details >}}
 <---> <!-- magic separator, between columns -->
-
 {{< p5-global-iframe id="breath" width="440" height="440" >}}
   function setup() {
     createCanvas(windowWidth-40, windowHeight-40);
