@@ -100,7 +100,7 @@ function Move(){
   
   
   if(abs(H)<windowWidth/4){
-    move = 0.01;
+    move = 0.0;
   }else{
     move= map(H,-windowHeight/2,windowHeight/2,-0.2,0.2, true);
   }

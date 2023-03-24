@@ -2,14 +2,30 @@
 
 Develop a terrain visualization application. Check out the 3D terrain generation with Perlin noise coding train tutorial.
 
-## Introducción Y Transfondo
+## Introducción
 
-## Antecedentes
+Las Bandas de Mach son una ilusion visual donde al colocar dos o mas tonalidades del mismo color con pequeño contraste, el ojo humano lo percibe con un constraste mayor del existente realmente mientras estas se encuentren en contacto.
 
-## Trabajo previo
+En esta actividad se busca mostrar como funciona este efecto en un terreno generado, 2 practicas en 1.
+## Transfondo o Teoria
 
-{{< p5-global-iframe id="breath" width="440" height="440" >}}
-  function setup() {
+En esta seccion solo se explicara la teoria respecto a las Bandas Mach debido que la explicacion del terreno y el funcionamiento del mismo, fue tomado del video tutorial dado en clase, se volvera a mencionar y detallar un poco en el proceso del codigo.
+
+{{< hint info >}}
+**Video Tutorial**  
+Enlace al tutorial sobre Terreno con Perlin Noise: https://www.youtube.com/watch?v=IKB1hWWedMk
+{{< /hint >}}
+
+### Mach Bands
+Las Bandas de Mach funcionan por asociacion, asi como el ojo tiende a agrupar los colores similares entre si, o los patrones para visualizar o percipir formas que no se encuentran hay, las bandas al agrupar colores de contrastes similares debido a que estan en contacto, la comparacion de tonalidades las realiza entre el propio grupo, percibiendo con mayor claridad el color mas "claro" del grupo, y mas oscuro aun el mas oscuro del mismo, esto lo podemos visualizar de manera bastante basica con la ilusion de "los 2 rectangulos grises" como se decidio presentar en este ejemplo, aunque sus variantes y ejemplos son muy extensas el concepto es el mencionado anteriormente, tendremos 2 fondos de contrastes altos, con dos rectangulos de un contraste medio entre ambos en cada uno de los fondos, viendolos por separado los rectangulos se perciben con diferentes contrastes entre si, pero como se puede comprobar usando el rectangulo interactivo ambos rectangulos tienen la misma tonalidad.
+
+Para fines practicos se creo un programa que ejemplifica la ilusion.
+
+{{< columns >}} <!-- begin columns block -->
+{{< details title="Ilusion Bandas" open=True >}}
+### Codigo utilizado
+{{< highlight js >}}
+ function setup() {
     createCanvas(400, 400);
     noStroke();
   } 
@@ -26,7 +42,35 @@ Develop a terrain visualization application. Check out the 3D terrain generation
   rect(width/2,height/4*3,width/5,height/5);
   rect(mouseX,mouseY,width/10,height/10);
   }
+{{< /highlight >}}
+{{< /details >}}
+<---> <!-- magic separator, between columns -->
+
+{{< p5-global-iframe id="breath" width="440" height="440" >}}
+  function setup() {
+    createCanvas(windowWidth-40, windowHeight-40);
+    noStroke();
+  } 
+
+  function draw() {
+  rectMode(CORNER)
+  fill(50);
+  rect(0,0,width,height/2);
+  fill(150);
+  rect(0,height/2,width,height/2);
+  fill(100);
+  rectMode(CENTER);
+  rect(width/2,height/4,width/5,height/5);
+  rect(width/2,height/4*3,width/5,height/5);
+  rect(mouseX,mouseY,width/10,height/10);
+  }
 {{< /p5-global-iframe >}}
+{{< /columns >}}
+
+
+## Codigo y resultados.
+
+
 
 ## Conclusiones y trabajos futuros 
 
