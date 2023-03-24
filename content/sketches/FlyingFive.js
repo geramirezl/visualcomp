@@ -16,7 +16,7 @@ function setup() {
   createCanvas(400, 400, WEBGL);
   checkbox = createCheckbox('Stroke', true);
   checkbox.style('color', 'yellow');
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth-40, windowHeight-40);
   
   
   lado= windowWidth*1.5;

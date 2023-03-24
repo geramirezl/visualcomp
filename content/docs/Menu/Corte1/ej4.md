@@ -43,9 +43,9 @@ Para fines practicos se creo un programa que ejemplifica la ilusion.
   }
 {{< /highlight >}}
 {{< /details >}}
-{{< p5-global-iframe id="bands" width="240" height="240" >}}
+{{< p5-global-iframe id="bands" width="440" height="440" >}}
   function setup() {
-    createCanvas(200, 200);
+    createCanvas(400, 400);
     noStroke();
   } 
 
@@ -63,23 +63,9 @@ Para fines practicos se creo un programa que ejemplifica la ilusion.
   }
 {{< /p5-global-iframe >}}
 
+## Codigo.
 
-## Codigo y resultados.
-
-
-
-## Conclusiones y trabajos futuros 
-
-
-## Mach bands
-
-En el ejercicio que vamos a utilizar usamos la ilusion de contraste para la percepcion de la profundidad.
-
-## Terrain with Perlin noise
-
-Siguiendo el tutorial, creamos una malla de triangulos, y darle diversas alturas usando el Perlin noise, el cual es una lista aleatoria de numeros manteniendo una relacion entre los numeros cercanos, lo que hace que el terreno parezca realista y al mismo tiempo sea parcialmente infinito.
-
-{{< details title="Código" open=false >}}
+{{< details title="Código Completo" open=false >}}
 {{< highlight js >}}
 let sliderGroup = [];
 let X;
@@ -183,7 +169,7 @@ function Move(){
   
   
   if(abs(H)<windowWidth/4){
-    move = 0.01;
+    move = 0.00;
   }else{
     move= map(H,-windowHeight/2,windowHeight/2,-0.2,0.2, true);
   }
@@ -205,4 +191,99 @@ function myCheckedEvent() {
 
 {{< /highlight >}}
 {{< /details >}}
-{{< p5-iframe sketch="/visualcomp/sketches/FlyingFive.js" width="725" height="425" >}}
+
+El codigo realizado inspirado en el tutorial ya mencionado contiene unos metodos mayores ademas de los 2 basicos del propio p5: planess, deep y Move.
+{{< details title="Metodo planess" open=true >}}
+{{< highlight js >}}
+function planess(highh){
+  
+  for(var y=0; y< cols-1;y++){
+    beginShape(TRIANGLE_STRIP);
+    for(var x=0; x< fils-1;x++){
+      fill(highh[x][y])
+      vertex(x*escala,y*escala,highh[x][y]);
+      fill(highh[x][y+1])    
+      vertex(x*escala,(y+1)*escala,highh[x][y+1]);
+
+
+      
+    }
+    endShape();
+  }
+}
+{{< /highlight >}}
+{{< /details >}}
+El Metodo planess recibe la matriz de valores adquiridos usando el Perlin Noise, que se explicara mas a fondo en el metodo deep, y por junto con esta  crea la malla de terreno con sus respectivas alturas en la matrix, al mismo tiempo le da a cada vector su respectiva tonalidad segun su altura, esto para generar el efecto de las bandas Mach que nos permite percibir profundidad en la malla sin necesidad de detallar los bordes o limites de la misma. 
+Un pequeño detalle a mencionar es la Relacion entre la altura y el color, debido al colorMode utilizado en el setup, el color esta modificado para que su rango sea el mismo que la maxima altura posible de la matriz, con ello no es necesario mapear los valores adquiridos en sus respectivos colores.
+
+{{< details title="Metodo deep" open=true >}}
+{{< highlight js >}}
+function deep(xIn,yIn){
+  higs = [];
+  for(var x=0; x< fils;x++){
+    higs[x] = [];
+    for(var y=0; y< cols;y++){
+      higs[x][y]= map(noise(xIn+x*avance,yIn+y*avance), 0,1,0, distTerrain);
+    }
+  }
+  return higs;
+}
+{{< /highlight >}}
+{{< /details >}}
+
+El metodo deep genera la matriz de alturas dado una posicion inicial en los ejes xy, utilizando la funcion noise, que utiliza el Perlin Noise para darnos una mayor "cercania" entre los puntos que se toman los valores aleatorios, mapeandolo respecto a la variable de distancia de terreno que marca la altura maxima del mismo.
+
+{{< details title="Metodo Move" open=true >}}
+{{< highlight js >}}
+function Move(){
+  W = mouseX-windowWidth/2;
+  H = mouseY-windowHeight/2; 
+  if(abs(W)<windowWidth/4){
+    angle = 0;
+  }else{
+    if(H>1){
+      angle = map(-W,-windowWidth/2,windowWidth/2,-PI/4,PI/4, true);
+    }else{
+      angle = map(W,-windowWidth/2,windowWidth/2,-PI/4,PI/4, true);
+    }
+    
+  }
+  
+  
+  if(abs(H)<windowWidth/4){
+    move = 0.00;
+  }else{
+    move= map(H,-windowHeight/2,windowHeight/2,-0.2,0.2, true);
+  }
+  
+  
+  
+  x = x + move*sin(angle);
+  y = y - move*cos(angle);
+  
+}
+{{< /highlight >}}
+{{< /details >}}
+Por ultimo la funcion move mueve los puntos iniciales o de referencia sobre los que se mapea la malla, utilizando el mouse para calcular los movimientos, buscando polalizar la ubicacion del mouse para darle una direccion al movimiento de la malla.
+
+Tambien se implemento un boton, para mostrar como cambia la percepcion cuando la malla tiene y no tiene bordes, la configuracion del boton viene de la biblioteca de referencia de p5.
+
+## Resultado
+Esta es el programa resultante del ejercicio.
+{{< p5-iframe sketch="/visualcomp/sketches/FlyingFive.js" width="425" height="425" >}}
+
+## Conclusiones
+
+- Aunque las bandas de Mach es un efecto tan comun que practicamente pasa desapercibido, es muy util para simplificar la forma de mostrar o agrupar diversas zonas.
+
+- Debido a la fluides del Perlin Noise, a la hora de visualisar algo random, es muchisimo mas agradable y facil de controlar usar un noise que un random base.
+
+- los controles de movimiento sin restriccion por medio del mouse gastan demasiado trabajo conseguiendo un control que sea equilibrado para mostrar el trabajo y poder interactuar con la pagina tranquilamente a la vez
+
+## Trabajos Futuros
+
+- empezando con lo utilizado en el tutorial, La forma de realizacion de mallas es muy util para cualquier trabajo no solo en terrenos, sino a la hora de poligomizar cualquier figura
+
+- el Perlin Noise permite transcisiones fluidas aun cuando genera cosas aleatorias, asi que es util en cualquier control que llame a lo aleatorio pero deba mostrarse
+
+- Aunque las bandas en si no son muy utilizadas, sus variantes de color y posterizacion aplican su base, lo que significa que seguro las volveremos a ver.
