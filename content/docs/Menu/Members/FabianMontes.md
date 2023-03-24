@@ -18,4 +18,4 @@ Como una pequeña Ilusion visual decidi recrear un video que encontre en su mome
 **Video de Inspiracion**  
 Enlace del video del cual se tomo la inspiracion para recrearlo: https://www.youtube.com/watch?v=hzf2xfVDDWs
 {{< /hint >}}
-{{< p5-iframe sketch="/visualcomp/sketches/FMil.js" width="470" height="520">}}
+{{< p5-iframe sketch="/visualcomp/sketches/FMil.js" width="490" height="540">}}
