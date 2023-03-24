@@ -46,9 +46,9 @@ Para fines practicos se creo un programa que ejemplifica la ilusion.
 {{< /details >}}
 <---> <!-- magic separator, between columns -->
 {{< details title="Ilusion Bandas" open=True >}}
-{{< p5-global-iframe id="breath" width="440" height="440" >}}
+{{< p5-global-iframe id="breath" width="240" height="240" >}}
   function setup() {
-    createCanvas(400, 400);
+    createCanvas(200, 200);
     noStroke();
   } 
 
