@@ -2,6 +2,35 @@
 
 Develop a terrain visualization application. Check out the 3D terrain generation with Perlin noise coding train tutorial.
 
+## Introducción Y Transfondo
+
+## Antecedentes
+
+## Trabajo previo
+
+{{< p5-global-iframe id="breath" width="440" height="440" >}}
+  function setup() {
+    createCanvas(400, 400);
+    noStroke();
+  } 
+
+  function draw() {
+  rectMode(CORNER)
+  fill(50);
+  rect(0,0,width,height/2);
+  fill(150);
+  rect(0,height/2,width,height/2);
+  fill(100);
+  rectMode(CENTER);
+  rect(width/2,height/4,width/5,height/5);
+  rect(width/2,height/4*3,width/5,height/5);
+  rect(mouseX,mouseY,width/10,height/10);
+  }
+{{< /p5-global-iframe >}}
+
+## Conclusiones y trabajos futuros 
+
+
 ## Mach bands
 
 En el ejercicio que vamos a utilizar usamos la ilusion de contraste para la percepcion de la profundidad.
