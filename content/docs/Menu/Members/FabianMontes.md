@@ -14,24 +14,8 @@ Me fascina leer historias de fantasia, ver series, y jugar, tambien tambien part
 
 ## Ilusion visual
 Como una pequeña Ilusion visual decidi recrear un video que encontre en su momento, aunque no se logro recrear el sonido del metronomo, el movimiento y efecto que genera igual permanece. 
-{{< columns >}} <!-- begin columns block -->
 {{< hint info >}}
 **Video de Inspiracion**  
 Enlace del video del cual se tomo la inspiracion para recrearlo: https://www.youtube.com/watch?v=hzf2xfVDDWs
 {{< /hint >}}
-<---> <!-- magic separator, between columns -->
 {{< p5-iframe sketch="/visualcomp/sketches/FMil.js" width="500" height="500">}}
-# Right Content
-Lorem markdownum insigne...
-{{< /columns >}}
-
-
-
-
-
-
-Un pequeño movimiento crea una percepcion de diversas figuras usando solo lineas,
-Tambien se usa unos botones propios, que al ser dibujadas se mantienen dentro del canvas.
-
-
-.
