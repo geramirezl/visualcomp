@@ -22,7 +22,7 @@ Las Bandas de Mach funcionan por asociacion, asi como el ojo tiende a agrupar lo
 Para fines practicos se creo un programa que ejemplifica la ilusion.
 
 {{< details title="Ilusion Bandas,Code" open=false >}}
-### Codigo utilizado
+## Codigo utilizado
 {{< highlight js >}}
  function setup() {
     createCanvas(400, 400);
@@ -286,4 +286,4 @@ Esta es el programa resultante del ejercicio.
 
 - el Perlin Noise permite transcisiones fluidas aun cuando genera cosas aleatorias, asi que es util en cualquier control que llame a lo aleatorio pero deba mostrarse
 
-- Aunque las bandas en si no son muy utilizadas, sus variantes de color y posterizacion aplican su base, lo que significa que seguro las volveremos a ver.
+- Aunque las bandas en si no son muy utilizadas, es bueno entenderlas para poder notar cuando ocurren y poder evitarlas o utilizarlas de manera apropiada.
