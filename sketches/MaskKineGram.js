@@ -3,7 +3,7 @@ var Gap1,frames1;
 var Gap2,frames2;
 var Gap3,frames3;
 var Gap4,frames4;
-var prevmil;
+var prevmil,prevmil2;
 var darkness;
 var run = false;
 let slider;
@@ -18,27 +18,27 @@ function setup() {
   frames1 = 6;
   Gap2 = 1;
   frames2 = 7;
-  Gap3 = 20;
-  frames3 = 5;
-  Gap4 = 5;
-  frames4 = 6;
+  Gap3 = 5;
+  frames3 = 2;
+  Gap4 = 3;
+  frames4 = 3;
   one = 0;
   two = 0;
   tree = 0;
   four = 0;
-  button = new Button('snap',0,0);
+  button = new Button(' snap ',0,0);
   button.mousePressed(changeBG);
-  
-  checkbox = new CheckBox('run',width/2,0, false);
-  checkbox.changed(myCheckedEvent);
-  sliders = new Slider('shade',width/6*5, 0,0,255, 255, 1);
-  
+  checkbox = new Button(' run ',width/2,0);
+  checkbox.mousePressed(myCheckedEvent);
+  sliders = new Button(' shade ',width/6*5,0);
+  sliders.mousePressed(myCheckedEvent2);
   noStroke();
-  prevmil=frameCount;
+  prevmil2=prevmil=frameCount;
   
 }
 
 var delayss= 3;
+var delayss3= 30;
 
 function draw() {
   background(255);
@@ -47,12 +47,18 @@ function draw() {
   
   Circkless(0,0,width/2,height,Gap1,frames1,false, one);
   Seconds(width/2,height/2,width/2,height/2,Gap2,frames2,true, two);
-  Lane(width/3*2,0,width/6,height*(+1/3),Gap3,frames3,false, tree);
-  Lane(width/2,width/6,width/2,height/6,Gap4,frames4,true,four);
+  Lane(width/2+width/60,height/20,width/2-width/60*2,height/2-height/30*2,Gap3,frames3,true, tree,5*PI/180);
+  Lane(width/2+width/60,height/20,width/2-width/60*2,height/2-height/30*2,Gap4,frames4,true,0,0);
   
   if(run && frameCount-prevmil>=delayss){
     prevmil = frameCount;
-    changeBG()
+    twos= two;
+    changeBG();
+    if(frameCount-prevmil2>=delayss3){
+      prevmil2 = frameCount;
+    }else{
+      two=twos
+    }
   }  
   buttons();
 }
@@ -79,7 +85,7 @@ function Circkless(x,y,lenx,leny,gap,frames,horizon,timing){
     
   }
   
-  Lane(x,y,lenx,leny,gap,frames,horizon,timing);
+  Lane(x,y,lenx,leny,gap,frames,horizon,timing,0);
 }
 
 
@@ -97,34 +103,45 @@ function Seconds(x,y,lenx,leny,gap,frames,horizon,timing){
     
   }
   
-  Lane(x,y,lenx,leny,gap,frames,horizon,timing);
+  Lane(x,y,lenx,leny,gap,frames,horizon,timing,0);
 }
 
 
 
-function Lane(x,y,lenx,leny,gap,frames,horizon,timing){
+function Lane(x,y,lenx,leny,gap,frames,horizon,timing,rotation){
   times = 100;
   ones = 1;
   twos = 1;
   espace = frames*gap;
+  lenxx=lenx;
+  lenyy=leny;
   if(horizon){
     times = Math.ceil(lenx/espace)
-    lenx = frames*gap-gap;
+    lenxx = frames*gap-gap;
     ones = 0;
   }else{
     times = Math.ceil(leny/espace)
-    leny = frames*gap-gap;
+    lenyy = frames*gap-gap;
     twos = 0;
   }
   lena=1
   if(timing-gap<0)
     lena= 0
-  
-  fill(0,sliders.value())
-  rect(x,y,lenx*ones*lena+twos*(timing-gap),twos*leny*lena+(timing - gap)*ones);
-  for(var i = 0; i< times;i++){
-    rect(x+twos*(espace*i+timing),y+ones*(espace*i+timing),lenx,leny);
+  translate(x+lenx/2,y+leny/2)
+  rotate(rotation)
+  fill(0,shade*255)
+  rect(-lenx/2,-leny/2,lenxx*ones*lena+twos*(timing-gap),twos*lenyy*lena+(timing - gap)*ones);
+  for(var i = 0; i< times-1;i++){
+    rect(-lenx/2+twos*(espace*i+timing),-leny/2+ones*(espace*i+timing),lenxx,lenyy);
   }
+  
+  if(lenxx-timing*twos>0 && lenyy-timing*ones>0){
+    rect(-lenx/2+((times-1)*espace+timing)*twos,-leny/2+((times-1)*espace+timing)*ones,lenxx-timing*twos,lenyy-timing*ones);
+  }
+  
+  //rect(lenx/2-lenxx+gap*twos,leny/2-lenyy+(timing+gap)*ones,100,100);
+  rotate(-rotation)
+  translate(-x-lenx/2,-y-leny/2)
   
 }
 
@@ -191,7 +208,6 @@ function mouseDragged() {
   }
   refY=mouseY
   refX=mouseX
-  sliders.Dragged()
 }
 
 function changeBG() {
@@ -218,10 +234,14 @@ function changeBG() {
 }
 
 function myCheckedEvent() {
-  if (checkbox.check) {
-    run = true
-  } else {
-    run = false
+  run = !run
+}
+var shade=1;
+function myCheckedEvent2() {
+  if(shade==1){
+     shade=0;
+  }else{
+    shade=1;
   }
 }
 
@@ -435,89 +455,3 @@ class Button{
       this.colore= colos
     }
 }
-
-class CheckBox extends Button{
-   constructor(label,x,y,ini){
-    super(label,x,y)
-    this.w=this.w*4/3
-    this.check=ini
-    }
-  
-    changed(alpha = null){
-      this.alpha=alpha
-    }
-  
-    draw(){
-      noStroke()
-      var bart = 200
-      if(this.check){
-        bart = 10
-      }
-      fill(bart)
-      rect(this.x,this.y,this.w/4,this.h)
-      fill(this.colore)
-      textWidth(1)
-      text(this.label,this.x+this.w/3,this.y+this.h/3*2)
-    }
-    Pressed(){
-      if(mouseX>this.x && mouseX<this.x+this.h &&mouseY>this.y && mouseY<this.y+this.h){
-        this.isPressed=true;
-      }
-    }
-    released(){
-      if(this.isPressed){
-        this.isPressed=false;
-        this.check=!this.check
-          this.alpha()
-      }
-    }
-}
-
-class Slider extends Button{
-  constructor(label,x,y,ini,end,value,step){
-   super(label,x,y)
-    this.w= max(this.w,(end-ini)+2)
-    this.h= this.h/3*5
-    this.ini = ini
-    this.end = end
-    this.step = step
-    this.valuee = value
-    this.colore = color(50, 50, 50);
-    this.alpha= function() {}
-  }
-  draw(){
-    noStroke()
-    fill(50);
-    rect(this.x,this.y,this.w,this.h)
-    textSize(13);
-    fill(255);
-    text(this.label, this.x,this.y+this.h/5*2);
-    fill(100);
-    rect(this.x,this.y+this.h/2,this.w-1,this.h/2)
-    fill(this.colore);
-    rect(this.x+this.valuee/(this.end-this.ini)*this.w,this.y+this.h/2,this.w*this.step/(this.end-this.ini),this.h/2)
-  }
-  
-  value(){
-    return this.valuee
-  }
-  
-  Pressed(){
-      if(mouseX>this.x && mouseX<this.x+this.w &&mouseY>this.y+this.h/2 && mouseY<this.y+this.h){
-        this.isPressed=true;
-        
-      }
-      
-    }
-  
-  Dragged(){
-    if(this.isPressed){
-      this.valuee = map(mouseX,this.x,this.x+this.w,0,(this.end-this.ini)/this.step,true)
-      this.valuee = int(this.valuee*this.step+this.ini)
-      print(this.valuee)
-      
-    }
-  }
-}
-
-
