@@ -2,7 +2,7 @@
 Introducción # Para entender el funcionamiento de las mascaras visuales o Visual Masking, Usaremos el kinegram o Scanimation, donde usando una rendija uniforme como mascara crearemos una imagen en movimiento a partir de una imagen de diversas franjas o frames moviendo la mascara sobre la misma.
 Transfondo o Teoria # Kineograph or flipbook # El folioscopio, es un libro o una secuencia de imagenes que varian ligeramente unas de otras, que cambiando las paginas rapidamente o recorriendo la secuencia generan la percepcion de movimiento o transicion entre una y otra, generando una animacion."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Ejercicio 5 # Implement a kinegram and some moiré patterns which are close related visual phenomena to masking.
 Introducción # Para entender el funcionamiento de las mascaras visuales o Visual Masking, Usaremos el kinegram o Scanimation, donde usando una rendija uniforme como mascara crearemos una imagen en movimiento a partir de una imagen de diversas franjas o frames moviendo la mascara sobre la misma.
-Transfondo o Teoria # Kineograph or flipbook # El folioscopio, es un libro o una secuencia de imagenes que varian ligeramente unas de otras, que cambiando las paginas rapidamente o recorriendo la secuencia generan la percepcion de movimiento o transicion entre una y otra, generando una animacion."><meta property="og:type" content="article"><meta property="og:url" content="https://geramirezl.github.io/visualcomp/docs/Menu/Corte1/ej5/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-03-25T22:41:18-05:00"><title>Ej5 | Showcase Template</title><link rel=manifest href=/visualcomp/manifest.json><link rel=icon href=/visualcomp/favicon.png type=image/x-icon><link rel=stylesheet href=/visualcomp/book.min.4b35fed0bea034bbc19c89c71e14b73fb9c68cfcc586b9382adfb9b7b103ba06.css integrity="sha256-SzX+0L6gNLvBnInHHhS3P7nGjPzFhrk4Kt+5t7EDugY=" crossorigin=anonymous><script defer src=/visualcomp/flexsearch.min.js></script>
+Transfondo o Teoria # Kineograph or flipbook # El folioscopio, es un libro o una secuencia de imagenes que varian ligeramente unas de otras, que cambiando las paginas rapidamente o recorriendo la secuencia generan la percepcion de movimiento o transicion entre una y otra, generando una animacion."><meta property="og:type" content="article"><meta property="og:url" content="https://geramirezl.github.io/visualcomp/docs/Menu/Corte1/ej5/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-03-25T22:43:39-05:00"><title>Ej5 | Showcase Template</title><link rel=manifest href=/visualcomp/manifest.json><link rel=icon href=/visualcomp/favicon.png type=image/x-icon><link rel=stylesheet href=/visualcomp/book.min.4b35fed0bea034bbc19c89c71e14b73fb9c68cfcc586b9382adfb9b7b103ba06.css integrity="sha256-SzX+0L6gNLvBnInHHhS3P7nGjPzFhrk4Kt+5t7EDugY=" crossorigin=anonymous><script defer src=/visualcomp/flexsearch.min.js></script>
 <script defer src=/visualcomp/en.search.min.c54cb0b85d98bce471dc5c99b81825538ca7dcde0cb774b6ea5817733a896b49.js integrity="sha256-xUywuF2YvORx3FyZuBglU4yn3N4Mt3S26lgXczqJa0k=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/visualcomp/><span>Showcase Template</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><span>Menu</span><ul><li><input type=checkbox id=section-a24993e858734e2a47438db23047ae18 class=toggle checked>
 <label for=section-a24993e858734e2a47438db23047ae18 class="flex justify-between"><a role=button>Corte1</a></label><ul><li><a href=/visualcomp/docs/Menu/Corte1/ej1/>Ej1</a></li><li><a href=/visualcomp/docs/Menu/Corte1/ej2/>Ej2</a></li><li><a href=/visualcomp/docs/Menu/Corte1/ej3/>Ej3</a></li><li><a href=/visualcomp/docs/Menu/Corte1/ej4/>Ej4</a></li><li><a href=/visualcomp/docs/Menu/Corte1/ej5/ class=active>Ej5</a></li><li><a href=/visualcomp/docs/Menu/Corte1/ej6/>Ej6</a></li></ul></li><li><input type=checkbox id=section-043ec1151eedb9eb9d051a3192c81258 class=toggle>
@@ -11,9 +11,954 @@ Transfondo o Teoria # Kineograph or flipbook # El folioscopio, es un libro o una
 <label for=section-388bef96d17c2b11976e72fa3dd44910 class="flex justify-between"><a href=/visualcomp/docs/Menu/Members/>Members</a></label><ul><li><a href=/visualcomp/docs/Menu/Members/FabianMontes/>Fabian Montes</a></li><li><a href=/visualcomp/docs/Menu/Members/GabrielRamirez/>Gabriel Ramirez</a></li><li><a href=/visualcomp/docs/Menu/Members/JuanSierra/>Juan Sierra</a></li></ul></li><li><input type=checkbox id=section-2a8fcaa7f0b89ed89cd6417a1bdcdbd7 class=toggle>
 <label for=section-2a8fcaa7f0b89ed89cd6417a1bdcdbd7 class="flex justify-between"><a href=/visualcomp/docs/Menu/p5/>P5</a></label><ul><li><a href=/visualcomp/docs/Menu/p5/Corte-2/>Corte 2</a></li><li><a href=/visualcomp/docs/Menu/p5/Corte-1/>Corte 1</a></li></ul></li></ul></li></ul><ul><li><a href=/visualcomp/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/visualcomp/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>Ej5</strong>
-<label for=toc-control><img src=/visualcomp/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#ejercicio-5>Ejercicio 5</a><ul><li><a href=#introducción>Introducción</a></li><li><a href=#transfondo-o-teoria>Transfondo o Teoria</a><ul><li><a href=#kineograph-or-flipbook>Kineograph or flipbook</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=ejercicio-5>Ejercicio 5
+<label for=toc-control><img src=/visualcomp/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#ejercicio-5>Ejercicio 5</a><ul><li><a href=#introducción>Introducción</a></li><li><a href=#transfondo-o-teoria>Transfondo o Teoria</a><ul><li><a href=#kineograph-or-flipbook>Kineograph or flipbook</a></li><li><a href=#scanimation>Scanimation</a></li><li><a href=#moiré-pattern>Moiré pattern</a></li><li><a href=#frames-and-frames>Frames and frames</a></li></ul></li><li><a href=#codigo-utilizado>Codigo utilizado</a></li><li><a href=#resultado>Resultado</a></li><li><a href=#conclusiones>Conclusiones</a></li><li><a href=#trabajos-futuros>Trabajos Futuros</a></li><li><a href=#visual-masking>Visual masking</a><ul><li><a href=#mascara-movimiento>Mascara movimiento</a></li><li><a href=#frames-unicos>Frames unicos</a></li><li><a href=#animacion-movimientos>Animacion/ movimientos</a></li></ul></li><li><a href=#movimientos>movimientos</a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=ejercicio-5>Ejercicio 5
 <a class=anchor href=#ejercicio-5>#</a></h1><p>Implement a kinegram and some moiré patterns which are close related visual phenomena to masking.</p><h2 id=introducción>Introducción
 <a class=anchor href=#introducci%c3%b3n>#</a></h2><p>Para entender el funcionamiento de las mascaras visuales o Visual Masking, Usaremos el kinegram o Scanimation, donde usando una rendija uniforme como mascara crearemos una imagen en movimiento a partir de una imagen de diversas franjas o frames moviendo la mascara sobre la misma.</p><h2 id=transfondo-o-teoria>Transfondo o Teoria
 <a class=anchor href=#transfondo-o-teoria>#</a></h2><h3 id=kineograph-or-flipbook>Kineograph or flipbook
-<a class=anchor href=#kineograph-or-flipbook>#</a></h3><p>El folioscopio, es un libro o una secuencia de imagenes que varian ligeramente unas de otras, que cambiando las paginas rapidamente o recorriendo la secuencia generan la percepcion de movimiento o transicion entre una y otra, generando una animacion.</p><p>Inicialmente el concepto de estos son dibujos en libros o notas, siendo una forma primitiva de la animacion, en el ejemplo tenemos un movimiento de molino donde tenemos 4 paginas, las cuales cuando se empieza a cambiar rapidamente muestran como rueda el molino.</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://geramirezl.github.io/visualcomp/commit/24bab224b5efd7a8e38629135c6709414b42a6d6 title='Last modified by FabianMontes | March 26, 2023' target=_blank rel=noopener><img src=/visualcomp/svg/calendar.svg class=book-icon alt=Calendar>
-<span>March 26, 2023</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#ejercicio-5>Ejercicio 5</a><ul><li><a href=#introducción>Introducción</a></li><li><a href=#transfondo-o-teoria>Transfondo o Teoria</a><ul><li><a href=#kineograph-or-flipbook>Kineograph or flipbook</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>
+<a class=anchor href=#kineograph-or-flipbook>#</a></h3><p>El folioscopio, es un libro o una secuencia de imagenes que varian ligeramente unas de otras, que cambiando las paginas rapidamente o recorriendo la secuencia generan la percepcion de movimiento o transicion entre una y otra, generando una animacion.</p><p>Inicialmente el concepto de estos son dibujos en libros o notas, siendo una forma primitiva de la animacion, en el ejemplo tenemos un movimiento de molino donde tenemos 4 paginas, las cuales cuando se empieza a cambiar rapidamente muestran como rueda el molino.</p><details><summary>Molino, Code</summary><div class=markdown-inner><h2 id=codigo-utilizado>Codigo utilizado
+<a class=anchor href=#codigo-utilizado>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span> <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>buto</span>,<span style=color:#a6e22e>rund</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>page</span>,<span style=color:#a6e22e>moves</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>milprev</span>, <span style=color:#a6e22e>delayer</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>400</span>, <span style=color:#ae81ff>400</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>buto</span><span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Button</span>(<span style=color:#e6db74>&#39;nextPage&#39;</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>-</span><span style=color:#ae81ff>20</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rund</span><span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Button</span>(<span style=color:#e6db74>&#39;Move&#39;</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>-</span><span style=color:#ae81ff>20</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rund</span>.<span style=color:#a6e22e>mousePressed</span>(<span style=color:#a6e22e>changings</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>buto</span>.<span style=color:#a6e22e>mousePressed</span>(<span style=color:#a6e22e>change</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>page</span><span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>moves</span><span style=color:#f92672>=</span><span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>milprev</span><span style=color:#f92672>=</span><span style=color:#a6e22e>frameCount</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>delayer</span><span style=color:#f92672>=</span><span style=color:#ae81ff>5</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>220</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>switch</span>(<span style=color:#a6e22e>page</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>0</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>frame0</span>();
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>1</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>frame1</span>();
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>frame2</span>();
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>3</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>frame3</span>();
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>moves</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>frameCount</span><span style=color:#f92672>-</span><span style=color:#a6e22e>milprev</span><span style=color:#f92672>&gt;=</span><span style=color:#a6e22e>delayer</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>milprev</span><span style=color:#f92672>=</span><span style=color:#a6e22e>frameCount</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>change</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>buto</span>.<span style=color:#a6e22e>draw</span>()
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rund</span>.<span style=color:#a6e22e>draw</span>()
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>frame0</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>base</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span>,<span style=color:#a6e22e>height</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#f92672>-</span><span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>frame1</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>base</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span>,<span style=color:#a6e22e>height</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#f92672>-</span><span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#f92672>-</span><span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>frame2</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>base</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span>,<span style=color:#a6e22e>height</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#f92672>-</span><span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#f92672>-</span><span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>frame3</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>base</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span>,<span style=color:#a6e22e>height</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#f92672>-</span><span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#f92672>-</span><span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>base</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>w</span>,<span style=color:#a6e22e>h</span>){  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>150</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>triangle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>w</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>,<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>w</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>h</span>,<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>w</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>h</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>ellipse</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>w</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>,<span style=color:#a6e22e>w</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>,<span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Button</span>{
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>label</span>,<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>){
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span><span style=color:#f92672>=</span><span style=color:#a6e22e>x</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>=</span><span style=color:#a6e22e>y</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span><span style=color:#f92672>=</span><span style=color:#ae81ff>10</span><span style=color:#f92672>*</span><span style=color:#a6e22e>label</span>.<span style=color:#a6e22e>length</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>=</span><span style=color:#ae81ff>20</span>;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>label</span><span style=color:#f92672>=</span><span style=color:#a6e22e>label</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>colore</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>color</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>200</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span><span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>alpha</span><span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {}
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>draw</span>(){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>noStroke</span>()
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>bart</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>colore</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span>){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>bart</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>lerpColor</span>(<span style=color:#a6e22e>bart</span>, <span style=color:#a6e22e>color</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>), <span style=color:#ae81ff>0.5</span>);
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>bart</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>rect</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>textWidth</span>(<span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>text</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>label</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span><span style=color:#f92672>/</span><span style=color:#ae81ff>10</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>mousePressed</span>(<span style=color:#a6e22e>alpha</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>alpha</span><span style=color:#f92672>=</span><span style=color:#a6e22e>alpha</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Pressed</span>(){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>mouseX</span><span style=color:#f92672>&gt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>mouseX</span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span> <span style=color:#f92672>&amp;&amp;</span><span style=color:#a6e22e>mouseY</span><span style=color:#f92672>&gt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>mouseY</span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span><span style=color:#f92672>=</span><span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>alpha</span>()  
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>released</span>(){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span><span style=color:#f92672>=</span><span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>color</span>(<span style=color:#a6e22e>colos</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>colore</span><span style=color:#f92672>=</span> <span style=color:#a6e22e>colos</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mouseReleased</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>buto</span>.<span style=color:#a6e22e>released</span>()
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rund</span>.<span style=color:#a6e22e>released</span>()
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mousePressed</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>buto</span>.<span style=color:#a6e22e>Pressed</span>()
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rund</span>.<span style=color:#a6e22e>Pressed</span>()
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>changings</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>moves</span> <span style=color:#f92672>=</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>moves</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>change</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>page</span><span style=color:#f92672>++</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>page</span><span style=color:#f92672>==</span><span style=color:#ae81ff>4</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>page</span> <span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div></div></details><iframe id=bands style=width:440px;height:440px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script>
+              
+   var buto,rund;
+var page,moves;
+var milprev, delayer;
+
+function setup() {
+  createCanvas(400, 400);
+  noStroke();
+  buto= new Button('nextPage',width/3,height-20);
+  rund= new Button('Move',width/5*3,height-20);
+  rund.mousePressed(changings);
+  buto.mousePressed(change);
+  page= 0;
+  moves=false;
+  milprev=frameCount;
+  delayer=5;
+}
+
+
+
+function draw() {
+  background(220);
+  fill(0);
+  switch(page){
+    case 0:
+      frame0();
+      break;
+    case 1:
+      frame1();
+      break;
+    case 2:
+      frame2();
+      break;
+    case 3:
+      frame3();
+      break;
+  }
+  
+  if(moves && frameCount-milprev>=delayer){
+    milprev=frameCount;
+    change();
+  }
+  
+  buto.draw()
+  rund.draw()
+}
+
+function frame0(){
+  base(0,0,width,height);
+  translate(width/2,height/3);
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  translate(-width/2,-height/3);
+}
+
+function frame1(){
+  base(0,0,width,height);
+  translate(width/2,height/3);
+  rotate(PI/8)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(-PI/8)
+  translate(-width/2,-height/3);
+}
+
+function frame2(){
+  base(0,0,width,height);
+  translate(width/2,height/3);
+  rotate(PI/4)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(-PI/4)
+  translate(-width/2,-height/3);
+}
+
+function frame3(){
+  base(0,0,width,height);
+  translate(width/2,height/3);
+  rotate(PI/8*3)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(PI/2)
+  triangle(0,0,width/5*2,-height/12,width/5*2,height/12)
+  rotate(-PI/8*3)
+  translate(-width/2,-height/3);
+}
+
+function base(x,y,w,h){  
+  fill(0,150)
+  triangle(x+w/2,y+h/3,x+w/4,y+h,x+w/4*3,y+h);
+  ellipse(x+w/2,y+h/3,w/5,h/5);
+  fill(0)
+}
+
+
+class Button{
+    constructor(label,x,y){
+	this.x=x
+	this.y=y
+    this.w=10*label.length;
+    this.h=20;
+	this.label=label
+    this.colore = color(200, 200, 200);
+    this.isPressed= false
+    this.alpha= function() {}
+    }
+	draw(){
+      noStroke()
+      var bart = this.colore
+      if(this.isPressed){
+        bart = lerpColor(bart, color(0,0,0), 0.5);
+      }
+      fill(bart)
+      rect(this.x,this.y,this.w,this.h)
+      fill(0)
+      textWidth(1)
+      text(this.label,this.x+this.w/10,this.y+this.h/3*2)
+    }
+  
+    mousePressed(alpha = null){
+      this.alpha=alpha
+    }
+  
+    Pressed(){
+      if(mouseX>this.x && mouseX<this.x+this.w &&amp;mouseY>this.y && mouseY<this.y+this.h){
+        this.isPressed=true;
+        this.alpha()  
+      }
+      
+    }
+  
+    released(){
+      this.isPressed=false;
+    }
+    color(colos){
+      this.colore= colos
+    }
+}
+function mouseReleased(){
+  buto.released()
+  rund.released()
+}
+
+
+function mousePressed(){
+  buto.Pressed()
+  rund.Pressed()
+}
+
+function changings(){
+  moves = !moves
+}
+
+function change(){
+  page++
+  if(page==4){
+    page =0;
+  }
+} 
+
+            </script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe><h3 id=scanimation>Scanimation
+<a class=anchor href=#scanimation>#</a></h3><h3 id=moiré-pattern>Moiré pattern
+<a class=anchor href=#moir%c3%a9-pattern>#</a></h3><h3 id=frames-and-frames>Frames and frames
+<a class=anchor href=#frames-and-frames>#</a></h3><h2 id=codigo-utilizado>Codigo utilizado
+<a class=anchor href=#codigo-utilizado>#</a></h2><h2 id=resultado>Resultado
+<a class=anchor href=#resultado>#</a></h2><p>Esta es el programa resultante del ejercicio.
+<iframe id=FlyingFive style=width:425px;height:425px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script src=/visualcomp/sketches/FlyingFive.js></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe></p><h2 id=conclusiones>Conclusiones
+<a class=anchor href=#conclusiones>#</a></h2><ul><li><p>Aunque las bandas de Mach es un efecto tan comun que practicamente pasa desapercibido, es muy util para simplificar la forma de mostrar o agrupar diversas zonas.</p></li><li><p>Debido a la fluides del Perlin Noise, a la hora de visualisar algo random, es muchisimo mas agradable y facil de controlar usar un noise que un random base.</p></li><li><p>los controles de movimiento sin restriccion por medio del mouse gastan demasiado trabajo conseguiendo un control que sea equilibrado para mostrar el trabajo y poder interactuar con la pagina tranquilamente a la vez</p></li></ul><h2 id=trabajos-futuros>Trabajos Futuros
+<a class=anchor href=#trabajos-futuros>#</a></h2><h2 id=visual-masking>Visual masking
+<a class=anchor href=#visual-masking>#</a></h2><p>Un Kinegram es un fenomeno visual, donde utilizando una banda de mascara, al moverla sobre una imagen fija de fondo se crea una animacion de movimiento o diferencia entre ambos frames.</p><p>En el ejercicio que implementamos tenemos 4 ejemplos de como funcionan estas mascaras.</p><h3 id=mascara-movimiento>Mascara movimiento
+<a class=anchor href=#mascara-movimiento>#</a></h3><p>En la esquina superior derecha tenemos 2 mascaras de diversos tamaños y direcciones cruzando entre si, lo que genera un patron que se repite.</p><h3 id=frames-unicos>Frames unicos
+<a class=anchor href=#frames-unicos>#</a></h3><p>Cuando la mascara tiene solo un espacio vacio entre lo que cubre, las imagenes entre frames y frames no se traspasan en ningun momento, generando una transicion completa entre ellos, como en la esquina inferior derecha, con el mensaje WELCOME.</p><h3 id=animacion-movimientos>Animacion/ movimientos
+<a class=anchor href=#animacion-movimientos>#</a></h3><p>Con las mascaras podemos generar movimiento cuando la imagen que se muestra entre frames es diferente, ademas si el espacio vacio es mayor, se genera un efecto de transicion entre los mismos, como el movimiento de la mascara de la izquierda.</p><h2 id=movimientos>movimientos
+<a class=anchor href=#movimientos>#</a></h2><p>La animacion responde al drag mouse, o con los botones puedes alterar para ver mejor ciertas mascaras.</p><p><details><summary>Código</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>refY</span>, <span style=color:#a6e22e>refX</span>,<span style=color:#a6e22e>one</span>,<span style=color:#a6e22e>two</span>,<span style=color:#a6e22e>tree</span>,<span style=color:#a6e22e>four</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>Gap1</span>,<span style=color:#a6e22e>frames1</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>Gap2</span>,<span style=color:#a6e22e>frames2</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>Gap3</span>,<span style=color:#a6e22e>frames3</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>Gap4</span>,<span style=color:#a6e22e>frames4</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>prevmil</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>darkness</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>run</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>slider</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>button</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>checkbox</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>sliders</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>500</span>, <span style=color:#ae81ff>500</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>refY</span><span style=color:#f92672>=</span><span style=color:#a6e22e>mouseY</span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>refX</span><span style=color:#f92672>=</span><span style=color:#a6e22e>mouseX</span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Gap1</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>frames1</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>6</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Gap2</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>frames2</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>7</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Gap3</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>20</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>frames3</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Gap4</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>frames4</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>6</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>one</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>two</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>tree</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>four</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>button</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Button</span>(<span style=color:#e6db74>&#39;snap&#39;</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>button</span>.<span style=color:#a6e22e>mousePressed</span>(<span style=color:#a6e22e>changeBG</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>checkbox</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>CheckBox</span>(<span style=color:#e6db74>&#39;run&#39;</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#ae81ff>0</span>, <span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>checkbox</span>.<span style=color:#a6e22e>changed</span>(<span style=color:#a6e22e>myCheckedEvent</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>sliders</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Slider</span>(<span style=color:#e6db74>&#39;shade&#39;</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>6</span><span style=color:#f92672>*</span><span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>255</span>, <span style=color:#ae81ff>255</span>, <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>prevmil</span><span style=color:#f92672>=</span><span style=color:#a6e22e>frameCount</span>;
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>delayss</span><span style=color:#f92672>=</span> <span style=color:#ae81ff>3</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//scale(2)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#75715e>//translate(0,-height/2)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Circkless</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span>,<span style=color:#a6e22e>Gap1</span>,<span style=color:#a6e22e>frames1</span>,<span style=color:#66d9ef>false</span>, <span style=color:#a6e22e>one</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Seconds</span>(<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>Gap2</span>,<span style=color:#a6e22e>frames2</span>,<span style=color:#66d9ef>true</span>, <span style=color:#a6e22e>two</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Lane</span>(<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>6</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>*</span>(<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>),<span style=color:#a6e22e>Gap3</span>,<span style=color:#a6e22e>frames3</span>,<span style=color:#66d9ef>false</span>, <span style=color:#a6e22e>tree</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Lane</span>(<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>6</span>,<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>6</span>,<span style=color:#a6e22e>Gap4</span>,<span style=color:#a6e22e>frames4</span>,<span style=color:#66d9ef>true</span>,<span style=color:#a6e22e>four</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>run</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>frameCount</span><span style=color:#f92672>-</span><span style=color:#a6e22e>prevmil</span><span style=color:#f92672>&gt;=</span><span style=color:#a6e22e>delayss</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>prevmil</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>frameCount</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>changeBG</span>()
+</span></span><span style=display:flex><span>  }  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>buttons</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Circkless</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>frames</span>,<span style=color:#a6e22e>horizon</span>,<span style=color:#a6e22e>timing</span>){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;<span style=color:#a6e22e>i</span><span style=color:#f92672>&lt;</span><span style=color:#a6e22e>leny</span>;<span style=color:#a6e22e>i</span><span style=color:#f92672>=</span><span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>frames</span><span style=color:#f92672>*</span><span style=color:#a6e22e>gap</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>24</span><span style=color:#f92672>*</span><span style=color:#ae81ff>20</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>7</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>24</span><span style=color:#f92672>*</span><span style=color:#ae81ff>18</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>1</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>24</span><span style=color:#f92672>*</span><span style=color:#ae81ff>17</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>5</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>24</span><span style=color:#f92672>*</span><span style=color:#ae81ff>16</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>6</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span><span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>24</span><span style=color:#f92672>*</span><span style=color:#ae81ff>15</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>7</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span><span style=color:#f92672>*</span><span style=color:#ae81ff>5</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>24</span><span style=color:#f92672>*</span><span style=color:#ae81ff>14</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>5</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span><span style=color:#f92672>*</span><span style=color:#ae81ff>6</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>24</span><span style=color:#f92672>*</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>9</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span><span style=color:#f92672>*</span><span style=color:#ae81ff>7</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>24</span><span style=color:#f92672>*</span><span style=color:#ae81ff>10</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>10</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>1</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span><span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>24</span><span style=color:#f92672>*</span><span style=color:#ae81ff>9</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>11</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span><span style=color:#f92672>*</span><span style=color:#ae81ff>9</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>24</span><span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span><span style=color:#f92672>*</span><span style=color:#ae81ff>10</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>24</span><span style=color:#f92672>*</span><span style=color:#ae81ff>7</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>13</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span><span style=color:#f92672>*</span><span style=color:#ae81ff>11</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>12</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>5</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span><span style=color:#f92672>*</span><span style=color:#ae81ff>12</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span><span style=color:#f92672>*</span><span style=color:#ae81ff>5</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span><span style=color:#f92672>*</span><span style=color:#ae81ff>13</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span><span style=color:#f92672>*</span><span style=color:#ae81ff>7</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>7</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>1</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>28</span><span style=color:#f92672>*</span><span style=color:#ae81ff>27</span>),<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>12</span><span style=color:#f92672>*</span><span style=color:#ae81ff>9</span>,<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#ae81ff>14</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>,<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Lane</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>frames</span>,<span style=color:#a6e22e>horizon</span>,<span style=color:#a6e22e>timing</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Seconds</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>frames</span>,<span style=color:#a6e22e>horizon</span>,<span style=color:#a6e22e>timing</span>){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;<span style=color:#a6e22e>i</span><span style=color:#f92672>&lt;</span><span style=color:#a6e22e>lenx</span>;<span style=color:#a6e22e>i</span><span style=color:#f92672>=</span><span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>frames</span><span style=color:#f92672>*</span><span style=color:#a6e22e>gap</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Letters</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>,<span style=color:#e6db74>&#39;w&#39;</span>,<span style=color:#a6e22e>gap</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Letters</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>,<span style=color:#e6db74>&#39;e&#39;</span>,<span style=color:#a6e22e>gap</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Letters</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#ae81ff>2</span><span style=color:#f92672>*</span><span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>,<span style=color:#e6db74>&#39;l&#39;</span>,<span style=color:#a6e22e>gap</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Letters</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#ae81ff>3</span><span style=color:#f92672>*</span><span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>,<span style=color:#e6db74>&#39;c&#39;</span>,<span style=color:#a6e22e>gap</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Letters</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#ae81ff>4</span><span style=color:#f92672>*</span><span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>,<span style=color:#e6db74>&#39;o&#39;</span>,<span style=color:#a6e22e>gap</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Letters</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>,<span style=color:#e6db74>&#39;m&#39;</span>,<span style=color:#a6e22e>gap</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Letters</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#ae81ff>6</span><span style=color:#f92672>*</span><span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>,<span style=color:#e6db74>&#39;e&#39;</span>,<span style=color:#a6e22e>gap</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Lane</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>frames</span>,<span style=color:#a6e22e>horizon</span>,<span style=color:#a6e22e>timing</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Lane</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>frames</span>,<span style=color:#a6e22e>horizon</span>,<span style=color:#a6e22e>timing</span>){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>times</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>100</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>ones</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>twos</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>espace</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>frames</span><span style=color:#f92672>*</span><span style=color:#a6e22e>gap</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>horizon</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>times</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>ceil</span>(<span style=color:#a6e22e>lenx</span><span style=color:#f92672>/</span><span style=color:#a6e22e>espace</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>lenx</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>frames</span><span style=color:#f92672>*</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>-</span><span style=color:#a6e22e>gap</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>ones</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>times</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>ceil</span>(<span style=color:#a6e22e>leny</span><span style=color:#f92672>/</span><span style=color:#a6e22e>espace</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>leny</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>frames</span><span style=color:#f92672>*</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>-</span><span style=color:#a6e22e>gap</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>twos</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>lena</span><span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>timing</span><span style=color:#f92672>-</span><span style=color:#a6e22e>gap</span><span style=color:#f92672>&lt;</span><span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>lena</span><span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>sliders</span>.<span style=color:#a6e22e>value</span>())
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>lenx</span><span style=color:#f92672>*</span><span style=color:#a6e22e>ones</span><span style=color:#f92672>*</span><span style=color:#a6e22e>lena</span><span style=color:#f92672>+</span><span style=color:#a6e22e>twos</span><span style=color:#f92672>*</span>(<span style=color:#a6e22e>timing</span><span style=color:#f92672>-</span><span style=color:#a6e22e>gap</span>),<span style=color:#a6e22e>twos</span><span style=color:#f92672>*</span><span style=color:#a6e22e>leny</span><span style=color:#f92672>*</span><span style=color:#a6e22e>lena</span><span style=color:#f92672>+</span>(<span style=color:#a6e22e>timing</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>gap</span>)<span style=color:#f92672>*</span><span style=color:#a6e22e>ones</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>times</span>;<span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>twos</span><span style=color:#f92672>*</span>(<span style=color:#a6e22e>espace</span><span style=color:#f92672>*</span><span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>timing</span>),<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>ones</span><span style=color:#f92672>*</span>(<span style=color:#a6e22e>espace</span><span style=color:#f92672>*</span><span style=color:#a6e22e>i</span><span style=color:#f92672>+</span><span style=color:#a6e22e>timing</span>),<span style=color:#a6e22e>lenx</span>,<span style=color:#a6e22e>leny</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mouseReleased</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>sliders</span>.<span style=color:#a6e22e>released</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>button</span>.<span style=color:#a6e22e>released</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>checkbox</span>.<span style=color:#a6e22e>released</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mousePressed</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>sliders</span>.<span style=color:#a6e22e>Pressed</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>button</span>.<span style=color:#a6e22e>Pressed</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>checkbox</span>.<span style=color:#a6e22e>Pressed</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mouseDragged</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>refY</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>mouseY</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>one</span><span style=color:#f92672>==</span><span style=color:#ae81ff>0</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>one</span><span style=color:#f92672>=</span><span style=color:#a6e22e>frames1</span><span style=color:#f92672>*</span><span style=color:#a6e22e>Gap1</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>one</span><span style=color:#f92672>--</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>tree</span><span style=color:#f92672>==</span><span style=color:#ae81ff>0</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>tree</span><span style=color:#f92672>=</span><span style=color:#a6e22e>frames3</span><span style=color:#f92672>*</span><span style=color:#a6e22e>Gap3</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>tree</span><span style=color:#f92672>--</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>one</span><span style=color:#f92672>==</span><span style=color:#a6e22e>frames1</span><span style=color:#f92672>*</span><span style=color:#a6e22e>Gap1</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>one</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>one</span><span style=color:#f92672>++</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>tree</span><span style=color:#f92672>==</span><span style=color:#a6e22e>frames3</span><span style=color:#f92672>*</span><span style=color:#a6e22e>Gap3</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>tree</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>tree</span><span style=color:#f92672>++</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>refX</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>mouseX</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>two</span><span style=color:#f92672>==</span><span style=color:#ae81ff>0</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>two</span><span style=color:#f92672>=</span><span style=color:#a6e22e>frames2</span><span style=color:#f92672>*</span><span style=color:#a6e22e>Gap2</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>two</span><span style=color:#f92672>--</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>four</span><span style=color:#f92672>==</span><span style=color:#ae81ff>0</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>four</span><span style=color:#f92672>=</span><span style=color:#a6e22e>frames4</span><span style=color:#f92672>*</span><span style=color:#a6e22e>Gap4</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>four</span><span style=color:#f92672>--</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>two</span><span style=color:#f92672>==</span><span style=color:#a6e22e>frames2</span><span style=color:#f92672>*</span><span style=color:#a6e22e>Gap2</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>two</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>two</span><span style=color:#f92672>++</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>four</span><span style=color:#f92672>==</span><span style=color:#a6e22e>frames4</span><span style=color:#f92672>*</span><span style=color:#a6e22e>Gap4</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>four</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>four</span><span style=color:#f92672>++</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>refY</span><span style=color:#f92672>=</span><span style=color:#a6e22e>mouseY</span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>refX</span><span style=color:#f92672>=</span><span style=color:#a6e22e>mouseX</span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>sliders</span>.<span style=color:#a6e22e>Dragged</span>()
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>changeBG</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>two</span><span style=color:#f92672>==</span>(<span style=color:#a6e22e>frames2</span><span style=color:#f92672>*</span><span style=color:#a6e22e>Gap2</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>)){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>two</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>two</span><span style=color:#f92672>++</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>one</span><span style=color:#f92672>==</span><span style=color:#a6e22e>frames1</span><span style=color:#f92672>*</span><span style=color:#a6e22e>Gap1</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>one</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>one</span><span style=color:#f92672>++</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>tree</span><span style=color:#f92672>==</span><span style=color:#a6e22e>frames3</span><span style=color:#f92672>*</span><span style=color:#a6e22e>Gap3</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>tree</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>tree</span><span style=color:#f92672>++</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>four</span><span style=color:#f92672>==</span><span style=color:#a6e22e>frames4</span><span style=color:#f92672>*</span><span style=color:#a6e22e>Gap4</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>four</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>four</span><span style=color:#f92672>++</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>myCheckedEvent</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>checkbox</span>.<span style=color:#a6e22e>check</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>run</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>  } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>run</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Letters</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>max</span>,<span style=color:#a6e22e>up</span>,<span style=color:#a6e22e>letter</span>,<span style=color:#a6e22e>gap</span>){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>porct</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>i</span><span style=color:#f92672>/</span><span style=color:#a6e22e>max</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>switch</span>(<span style=color:#a6e22e>letter</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;w&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>2</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>-</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>2</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>2</span><span style=color:#f92672>*</span><span style=color:#a6e22e>up</span><span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>)
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span><span style=color:#f92672>*</span><span style=color:#a6e22e>up</span><span style=color:#f92672>+</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)<span style=color:#f92672>*</span><span style=color:#a6e22e>up</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>)
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#ae81ff>2</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span><span style=color:#f92672>*</span><span style=color:#a6e22e>up</span><span style=color:#f92672>-</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>)<span style=color:#f92672>*</span><span style=color:#a6e22e>up</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>)
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span>(<span style=color:#a6e22e>porct</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>2</span><span style=color:#f92672>*</span><span style=color:#a6e22e>up</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>)
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;e&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>4</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&lt;</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>){
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>)
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span>)
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;l&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>4</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span>)
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span>)
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;o&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>12</span><span style=color:#f92672>/</span><span style=color:#ae81ff>16</span>){
+</span></span><span style=display:flex><span>         <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>, <span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>5</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>){
+</span></span><span style=display:flex><span>         <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>5</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span><span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>5</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>, <span style=color:#a6e22e>gap</span>, <span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>5</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>)
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>){
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>){
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>sqrt</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span>)
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>5</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>sqrt</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>, <span style=color:#a6e22e>gap</span>, <span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>sqrt</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>)
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span><span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>sqrt</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>, <span style=color:#a6e22e>gap</span>, <span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>sqrt</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;c&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;=</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>){
+</span></span><span style=display:flex><span>         <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>, <span style=color:#a6e22e>gap</span>, <span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>5</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>, <span style=color:#a6e22e>gap</span>, <span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>5</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>){
+</span></span><span style=display:flex><span>         <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>5</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span><span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>5</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>, <span style=color:#a6e22e>gap</span>, <span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>5</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>)
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>){
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>){
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>sqrt</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span>)
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>5</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>sqrt</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>, <span style=color:#a6e22e>gap</span>, <span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>8</span><span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>sqrt</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>8</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>8</span>)
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span><span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>sqrt</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>, <span style=color:#a6e22e>gap</span>, <span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>sqrt</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>*</span><span style=color:#ae81ff>4</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;m&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&lt;</span><span style=color:#ae81ff>3</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span><span style=color:#f92672>&amp;&amp;</span><span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>di</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>){
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>di</span> <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span><span style=color:#f92672>*</span><span style=color:#a6e22e>di</span><span style=color:#f92672>*</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>),<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>)
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>gap</span>,<span style=color:#a6e22e>up</span>)
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Circkle</span>(<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>max</span>,<span style=color:#a6e22e>up</span>,<span style=color:#a6e22e>i</span>,<span style=color:#a6e22e>porcx</span>,<span style=color:#a6e22e>porcy</span>,<span style=color:#a6e22e>gap</span>){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>x</span><span style=color:#f92672>=</span><span style=color:#a6e22e>x</span><span style=color:#f92672>-</span><span style=color:#a6e22e>max</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>y</span><span style=color:#f92672>=</span><span style=color:#a6e22e>y</span><span style=color:#f92672>-</span><span style=color:#a6e22e>up</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>i</span><span style=color:#f92672>&lt;</span><span style=color:#a6e22e>y</span><span style=color:#f92672>||</span><span style=color:#a6e22e>i</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>up</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>i</span><span style=color:#f92672>=</span><span style=color:#a6e22e>i</span><span style=color:#f92672>-</span><span style=color:#a6e22e>y</span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>porct</span><span style=color:#f92672>=</span><span style=color:#a6e22e>i</span><span style=color:#f92672>/</span><span style=color:#a6e22e>up</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>lporcx</span><span style=color:#f92672>=</span>(<span style=color:#ae81ff>1</span><span style=color:#f92672>-</span><span style=color:#a6e22e>porcx</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>lporcy</span><span style=color:#f92672>=</span>(<span style=color:#ae81ff>1</span><span style=color:#f92672>-</span><span style=color:#a6e22e>porcy</span>)<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>lporcy</span><span style=color:#f92672>+</span><span style=color:#a6e22e>porcy</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#a6e22e>lporcy</span><span style=color:#f92672>-</span><span style=color:#a6e22e>porcy</span>)<span style=color:#f92672>/</span><span style=color:#a6e22e>lporcy</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>*</span><span style=color:#a6e22e>max</span><span style=color:#f92672>*</span><span style=color:#a6e22e>lporcx</span>, <span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>max</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>porct</span><span style=color:#f92672>-</span><span style=color:#a6e22e>lporcy</span><span style=color:#f92672>-</span><span style=color:#a6e22e>porcy</span>)<span style=color:#f92672>/</span><span style=color:#a6e22e>lporcy</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>*</span><span style=color:#a6e22e>max</span><span style=color:#f92672>*</span><span style=color:#a6e22e>lporcx</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>  }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>porct</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>lporcy</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>max</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>  }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>lporcy</span><span style=color:#f92672>-</span><span style=color:#a6e22e>porct</span>)<span style=color:#f92672>/</span><span style=color:#a6e22e>lporcy</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>*</span><span style=color:#a6e22e>max</span><span style=color:#f92672>*</span><span style=color:#a6e22e>lporcx</span>, <span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>max</span><span style=color:#f92672>-</span><span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>lporcy</span><span style=color:#f92672>-</span><span style=color:#a6e22e>porct</span>)<span style=color:#f92672>/</span><span style=color:#a6e22e>lporcy</span>,<span style=color:#ae81ff>2</span>)<span style=color:#f92672>*</span><span style=color:#a6e22e>max</span><span style=color:#f92672>*</span><span style=color:#a6e22e>lporcx</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>gap</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>buttons</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>button</span>.<span style=color:#a6e22e>draw</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>sliders</span>.<span style=color:#a6e22e>draw</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>checkbox</span>.<span style=color:#a6e22e>draw</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>cicles</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>moves</span><span style=color:#f92672>=</span><span style=color:#a6e22e>moves</span><span style=color:#f92672>+</span><span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>180</span><span style=color:#f92672>*</span><span style=color:#a6e22e>speeds</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>moves</span><span style=color:#f92672>&gt;=</span><span style=color:#ae81ff>2</span><span style=color:#f92672>*</span><span style=color:#a6e22e>PI</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>moves</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Fig</span>(<span style=color:#a6e22e>xy</span>,<span style=color:#a6e22e>dif</span>){
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>porct</span><span style=color:#f92672>=</span><span style=color:#a6e22e>sin</span>(<span style=color:#a6e22e>moves</span><span style=color:#f92672>+</span><span style=color:#a6e22e>dif</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>vertex</span>(<span style=color:#a6e22e>xx</span><span style=color:#f92672>+</span><span style=color:#a6e22e>porct</span><span style=color:#f92672>*</span><span style=color:#a6e22e>xy</span>[<span style=color:#ae81ff>0</span>],<span style=color:#a6e22e>yy</span><span style=color:#f92672>+</span><span style=color:#a6e22e>porct</span><span style=color:#f92672>*</span><span style=color:#a6e22e>xy</span>[<span style=color:#ae81ff>1</span>]);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>ciclers</span>(<span style=color:#a6e22e>xy</span>,<span style=color:#a6e22e>dif</span>){
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>porct</span><span style=color:#f92672>=</span><span style=color:#a6e22e>sin</span>(<span style=color:#a6e22e>moves</span><span style=color:#f92672>+</span><span style=color:#a6e22e>dif</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pint</span><span style=color:#f92672>=</span>(<span style=color:#a6e22e>dif</span><span style=color:#f92672>-</span><span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)<span style=color:#f92672>/</span><span style=color:#a6e22e>PI</span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>pint</span><span style=color:#f92672>*</span><span style=color:#a6e22e>alphass</span>.<span style=color:#a6e22e>value</span>(),<span style=color:#a6e22e>pint</span><span style=color:#f92672>*</span>(<span style=color:#ae81ff>100</span><span style=color:#f92672>-</span><span style=color:#a6e22e>alphass</span>.<span style=color:#a6e22e>value</span>()),<span style=color:#ae81ff>100</span><span style=color:#f92672>-</span><span style=color:#a6e22e>pint</span><span style=color:#f92672>*</span><span style=color:#a6e22e>alphass</span>.<span style=color:#a6e22e>value</span>());
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>xx</span><span style=color:#f92672>+</span><span style=color:#a6e22e>porct</span><span style=color:#f92672>*</span><span style=color:#a6e22e>xy</span>[<span style=color:#ae81ff>0</span>],<span style=color:#a6e22e>yy</span><span style=color:#f92672>+</span><span style=color:#a6e22e>porct</span><span style=color:#f92672>*</span><span style=color:#a6e22e>xy</span>[<span style=color:#ae81ff>1</span>],<span style=color:#a6e22e>cLen</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>liner</span>(<span style=color:#a6e22e>xy</span>,<span style=color:#a6e22e>dif</span>){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>line</span>(<span style=color:#a6e22e>xx</span><span style=color:#f92672>-</span><span style=color:#a6e22e>xy</span>[<span style=color:#ae81ff>0</span>],<span style=color:#a6e22e>yy</span><span style=color:#f92672>-</span><span style=color:#a6e22e>xy</span>[<span style=color:#ae81ff>1</span>],<span style=color:#a6e22e>xx</span><span style=color:#f92672>+</span><span style=color:#a6e22e>xy</span>[<span style=color:#ae81ff>0</span>],<span style=color:#a6e22e>yy</span><span style=color:#f92672>+</span><span style=color:#a6e22e>xy</span>[<span style=color:#ae81ff>1</span>]);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>rectar</span>(<span style=color:#a6e22e>ang</span>,<span style=color:#a6e22e>len</span>){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>x1</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>len</span><span style=color:#f92672>*</span><span style=color:#a6e22e>sin</span>(<span style=color:#a6e22e>ang</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>y1</span> <span style=color:#f92672>=</span><span style=color:#a6e22e>len</span><span style=color:#f92672>*</span><span style=color:#a6e22e>cos</span>(<span style=color:#a6e22e>ang</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> [<span style=color:#a6e22e>x1</span>,<span style=color:#a6e22e>y1</span>];
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>LineUp</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>lines</span><span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>updateAng</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>LineDown</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>lines</span><span style=color:#f92672>--</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>lines</span><span style=color:#f92672>&lt;</span><span style=color:#ae81ff>1</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>lines</span><span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>updateAng</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>updateAng</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>angs</span><span style=color:#f92672>=</span><span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#a6e22e>lines</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Figs</span>(){
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>figse</span> <span style=color:#f92672>=</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>figse</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Figso</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>figso</span> <span style=color:#f92672>=</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>figso</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Button</span>{
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>label</span>,<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>){
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span><span style=color:#f92672>=</span><span style=color:#a6e22e>x</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>=</span><span style=color:#a6e22e>y</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span><span style=color:#f92672>=</span><span style=color:#ae81ff>10</span><span style=color:#f92672>*</span><span style=color:#a6e22e>label</span>.<span style=color:#a6e22e>length</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>=</span><span style=color:#ae81ff>20</span>;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>label</span><span style=color:#f92672>=</span><span style=color:#a6e22e>label</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>colore</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>color</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>200</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span><span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>alpha</span><span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {}
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>draw</span>(){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>noStroke</span>()
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>bart</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>colore</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span>){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>bart</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>lerpColor</span>(<span style=color:#a6e22e>bart</span>, <span style=color:#a6e22e>color</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>), <span style=color:#ae81ff>0.5</span>);
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>bart</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>rect</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>textWidth</span>(<span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>text</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>label</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span><span style=color:#f92672>/</span><span style=color:#ae81ff>10</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>mousePressed</span>(<span style=color:#a6e22e>alpha</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>alpha</span><span style=color:#f92672>=</span><span style=color:#a6e22e>alpha</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Pressed</span>(){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>mouseX</span><span style=color:#f92672>&gt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>mouseX</span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span> <span style=color:#f92672>&amp;&amp;</span><span style=color:#a6e22e>mouseY</span><span style=color:#f92672>&gt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>mouseY</span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span><span style=color:#f92672>=</span><span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>alpha</span>()  
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>released</span>(){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span><span style=color:#f92672>=</span><span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>color</span>(<span style=color:#a6e22e>colos</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>colore</span><span style=color:#f92672>=</span> <span style=color:#a6e22e>colos</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CheckBox</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Button</span>{
+</span></span><span style=display:flex><span>   <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>label</span>,<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>ini</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>super</span>(<span style=color:#a6e22e>label</span>,<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span><span style=color:#f92672>=</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span><span style=color:#f92672>*</span><span style=color:#ae81ff>4</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>check</span><span style=color:#f92672>=</span><span style=color:#a6e22e>ini</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>changed</span>(<span style=color:#a6e22e>alpha</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>alpha</span><span style=color:#f92672>=</span><span style=color:#a6e22e>alpha</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>draw</span>(){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>noStroke</span>()
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>bart</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>200</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>check</span>){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>bart</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>bart</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>rect</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span><span style=color:#f92672>/</span><span style=color:#ae81ff>4</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>fill</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>colore</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>textWidth</span>(<span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>text</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>label</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Pressed</span>(){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>mouseX</span><span style=color:#f92672>&gt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>mouseX</span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span> <span style=color:#f92672>&amp;&amp;</span><span style=color:#a6e22e>mouseY</span><span style=color:#f92672>&gt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>mouseY</span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span><span style=color:#f92672>=</span><span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>released</span>(){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span><span style=color:#f92672>=</span><span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>check</span><span style=color:#f92672>=!</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>check</span>
+</span></span><span style=display:flex><span>          <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>alpha</span>()
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Slider</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Button</span>{
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>label</span>,<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>,<span style=color:#a6e22e>ini</span>,<span style=color:#a6e22e>end</span>,<span style=color:#a6e22e>value</span>,<span style=color:#a6e22e>step</span>){
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>super</span>(<span style=color:#a6e22e>label</span>,<span style=color:#a6e22e>x</span>,<span style=color:#a6e22e>y</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span><span style=color:#f92672>=</span> <span style=color:#a6e22e>max</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span>,(<span style=color:#a6e22e>end</span><span style=color:#f92672>-</span><span style=color:#a6e22e>ini</span>)<span style=color:#f92672>+</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>3</span><span style=color:#f92672>*</span><span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>ini</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>ini</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>end</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>end</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>step</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>step</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>valuee</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>value</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>colore</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>color</span>(<span style=color:#ae81ff>50</span>, <span style=color:#ae81ff>50</span>, <span style=color:#ae81ff>50</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>alpha</span><span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {}
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>draw</span>(){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>noStroke</span>()
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>50</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rect</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>textSize</span>(<span style=color:#ae81ff>13</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>text</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>label</span>, <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>100</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rect</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>fill</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>colore</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rect</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>valuee</span><span style=color:#f92672>/</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>end</span><span style=color:#f92672>-</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>ini</span>)<span style=color:#f92672>*</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span><span style=color:#f92672>*</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>step</span><span style=color:#f92672>/</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>end</span><span style=color:#f92672>-</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>ini</span>),<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>value</span>(){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>valuee</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Pressed</span>(){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>mouseX</span><span style=color:#f92672>&gt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>mouseX</span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span> <span style=color:#f92672>&amp;&amp;</span><span style=color:#a6e22e>mouseY</span><span style=color:#f92672>&gt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>mouseY</span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>h</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span><span style=color:#f92672>=</span><span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>Dragged</span>(){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isPressed</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>valuee</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>map</span>(<span style=color:#a6e22e>mouseX</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>w</span>,<span style=color:#ae81ff>0</span>,(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>end</span><span style=color:#f92672>-</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>ini</span>)<span style=color:#f92672>/</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>step</span>,<span style=color:#66d9ef>true</span>)
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>valuee</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>int</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>valuee</span><span style=color:#f92672>*</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>step</span><span style=color:#f92672>+</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>ini</span>)
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>print</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>valuee</span>)
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}</span></span></code></pre></div></div></details><iframe id=MaskKineGram style=width:500px;height:500px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script src=/visualcomp/sketches/MaskKineGram.js></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://geramirezl.github.io/visualcomp/commit/f9d4d978371a394f3a22d37f479ef9d0a5f3759c title='Last modified by FabianMontes | March 26, 2023' target=_blank rel=noopener><img src=/visualcomp/svg/calendar.svg class=book-icon alt=Calendar>
+<span>March 26, 2023</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#ejercicio-5>Ejercicio 5</a><ul><li><a href=#introducción>Introducción</a></li><li><a href=#transfondo-o-teoria>Transfondo o Teoria</a><ul><li><a href=#kineograph-or-flipbook>Kineograph or flipbook</a></li><li><a href=#scanimation>Scanimation</a></li><li><a href=#moiré-pattern>Moiré pattern</a></li><li><a href=#frames-and-frames>Frames and frames</a></li></ul></li><li><a href=#codigo-utilizado>Codigo utilizado</a></li><li><a href=#resultado>Resultado</a></li><li><a href=#conclusiones>Conclusiones</a></li><li><a href=#trabajos-futuros>Trabajos Futuros</a></li><li><a href=#visual-masking>Visual masking</a><ul><li><a href=#mascara-movimiento>Mascara movimiento</a></li><li><a href=#frames-unicos>Frames unicos</a></li><li><a href=#animacion-movimientos>Animacion/ movimientos</a></li></ul></li><li><a href=#movimientos>movimientos</a></li></ul></li></ul></nav></div></aside></main></body></html>
