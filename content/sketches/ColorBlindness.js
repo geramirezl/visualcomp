@@ -1,24 +1,18 @@
+/* 
+  Code based in the following articles:
 
-// https://dl.acm.org/doi/10.1145/1240624.1240855
-// https://sci-hub.se/10.1145/1240624.1240855
-// https://www.irjet.net/archives/V7/i5/IRJET-V7I5687.pdf
-// http://vision.psychol.cam.ac.uk/jdmollon/papers/colourmaps.pdf
-
-  /*
-Color.Vision.Daltonize : v0.1
-------------------------------
-"Analysis of Color Blindness" by Onur Fidaner, Poliang Lin and Nevran Ozguven.
-http://scien.stanford.edu/class/psych221/projects/05/ofidaner/project_report.pdf
-"Digital Video Colourmaps for Checking the Legibility of Displays by Dichromats" by FranÃ§oise
-ViÃ©not, Hans Brettel and John D. Mollon
+https://dl.acm.org/doi/10.1145/1240624.1240855
+https://sci-hub.se/10.1145/1240624.1240855
+https://www.irjet.net/archives/V7/i5/IRJET-V7I5687.pdf
 http://vision.psychol.cam.ac.uk/jdmollon/papers/colourmaps.pdf
+http://scien.stanford.edu/class/psych221/projects/05/ofidaner/project_report.pdf
+
 */
 
 let type;
 let amount;
 
 let CVDMatrix;
-
 let cvdi;
 let cvdi_a;
 let cvdi_b;
@@ -145,5 +139,3 @@ function handleFile(file) {
   flag = false;
   
 }
-
-
