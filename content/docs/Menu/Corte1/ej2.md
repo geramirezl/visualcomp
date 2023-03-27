@@ -2,6 +2,33 @@
 
 Implement a color mapping application that helps people who are color blind see the colors around them.
 
+## CVD
+
+Daltonismo o deficiencia de color(color vision deficiency) CVD, es una barrera para un uso eficiente del computador. Implementar
+una forma de asistir colores en una forma universal es necesario.
+
+## Implementacion de una aplicacion
+Las dificultades se presentan dadas las distintas formas de daltonismo y sus varianzas de persona a persona. Para ello nos asistimos
+de los siguientes articulos 
+
+[Color Blindness Algorithm Comparison for Developing an Android](https://www.irjet.net/archives/V7/i5/IRJET-V7I5687.pdf)
+[An interface to support color blind computer users](https://dl.acm.org/doi/10.1145/1240624.1240855)
+[Digital Video Colourmaps for Checking the Legibility of Displays by Dichromats](http://vision.psychol.cam.ac.uk/jdmollon/papers/colourmaps.pdf)
+
+La idea es a partir de una imagen ingresada por el usuario, convertirla a una imagen visible para los distintos tipos de daltonismo.
+
+### LMS
+
+El codigo se basa en el uso del espacio de color LMS, que representa la respuesta de los distintos conos del ojo humano: corto, mediano y largas longitudes de onda (long, medium, short)
+
+La longitud de onda corta (S) esta asociada al azul, la longitud de onda mediana (M) esta asociada al verde y la longitud de onda larga (L) al rojo
+
+## Explicacion del algoritmo
+
+La idea es convertir los datos de la imagen ingresada del espacio de color RGB al LMS, y luego a travez de la multiplicacion de una matriz de pesos especifica a cada uno de los tipos de daltonismo se ajusta a datos que el usuario pueda observar si sufre uno de estas deficiencias.
+
+Por el momento solo estan aplicadas 3 formas de daltonismo: Protanope, Deuteranope, Tritanope
+
 ## Mapping Application
 
 
@@ -11,11 +38,9 @@ Implement a color mapping application that helps people who are color blind see 
 /* 
   Code based in the following articles:
 
-https://dl.acm.org/doi/10.1145/1240624.1240855
-https://sci-hub.se/10.1145/1240624.1240855
+https://dl.acm.org/doi/10.1145/1240624.1240855 (https://sci-hub.se/10.1145/1240624.1240855)
 https://www.irjet.net/archives/V7/i5/IRJET-V7I5687.pdf
 http://vision.psychol.cam.ac.uk/jdmollon/papers/colourmaps.pdf
-http://scien.stanford.edu/class/psych221/projects/05/ofidaner/project_report.pdf
 
 */
 
