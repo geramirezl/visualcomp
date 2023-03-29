@@ -11,9 +11,9 @@ una forma de asistir colores en una forma universal es necesario.
 Las dificultades se presentan dadas las distintas formas de daltonismo y sus varianzas de persona a persona. Para ello nos asistimos
 de los siguientes articulos 
 
-[Color Blindness Algorithm Comparison for Developing an Android](https://www.irjet.net/archives/V7/i5/IRJET-V7I5687.pdf)
-[An interface to support color blind computer users](https://dl.acm.org/doi/10.1145/1240624.1240855)
-[Digital Video Colourmaps for Checking the Legibility of Displays by Dichromats](http://vision.psychol.cam.ac.uk/jdmollon/papers/colourmaps.pdf)
+- [Color Blindness Algorithm Comparison for Developing an Android](https://www.irjet.net/archives/V7/i5/IRJET-V7I5687.pdf)
+- [An interface to support color blind computer users](https://dl.acm.org/doi/10.1145/1240624.1240855)
+- [Digital Video Colourmaps for Checking the Legibility of Displays by Dichromats](http://vision.psychol.cam.ac.uk/jdmollon/papers/colourmaps.pdf)
 
 La idea es a partir de una imagen ingresada por el usuario, convertirla a una imagen visible para los distintos tipos de daltonismo.
 
