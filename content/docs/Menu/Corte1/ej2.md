@@ -320,4 +320,4 @@ function handleFile(file) {
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/visualcomp/sketches/ColorBlindness.js" width="2000" height="2000" >}}
+{{< p5-iframe sketch="/visualcomp/sketches/ColorBlindness.js" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:200px;width:100%;border:none;overflow:hidden;" >}}
