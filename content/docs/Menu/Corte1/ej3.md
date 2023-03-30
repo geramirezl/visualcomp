@@ -11,8 +11,14 @@ Cada color pixelado se calcula con el promedio de los colores en el grupo de la 
 ### Coherencia espacial
 Cada color pixelado se toma de un color único arbitrario encontrado en cada grupo de la imagen original.
 Se buscan agrupar pixeles que tengan que ver entre ellos (cercanía y características visuales similares).
-### Diferencia
-La principal diferencia entre ambas técnicas es que la técnica de coherencia espacial genera bloques de píxeles que son visualmente más coherentes que los bloques generados por la técnica de promedio de color, lo que puede resultar en una imagen más nítida y definida. Sin embargo, la técnica de coherencia espacial puede ser más compleja y computacionalmente mayor que la técnica de promedio de color, por lo que puede requerir más tiempo de procesamiento.
+
+### Ejercicio
+Como explicamos antes, se planea usar la videocamara y el pixelator en los dos modos. 
+Primero toca dar permiso a la aplicación para utilizar la videocamara.
+Luego se utiliza el modo de promedio de colores por defecto y con los botones respectivos se puede cambiar el tamaño de los cuadros que se van tomando y el modo (promedio de colores o de coherencia espacial).
+Con respecto al código, se define el modo promedio de colores tomando el promedio de cada valor rgb tomado en el cuadro definido por el step.
+El otro modo de coherencia espacial, se toma de una forma similar, pero se tiene en cuenta un pequeño paso o valor de los otros cuadros, es decir, el promedio no es solo del cuadro tomado sino teniendo en cuenta los cuadros adyacentes.
+
 
 {{< details title="Código" open=false >}}
 {{< highlight js >}}
@@ -136,3 +142,10 @@ function spatialCoherenceMode() {
 {{< /highlight >}}
 {{< /details >}}
 {{< p5-iframe sketch="/visualcomp/sketches/pixelator.js" width="700" height="700" >}}
+
+### Diferencia
+La principal diferencia entre ambas técnicas es que la técnica de coherencia espacial genera bloques de píxeles que son visualmente más coherentes que los bloques generados por la técnica de promedio de color, lo que puede resultar en una imagen más nítida y definida. Sin embargo, la técnica de coherencia espacial puede ser más compleja y computacionalmente mayor que la técnica de promedio de color, por lo que puede requerir más tiempo de procesamiento.
+
+### Trabajos Futuros 
+
+Para tomar un ejemplo más exacto y diferenciar los modos de promedio y coherencia espacial, para el modo de coherencia espacial se puede utilizar el algoritmo de k-means. Se pueden agrupar pixeles que tienen valores rgb similares y en teoría llegar a una coherencia más acertada con respecto a los colores de los pixeles.
