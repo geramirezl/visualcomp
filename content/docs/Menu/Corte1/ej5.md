@@ -40,7 +40,7 @@ function setup() {
 
 function draw() {
   background(220);
-  if(pager>0){
+  if(pager>0){ /// se le da unos frames donde la imagen se demora, para dar la sensacion de un paso de pagina.
     fill(200);
     rect(0,0,width,height)
     pager--;
@@ -480,7 +480,7 @@ function draw() {
   Circkless(0,0,width/2,height,Gap1,frames1,false, one);
   Seconds(width/2,height/2,width/2,height/2,Gap2,frames2,true, two);
   Lane(width/2+width/60,height/20,width/2-width/60*2,height/2-height/30*2,Gap3,frames3,true, tree,5*PI/180);
-  Lane(width/2+width/60,height/20,width/2-width/60*2,height/2-height/30*2,Gap4,frames4,true,0,0);
+  Lane(width/2+width/60,height/20,width/2-width/60*2,height/2-height/30*2,Gap4,frames4,true,four,0);
   
   if(run && frameCount-prevmil>=delayss){
     prevmil = frameCount;
@@ -592,50 +592,55 @@ function mousePressed(){
 }
 
 function mouseDragged() {
-  if(refY>mouseY){
-    if(one==0){
-      one=frames1*Gap1-1;
+  if(abs(refY-mouseY)>abs(refX-mouseX)){
+    if(refY>mouseY){
+      if(one==0){
+        one=frames1*Gap1-1;
+      }else{
+        one--
+      }
+      if(tree==0){
+        tree=frames3*Gap3-1;
+      }else{
+        tree--
+      }
     }else{
-      one--
-    }
-    if(tree==0){
-      tree=frames3*Gap3-1;
-    }else{
-      tree--
-    }
-  }else{
-    if(one==frames1*Gap1-1){
-      one=0;
-    }else{
-      one++
-    }
-    if(tree==frames3*Gap3-1){
-      tree=0;
-    }else{
-      tree++
-    }
-  }
-  if(refX>mouseX){
-    if(two==0){
-      two=frames2*Gap2-1;
-    }else{
-      two--
-    }
-    if(four==0){
-      four=frames4*Gap4-1;
-    }else{
-      four--
+      if(one==frames1*Gap1-1){
+        one=0;
+      }else{
+        one++
+      }
+      if(tree==frames3*Gap3-1){
+        tree=0;
+      }else{
+        tree++
+      }
     }
   }else{
-    if(two==frames2*Gap2-1){
-      two=0;
+    if(refX>mouseX){
+      if(two==0){
+        two=frames2*Gap2-1;
+      }else{
+        two--
+      }
+      if(four==0){
+        four=frames4*Gap4-1;
+      }else{
+        four--
+      }
+      
     }else{
-      two++
-    }
-    if(four==frames4*Gap4-1){
-      four=0;
-    }else{
-      four++
+      if(two==frames2*Gap2-1){
+        two=0;
+      }else{
+        two++
+      }
+      if(four==frames4*Gap4-1){
+        four=0;
+      }else{
+        four++
+      }
+      
     }
   }
   refY=mouseY
@@ -777,71 +782,11 @@ function Circkle(x,y,max,up,i,porcx,porcy,gap){
   }
   
 }
-
-  
   
 function buttons(){
   button.draw();
   sliders.draw();
   checkbox.draw();
-}
-
-function cicles(){
-  moves=moves+PI/180*speeds;
-  if(moves>=2*PI){
-    moves=0;
-  }
-}
-
-function Fig(xy,dif){
-  
-  porct=sin(moves+dif);
-  vertex(xx+porct*xy[0],yy+porct*xy[1]);
-}
-
-function ciclers(xy,dif){
-  
-  porct=sin(moves+dif);
-  pint=(dif-PI/2)/PI
-  fill(pint*alphass.value(),pint*(100-alphass.value()),100-pint*alphass.value());
-  circle(xx+porct*xy[0],yy+porct*xy[1],cLen);
-  noFill();
-}
-
-function liner(xy,dif){
-  line(xx-xy[0],yy-xy[1],xx+xy[0],yy+xy[1]);
-}
-
-function rectar(ang,len){
-  x1 = len*sin(ang);
-  y1 =len*cos(ang);
-  return [x1,y1];
-}
-
-function LineUp(){
-  lines++;
-  updateAng();
-}
-
-function LineDown(){
-  lines--;
-  if(lines<1){
-    lines=1;
-  }
-  updateAng();
-}
-
-function updateAng(){
-  angs=PI/lines;
-}
-
-function Figs(){
-  
-  figse = !figse
-}
-
-function Figso(){
-  figso = !figso
 }
 
 class Button{
@@ -887,13 +832,12 @@ class Button{
       this.colore= colos
     }
 }
-
 {{< /highlight >}}
 {{< /details >}}
 
 Las Partes ah resaltar del codigo serian las previas mencionadas, primero la funcion lane, la cual sirve para general rendijas lineas de todo tipo, recibiendo primero las cuatro valores que determinan su posicion, ancho y alto (x,y,lenx,leny), su Gap y frames, si la rendija es horizontal (o vertical en caso contrario), la posicion actual o el frame actual en el que se encuentra, y su rotacion. utilizando esto se crea una rendija con los valores especificados.
 
-Esta es la funcion utilizada para todas las rendijas en el programa.
+Esta es la funcion utilizada para todas las rendijas o mallas en el programa.
 
 {{< details title="lane" open=true >}}
 {{< highlight js >}}
@@ -1098,7 +1042,8 @@ function Circkle(x,y,max,up,i,porcx,porcy,gap){
 ## Resultado
 {{< hint info >}}
 **Botones y movimientos**  
-Para interactuar con el programa se puede arrastrar el mouse para mover las renjillas, o usar los botones: snap para moverte un solo fotograma, run para mantener corriendo las rendijas constantemente y shade para quitar las rendijas.
+Para interactuar con el programa se puede arrastrar el mouse para mover las renjillas, moverlo horizontalmente afectara los de la izquierda sin contar el qque esta rotado, y verticalmente afectara el de la derecha y el rotado. tambien es posible navegar utilizando los botones de la parte superior: snap desplaza un unico pixel todos las rendijas, run realiza un movimiento constante de las mismas constantemente y shade quita o pone las rendijas.
+Como dato curioso, snap interactua mejor con el kinegram inferior, run con el de la derecha, y mover manualmente las rendijas funciona mejor para las dos rendijas superpuestas en un moire pattern.
 {{< /hint >}}
 
 Esta es el programa resultante del ejercicio.
@@ -1106,12 +1051,8 @@ Esta es el programa resultante del ejercicio.
 
 ## Conclusiones
 
-- 
-
-- 
-
-- 
+- Este ejercicio permitie entender de forma mas grafica como funciona una mascara, percibiendo figuras al reducir lo que se llega a ver.
 
 ## Trabajos Futuros
 
-
+- el kinegram muestra como al mover la rendija podemos percibir que la imagen realiza movimientos, cosa que se baso en su base en los murales en movimiento, donde es el movimiento del espectador, cosa parecida pasa con los moire pattern, que algunos patrones son dificiles de ver por que parece que se mueven, siendo esta la primera vez que interactuamos con este tipo de imagenes, si se pudiera aplicar de nuevo en futuros trabajos, se podria realizar la percepcion de movimientos o profundidad sin necesidad de variar la imagen.

@@ -48,7 +48,7 @@ function draw() {
   Circkless(0,0,width/2,height,Gap1,frames1,false, one);
   Seconds(width/2,height/2,width/2,height/2,Gap2,frames2,true, two);
   Lane(width/2+width/60,height/20,width/2-width/60*2,height/2-height/30*2,Gap3,frames3,true, tree,5*PI/180);
-  Lane(width/2+width/60,height/20,width/2-width/60*2,height/2-height/30*2,Gap4,frames4,true,0,0);
+  Lane(width/2+width/60,height/20,width/2-width/60*2,height/2-height/30*2,Gap4,frames4,true,four,0);
   
   if(run && frameCount-prevmil>=delayss){
     prevmil = frameCount;
@@ -160,50 +160,55 @@ function mousePressed(){
 }
 
 function mouseDragged() {
-  if(refY>mouseY){
-    if(one==0){
-      one=frames1*Gap1-1;
+  if(abs(refY-mouseY)>abs(refX-mouseX)){
+    if(refY>mouseY){
+      if(one==0){
+        one=frames1*Gap1-1;
+      }else{
+        one--
+      }
+      if(tree==0){
+        tree=frames3*Gap3-1;
+      }else{
+        tree--
+      }
     }else{
-      one--
-    }
-    if(tree==0){
-      tree=frames3*Gap3-1;
-    }else{
-      tree--
-    }
-  }else{
-    if(one==frames1*Gap1-1){
-      one=0;
-    }else{
-      one++
-    }
-    if(tree==frames3*Gap3-1){
-      tree=0;
-    }else{
-      tree++
-    }
-  }
-  if(refX>mouseX){
-    if(two==0){
-      two=frames2*Gap2-1;
-    }else{
-      two--
-    }
-    if(four==0){
-      four=frames4*Gap4-1;
-    }else{
-      four--
+      if(one==frames1*Gap1-1){
+        one=0;
+      }else{
+        one++
+      }
+      if(tree==frames3*Gap3-1){
+        tree=0;
+      }else{
+        tree++
+      }
     }
   }else{
-    if(two==frames2*Gap2-1){
-      two=0;
+    if(refX>mouseX){
+      if(two==0){
+        two=frames2*Gap2-1;
+      }else{
+        two--
+      }
+      if(four==0){
+        four=frames4*Gap4-1;
+      }else{
+        four--
+      }
+      
     }else{
-      two++
-    }
-    if(four==frames4*Gap4-1){
-      four=0;
-    }else{
-      four++
+      if(two==frames2*Gap2-1){
+        two=0;
+      }else{
+        two++
+      }
+      if(four==frames4*Gap4-1){
+        four=0;
+      }else{
+        four++
+      }
+      
     }
   }
   refY=mouseY
@@ -345,71 +350,11 @@ function Circkle(x,y,max,up,i,porcx,porcy,gap){
   }
   
 }
-
-  
   
 function buttons(){
   button.draw();
   sliders.draw();
   checkbox.draw();
-}
-
-function cicles(){
-  moves=moves+PI/180*speeds;
-  if(moves>=2*PI){
-    moves=0;
-  }
-}
-
-function Fig(xy,dif){
-  
-  porct=sin(moves+dif);
-  vertex(xx+porct*xy[0],yy+porct*xy[1]);
-}
-
-function ciclers(xy,dif){
-  
-  porct=sin(moves+dif);
-  pint=(dif-PI/2)/PI
-  fill(pint*alphass.value(),pint*(100-alphass.value()),100-pint*alphass.value());
-  circle(xx+porct*xy[0],yy+porct*xy[1],cLen);
-  noFill();
-}
-
-function liner(xy,dif){
-  line(xx-xy[0],yy-xy[1],xx+xy[0],yy+xy[1]);
-}
-
-function rectar(ang,len){
-  x1 = len*sin(ang);
-  y1 =len*cos(ang);
-  return [x1,y1];
-}
-
-function LineUp(){
-  lines++;
-  updateAng();
-}
-
-function LineDown(){
-  lines--;
-  if(lines<1){
-    lines=1;
-  }
-  updateAng();
-}
-
-function updateAng(){
-  angs=PI/lines;
-}
-
-function Figs(){
-  
-  figse = !figse
-}
-
-function Figso(){
-  figso = !figso
 }
 
 class Button{
