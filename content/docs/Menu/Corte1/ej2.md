@@ -320,4 +320,3 @@ function handleFile(file) {
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/visualcomp/sketches/ColorBlindness.js"}}
