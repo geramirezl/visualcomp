@@ -21,7 +21,7 @@ Inicialmente el concepto de estos son dibujos en libros o notas, siendo una form
  var buto,rund;
 var page,moves;
 var milprev, delayer;
-
+var pager;
 function setup() {
   createCanvas(400, 400);
   noStroke();
@@ -33,12 +33,19 @@ function setup() {
   moves=false;
   milprev=frameCount;
   delayer=5;
+  pager=5;
 }
 
 
 
 function draw() {
   background(220);
+  if(pager>0){
+    fill(200);
+    rect(0,0,width,height)
+    pager--;
+    return;
+  }
   fill(0);
   switch(page){
     case 0:
@@ -193,19 +200,20 @@ function changings(){
 }
 
 function change(){
+  pager=2
   page++
   if(page==4){
     page =0;
   }
-} 
+}
 {{< /highlight >}}
 {{< /details >}}
 
 {{< p5-global-iframe id="bands" width="440" height="440" >}}
-   var buto,rund;
+ var buto,rund;
 var page,moves;
 var milprev, delayer;
-
+var pager;
 function setup() {
   createCanvas(400, 400);
   noStroke();
@@ -217,12 +225,19 @@ function setup() {
   moves=false;
   milprev=frameCount;
   delayer=5;
+  pager=5;
 }
 
 
 
 function draw() {
   background(220);
+  if(pager>0){
+    fill(200);
+    rect(0,0,width,height)
+    pager--;
+    return;
+  }
   fill(0);
   switch(page){
     case 0:
@@ -377,11 +392,12 @@ function changings(){
 }
 
 function change(){
+  pager=2
   page++
   if(page==4){
     page =0;
   }
-} 
+}
 {{< /p5-global-iframe >}}
 
 ### Moiré pattern
