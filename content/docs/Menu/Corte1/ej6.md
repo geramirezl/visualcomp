@@ -18,7 +18,7 @@ function setup() {
   noCanvas();
 
   vid = createVideo(
-    ['assets/small.mp4', 'assets/small.ogv', 'assets/small.webm'],
+    ['sketches/animation.mkv'],
     vidLoad
   );
 
