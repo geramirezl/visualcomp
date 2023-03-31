@@ -2,7 +2,7 @@
 
 Implement an animation with keyframes.
 
-{{< video src="animation.mp4" type="video/mp4" preload="auto" >}}
+{{< video src="geramirezl/visualcomp/animation.mp4" type="video/mp4" preload="auto" >}}
 
 ## Temporal Coherence 
 
