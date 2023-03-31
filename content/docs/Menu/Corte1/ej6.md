@@ -18,7 +18,7 @@ function setup() {
   noCanvas();
 
   vid = createVideo(
-    ['sketches/animation.mkv'],
+    ['visualcomp/content/sketches/animation.mkv'],
     vidLoad
   );
 
