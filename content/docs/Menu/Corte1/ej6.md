@@ -10,6 +10,28 @@ Implement an animation with keyframes.
 ### Kineograph or flipbook
 
 
+
+{{< p5-global-iframe id="bands" width="440" height="440" >}}
+
+let vid;
+function setup() {
+  noCanvas();
+
+  vid = createVideo(
+    ['assets/small.mp4', 'assets/small.ogv', 'assets/small.webm'],
+    vidLoad
+  );
+
+  vid.size(400, 400);
+}
+
+// This function is called when the video loads
+function vidLoad() {
+  vid.loop();
+  vid.volume(0);
+}
+{{< /p5-global-iframe >}}
+
 ## Temporal Coherence 
 
 Temporal coherence is the visual phenomenon present all across nature whereby the perceived color of a given point within a region of interest tend to vary more according to the elapsed time passed between two given moments.
