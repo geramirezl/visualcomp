@@ -2,7 +2,14 @@
 
 Implement an animation with keyframes.
 
-{{< video "geramirezl/visualcomp/content/sketches/animation.mp4" >}}
+{{< rawhtml >}} 
+
+<video width=100% controls autoplay>
+    <source src="/visualcomp/content/sketches/animation.mp4" type="video/mp4">
+    Your browser does not support the video tag.  
+</video>
+
+{{< /rawhtml >}}
 
 ## Temporal Coherence 
 
