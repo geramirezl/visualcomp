@@ -2,12 +2,18 @@
 
 Implement a color mapping application that helps people who are color blind see the colors around them.
 
-## CVD
+## Introduccion
+
+El acceso a internet se puede considerar actualmente como uno de los derechos que todo ciudadano deberia de poder tener acceso. Este se ve impedido para las personas con dificultades auditivas y en este caso visuales. En este ejercicio mostraremos una aplicacion que podria ayudar a generar una implementacion para personas con deficiencia de color
+
+## Background
+
+### CVD
 
 Daltonismo o deficiencia de color(color vision deficiency) CVD, es una barrera para un uso eficiente del computador. Implementar
 una forma de asistir colores en una forma universal es necesario.
 
-## Implementacion de una aplicacion
+### Implementacion de una aplicacion
 Las dificultades se presentan dadas las distintas formas de daltonismo y sus varianzas de persona a persona. Para ello nos asistimos
 de los siguientes articulos 
 
@@ -321,3 +327,7 @@ function handleFile(file) {
 {{< /details >}}
 
 {{< p5-iframe sketch="/visualcomp/sketches/ColorBlindness.js" >}}
+
+## Conclusion
+
+Implementar soluciones para ayudar a personas con deficiencias del color no es algo complejo pero requiere de un estudio delicado sobre los distintos y variables presentadas en cada caso.
