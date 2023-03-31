@@ -2,6 +2,8 @@
 
 Implement an animation with keyframes.
 
+
+
 ## Temporal Coherence 
 
 Temporal coherence is the visual phenomenon present all across nature whereby the perceived color of a given point within a region of interest tend to vary more according to the elapsed time passed between two given moments.
