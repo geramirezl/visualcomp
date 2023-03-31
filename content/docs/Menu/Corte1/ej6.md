@@ -2,7 +2,7 @@
 
 Implement an animation with keyframes.
 
-
+{{< video autoplay="true" loop="true" src="visualcomp/content/sketches/animation.mkv" >}}
 
 ## Temporal Coherence 
 
