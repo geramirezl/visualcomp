@@ -2,6 +2,14 @@
 
 Implement an animation with keyframes.
 
+
+## Introducción
+
+## Transfondo o Teoria
+
+### Kineograph or flipbook
+
+
 ## Temporal Coherence 
 
 Temporal coherence is the visual phenomenon present all across nature whereby the perceived color of a given point within a region of interest tend to vary more according to the elapsed time passed between two given moments.
@@ -9,6 +17,8 @@ Temporal coherence is the visual phenomenon present all across nature whereby th
 **KeyFrames**  
 Los KeyFrames, o frames clave son puntos en la animacion que marcan el inicio y el final de una transicion, siendo la transicion que vera el espectador la variacion de un key frame a otro, llenando de pormedio la transicion con frames conocidos como "inbetweens".
 {{< /hint >}}
+
+
 ### Descripcion de la animacion
 
 teniendo una figura que comienza en el keyFrame 0, se movera a travez de la linea del tiempo variando sus caracteristicas para igualar las determinadas en los keyframes siguientes. Utilizar el boton Run permite mostrar como se ve las transiciones permanentemente
