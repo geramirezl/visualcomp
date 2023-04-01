@@ -23,7 +23,7 @@ Implement an animation with keyframes.
   p5.setup = function() {
     p5.createCanvas(710, 400);
     // specify multiple formats for different browsers
-    animati = p5.createVideo(['/showcase/sketches/animation.mp4']);
+    animati = p5.createVideo(['/visualcomp/sketches/animation.mp4']);
     animati.hide(); // by default video shows up in separate dom
                     // element. hide it and draw it to the canvas instead    
   };
