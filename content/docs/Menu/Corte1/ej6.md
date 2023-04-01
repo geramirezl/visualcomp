@@ -21,7 +21,7 @@ Implement an animation with keyframes.
   let fingers;
 
   p5.setup = function() {
-    p5.createCanvas(710, 400);
+    p5.createCanvas(808, 472);
     // specify multiple formats for different browsers
     animati = p5.createVideo(['/visualcomp/sketches/animation.mp4']);
     animati.hide(); // by default video shows up in separate dom
@@ -30,7 +30,7 @@ Implement an animation with keyframes.
 
   p5.draw = function() {
     p5.background(150);
-    p5.image(animati, 10, 10); // draw the video frame to canvas
+    p5.image(animati, 0, 0); // draw the video frame to canvas
   };
 
   p5.mousePressed = function() {
