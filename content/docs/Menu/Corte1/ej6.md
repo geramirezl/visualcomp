@@ -1,8 +1,44 @@
 # Ejercicio 6
 
 Implement an animation with keyframes.
+## Introduccion
 
-{{< video src="animation.mp4" type="video/mp4" preload="auto" >}}
+
+
+## Transfondo o Teoria
+
+
+## Codigo utilizado
+
+
+## Resultado
+
+
+## Conclusiones y Trabajos Futuros
+
+
+{{< p5-instance-div id="video" >}}
+  let fingers;
+
+  p5.setup = function() {
+    p5.createCanvas(710, 400);
+    // specify multiple formats for different browsers
+    animati = p5.createVideo(['/showcase/sketches/animation.mp4']);
+    animati.hide(); // by default video shows up in separate dom
+                    // element. hide it and draw it to the canvas instead    
+  };
+
+  p5.draw = function() {
+    p5.background(150);
+    p5.image(animati, 10, 10); // draw the video frame to canvas
+    p5.filter(p5.GRAY);
+    //p5.image(animati, 150, 150); // draw a second copy to canvas
+  };
+
+  p5.mousePressed = function() {
+    animati.loop(); // set the video to loop and start playing  
+  }
+{{< /p5-instance-div >}}
 
 ## Temporal Coherence 
 

@@ -1055,4 +1055,4 @@ Esta es el programa resultante del ejercicio.
 
 ## Trabajos Futuros
 
-- el kinegram muestra como al mover la rendija podemos percibir que la imagen realiza movimientos, cosa que se baso en su base en los murales en movimiento, donde es el movimiento del espectador, cosa parecida pasa con los moire pattern, que algunos patrones son dificiles de ver por que parece que se mueven, siendo esta la primera vez que interactuamos con este tipo de imagenes, si se pudiera aplicar de nuevo en futuros trabajos, se podria realizar la percepcion de movimientos o profundidad sin necesidad de variar la imagen.
+- Siguiendo la linea del kinegram como trabajo futuro seria interesante realizar un equivalente a los murales moviles de forma digital, desde una perspectiva primera persona o directamente la pantalla ocmo mural.
