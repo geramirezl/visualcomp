@@ -31,8 +31,6 @@ Implement an animation with keyframes.
   p5.draw = function() {
     p5.background(150);
     p5.image(animati, 10, 10); // draw the video frame to canvas
-    p5.filter(p5.GRAY);
-    //p5.image(animati, 150, 150); // draw a second copy to canvas
   };
 
   p5.mousePressed = function() {
