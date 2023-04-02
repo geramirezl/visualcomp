@@ -1056,3 +1056,19 @@ Esta es el programa resultante del ejercicio.
 ## Trabajos Futuros
 
 - Siguiendo la linea del kinegram como trabajo futuro seria interesante realizar un equivalente a los murales moviles de forma digital, desde una perspectiva primera persona o directamente la pantalla ocmo mural.
+
+
+## Recursos
+
+- [Guia y Ejercicio](https://visualcomputing.github.io/docs/visual_illusions/masking/)
+
+
+- [kinegram](https://michaelbach.de/ot/mot-scanimation/index.html)
+
+-[FlipBook](https://en.wikipedia.org/wiki/Flip_book)
+
+- [imagenes en movimiento](https://desarrollovisual.org/scanimations-imagenes-en-movimiento/)
+
+- [moire patten](https://en.wikipedia.org/wiki/Moiré_pattern)
+
+- [Idea Para el Molino](https://upload.wikimedia.org/wikipedia/commons/e/ed/1868_linett_kineograph_patent_fig._III.jpg)
