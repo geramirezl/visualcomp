@@ -1044,6 +1044,7 @@ function Circkle(x,y,max,up,i,porcx,porcy,gap){
 **Botones y movimientos**  
 Para interactuar con el programa se puede arrastrar el mouse para mover las renjillas, moverlo horizontalmente afectara los de la izquierda sin contar el qque esta rotado, y verticalmente afectara el de la derecha y el rotado. tambien es posible navegar utilizando los botones de la parte superior: snap desplaza un unico pixel todos las rendijas, run realiza un movimiento constante de las mismas constantemente y shade quita o pone las rendijas.
 Como dato curioso, snap interactua mejor con el kinegram inferior, run con el de la derecha, y mover manualmente las rendijas funciona mejor para las dos rendijas superpuestas en un moire pattern.
+(Al correr run, el movimiento de la rendija infreior es menor a las demas, para poder visualizarla mejor)
 {{< /hint >}}
 
 Esta es el programa resultante del ejercicio.
