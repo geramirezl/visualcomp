@@ -291,8 +291,8 @@ Esta es el programa resultante del ejercicio.
 
 ## Recursos
 
-- [Guia y Ejercicio]  ({{< relref "https://visualcomputing.github.io/docs/visual_illusions/mach_bands/" >}})
+- [Guia y Ejercicio]  ("https://visualcomputing.github.io/docs/visual_illusions/mach_bands/")
 
-- [Tutorial]({{< relref "https://www.youtube.com/watch?v=IKB1hWWedMk" >}})
+- [Tutorial]("https://www.youtube.com/watch?v=IKB1hWWedMk")
 
-- [Bandas de Mach]({{< relref "https://en.wikipedia.org/wiki/Mach_bands" >}})
+- [Bandas de Mach]("https://en.wikipedia.org/wiki/Mach_bands")
