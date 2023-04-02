@@ -1,9 +1,11 @@
 # Ejercicio 6
 
-Implement an animation with keyframes.
+Implement an animation with keyframes using the nub library for Processing (Java).
+
 ## Introduccion
 
-
+La coherencia Temporal es un fenomeno visual presente en la naturalezapor el cual el color percibidoen un punto dado una region de interes tiende a variar mas acordemente a el tiempo pasado entre dos momentos dados.
+En este ejercicio vamos a visualizar esta coherencia temporal
 
 ## Transfondo o Teoria
 

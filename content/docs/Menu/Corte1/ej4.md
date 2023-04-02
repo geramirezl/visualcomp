@@ -288,3 +288,11 @@ Esta es el programa resultante del ejercicio.
 
 - Aunque las bandas en si no son muy utilizadas, es bueno entenderlas para poder notar cuando ocurren y poder evitarlas o utilizarlas de manera apropiada.
 
+
+## Recursos
+
+- [Guia y Ejercicio]  ({{< relref "https://visualcomputing.github.io/docs/visual_illusions/mach_bands/" >}})
+
+- [Tutorial]({{< relref "https://www.youtube.com/watch?v=IKB1hWWedMk" >}})
+
+- [Bandas de Mach]({{< relref "https://en.wikipedia.org/wiki/Mach_bands" >}})
