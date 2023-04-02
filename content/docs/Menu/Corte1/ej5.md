@@ -1065,7 +1065,7 @@ Esta es el programa resultante del ejercicio.
 
 - [kinegram](https://michaelbach.de/ot/mot-scanimation/index.html)
 
--[FlipBook](https://en.wikipedia.org/wiki/Flip_book)
+- [FlipBook](https://en.wikipedia.org/wiki/Flip_book)
 
 - [imagenes en movimiento](https://desarrollovisual.org/scanimations-imagenes-en-movimiento/)
 
