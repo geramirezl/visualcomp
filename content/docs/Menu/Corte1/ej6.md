@@ -10,7 +10,7 @@ Esta Es una previa de lo que realiza el codigo:
     p5.createCanvas(808, 472);
     // specify multiple formats for different browsers
     animati = p5.createVideo(['/visualcomp/sketches/animation.mp4']);
-    animati.hide(); // by default video shows up in separate dom
+    //animati.hide(); // by default video shows up in separate dom
     animati.loop();
                     // element. hide it and draw it to the canvas instead    
   };
