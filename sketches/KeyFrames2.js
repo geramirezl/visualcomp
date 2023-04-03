@@ -9,11 +9,11 @@ function setup() {
   fair=false;
   linee=0;
   
-  figi = new Fig(50,50,75,75,PI/2,3);
-  figi.keyFrames.push([25,200,200,100,50,0])
-  figi.keyFrames.push([50,50,300,50,100,0])
-  figi.keyFrames.push([75,300,50,50,100,2*PI])
-  figi.keyFrames.push([100,50,50,75,75,PI/2])
+  figi = new Fig(200,0,150,25,0,1);
+  figi.keyFrames.push([25,200,50,50,100,0])
+  figi.keyFrames.push([65,200,500,50,100,0])
+  figi.keyFrames.push([70,200,535,200,25,0])
+  figi.keyFrames.push([80,200,500,75,75,0])
   
   fill(255);
   Ation = false;
@@ -22,7 +22,7 @@ function setup() {
   timeline.colore = color(255,255,255)
   timeline.mousePressed(chaTime);
   timeline.w=width-2
-  keyFrma = [0,25,50,75,100]
+  keyFrma = [0,25,65,70,80]
   rot = new Button('Rot',0,height-20);
   rot.mousePressed(rota)
   rot.w=width/7;
@@ -184,6 +184,8 @@ class Fig{
     
     if(this.sides>4){
       this.sides = 4
+    }else if(this.sides<1){
+      this.sides=1
     }
   }
   
@@ -397,7 +399,6 @@ function mousePressed(){
   }
 }
 
-
 function mouseDragged(){
   timeline.Dragged()
   if(Ation){
@@ -559,7 +560,6 @@ function chaTime(){
     linee=map(timeline.value(),0,100,0,width)
   }
 }
-
 
 function runni(){
   if(fair){
