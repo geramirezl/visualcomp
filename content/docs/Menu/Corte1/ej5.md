@@ -1073,3 +1073,5 @@ Esta es el programa resultante del ejercicio.
 - [moire patten](https://en.wikipedia.org/wiki/Moiré_pattern)
 
 - [Idea Para el Molino](https://upload.wikimedia.org/wikipedia/commons/e/ed/1868_linett_kineograph_patent_fig._III.jpg)
+
+- [Frame](https://es.wikipedia.org/wiki/Fotograma)
