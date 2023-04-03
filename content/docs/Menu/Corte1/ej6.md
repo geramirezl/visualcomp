@@ -7,7 +7,7 @@ Esta Es una previa de lo que realiza el codigo:
   let fingers;
 
   p5.setup = function() {
-    p5.createCanvas(808, 472);
+    //p5.createCanvas(808, 472);
     // specify multiple formats for different browsers
     animati = p5.createVideo(['/visualcomp/sketches/animation.mp4']);
     //animati.hide(); // by default video shows up in separate dom
@@ -15,14 +15,14 @@ Esta Es una previa de lo que realiza el codigo:
                     // element. hide it and draw it to the canvas instead    
   };
 
-  p5.draw = function() {
+  /*p5.draw = function() {
     p5.background(150);
     p5.image(animati, 0, 0); // draw the video frame to canvas
-  };
-
+  };*/
+/*
   p5.mousePressed = function() {
     animati.loop(); // set the video to loop and start playing  
-  }
+  }*/
 {{< /p5-instance-div >}}
 
 ## Introduccion
