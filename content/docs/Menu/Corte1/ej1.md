@@ -1,12 +1,69 @@
 # Ejercicio 1
 
-Study, implement and discuss possible applications of some known visual phenomena and optical illusions.
+Study, implement and discuss possible applications of some known [visual phenomena and optical illusions](https://michaelbach.de/ot/index.html).
 
-## Ilusiones Opticas
+## Introducción
 
-### Introduccion
+Por medio de el ejercicio vamos a buscar entender algunos efectos que ocurren con las ilusiones Opticas  sus relaciones y caracteristicas, para poder utilizarlas a nuestro favor cuando sean requeridas. 
 
-Una ilusión optica es una ilusión causada por el sistema visual y caracterizada por una percepción visual que parece diferir de la realidad. Pueden llegar a ser implementaciones simples de formas y figuras tanto como pueden a llegar complejas
+## Teoria y Transfondo
+
+### Ilusiones Opticas
+
+Una ilusión optica es una ilusión causada por el sistema visual y caracterizada por una percepción visual que parece diferir de la realidad. 
+La mayor forma de diferenciarlas es por medio de los principios de percepcion que se usan para entenderlas, conocidos como la Teoria de Gestalt.
+
+Tambien se a de notar que algunas ilusiones se pueden dividir respecto a si varian respecto al tiempo o no.
+
+### Teoria de  Gestalt:
+
+sirven o buscan para explicar como nuestra percepcion agrupa los objetos al momento de percibirlos.
+
+#### Semejanza:
+
+Forma, color Tamano y figura, textura.
+
+#### Continuidad:
+
+sigue el camino visual mas simple
+
+#### Cierre:
+
+Figura no cerrada o demilitada, 
+
+#### Proximidad:
+
+
+
+#### Simetria y orden:
+
+#### Figura Fondo:
+
+#### Direccion Comun:
+
+
+
+
+
+
+
+
+
+
+
+
+## Codigo.
+
+## Resultados
+
+## Conclusiones 
+
+
+## Trabajos Futuros
+
+
+
+
 
 ### Simple
 
