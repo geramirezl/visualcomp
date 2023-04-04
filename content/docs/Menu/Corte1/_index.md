@@ -6,7 +6,7 @@ bookCollapseSection: true
 
 
 
-## [Ej 1](({{< relref "ej1.md" >}}))
+## [Ej 1](({{< relref "content/docs/Menu/Corte1/ej1.md" >}}))
 
 Por medio de el ejercicio vamos a buscar entender algunos efectos que ocurren con las ilusiones Opticas  sus relaciones y caracteristicas, para poder utilizarlas a nuestro favor cuando sean requeridas. 
 
