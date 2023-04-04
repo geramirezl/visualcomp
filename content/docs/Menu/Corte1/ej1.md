@@ -420,7 +420,7 @@ El codigo solo exporta las imagenes utilizadas, y permite rotar la figura que mu
 Ilusion de movimientos.
 
 {{< p5-iframe sketch="/visualcomp/sketches/MotionIlution.js" width="540" height="540" >}}
-{{< p5-iframe sketch="/visualcomp/sketches/MotionIlution.js" width="670" height="443" >}}
+{{< p5-iframe sketch="/visualcomp/sketches/PerceptionIlusion.js" width="670" height="443" >}}
 
 ## Conclusiones 
 
