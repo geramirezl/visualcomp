@@ -4,23 +4,33 @@ bookCollapseSection: true
 
 # Corte 1
 
+Ejercicios Realizados en el corte1
 
-
-## [Ej 1]({{< relref "/docs/Menu/Corte1/ej1.md" >}})
+## [Ejercicio 1]({{< relref "/docs/Menu/Corte1/ej1.md" >}})
 
 Por medio de el ejercicio vamos a buscar entender algunos efectos que ocurren con las ilusiones Opticas  sus relaciones y caracteristicas, para poder utilizarlas a nuestro favor cuando sean requeridas. 
 
-## [Ej 2]({{< relref "/docs/Menu/Corte1/ej2.md" >}})
+## [Ejercicio 2]({{< relref "/docs/Menu/Corte1/ej2.md" >}})
 
+Implement a color mapping application that helps people who are color blind see the colors around them.
 
-## [Ej 3]({{< relref "/docs/Menu/Corte1/ej3.md" >}})
+## [Ejercicio 3]({{< relref "/docs/Menu/Corte1/ej3.md" >}})
 
+Implement a pixelator video application and perform a benchmark of the results (color avg vs spatial coherence). How would you assess the visual quality of the results?
 
-## [Ej 4]({{< relref "/docs/Menu/Corte1/ej4.md" >}})
+## [Ejercicio 4]({{< relref "/docs/Menu/Corte1/ej4.md" >}})
 
+Develop a terrain visualization application. Check out the 3D terrain generation with Perlin noise coding train tutorial.
 
-## [Ej 5]({{< relref "/docs/Menu/Corte1/ej5.md" >}})
+## [Ejercicio 5]({{< relref "/docs/Menu/Corte1/ej5.md" >}})
 
+Implement a kinegram and some moiré patterns which are close related visual phenomena to masking.
 
-## [Ej 6]({{< relref "/docs/Menu/Corte1/ej6.md" >}})
+## [Ejercicio 6]({{< relref "/docs/Menu/Corte1/ej6.md" >}})
+
+Implement an animation with keyframes using the [nub library](https://github.com/VisualComputing/nub/blob/master/examples/basics/KeyFrames/KeyFrames.pde) for [Processing](https://processing.org) (Java).
+
+# Video Explicativo
+
+El video donde se presenta y explica los ejercicios realizados en este corte.
 
