@@ -19,7 +19,7 @@ Tambien se a de notar que algunas ilusiones se pueden dividir respecto a si vari
 
 sirven o buscan para explicar como nuestra percepcion agrupa los objetos al momento de percibirlos.
 
-![Leyes de GESTALT]({{<> relref="/sketches/Gestalt.jpg">}})
+![Leyes de GESTALT]({{< relref="/sketches/Gestalt.jpg">}})
 
 #### Semejanza:
 
