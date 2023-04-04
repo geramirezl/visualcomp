@@ -6,7 +6,7 @@ let mode,visu;
 function preload() {
   table = loadImage('content/sketches/tables.png');
   car = loadImage('content/sketches/car1.png');
-  backgro = loadImage('geramirezl/visualcomp/content/sketches/car2.png');
+  backgro = loadImage('content/sketches/car2.png');
   
 }
 function setup() {
