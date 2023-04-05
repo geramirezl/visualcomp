@@ -8,7 +8,7 @@ Ejercicios Realizados en el corte1
 
 ## [Ejercicio 1]({{< relref "/docs/Menu/Corte1/ej1.md" >}})
 
-Por medio de el ejercicio vamos a buscar entender algunos efectos que ocurren con las ilusiones Opticas  sus relaciones y caracteristicas, para poder utilizarlas a nuestro favor cuando sean requeridas. 
+Study, implement and discuss possible applications of some known [visual phenomena and optical illusions](https://michaelbach.de/ot/index.html).
 
 ## [Ejercicio 2]({{< relref "/docs/Menu/Corte1/ej2.md" >}})
 
