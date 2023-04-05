@@ -34,3 +34,7 @@ Implement an animation with keyframes using the [nub library](https://github.com
 
 El video donde se presenta y explica los ejercicios realizados en este corte.
 
+{{< youtube GmRuTFMk9Yg >}}
+
+
+
