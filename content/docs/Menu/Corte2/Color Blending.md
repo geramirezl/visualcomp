@@ -49,4 +49,4 @@ function draw() {
 
 Ilusion de movimientos.
 
-{{< p5-iframe sketch="/visualcomp/sketches/ColorBlending.js" lib1="ttps://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="540" height="540" >}}
+{{< p5-iframe sketch="/visualcomp/sketches/ColorBlending.js" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="540" height="540" >}}
