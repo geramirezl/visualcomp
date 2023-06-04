@@ -47,6 +47,4 @@ function draw() {
 {{< /highlight >}}
 {{< /details >}}
 
-Ilusion de movimientos.
-
-{{< p5-iframe sketch="/visualcomp/sketches/ColorBlending.js" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="540" height="540" >}}
+{{< p5-iframe sketch="/visualcomp/sketches/ColorBlending.js" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" lib2="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js" width="540" height="540" >}}
