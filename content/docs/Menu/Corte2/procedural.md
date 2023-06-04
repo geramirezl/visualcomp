@@ -2,57 +2,14 @@
 
 ## Introducción
 
-Por medio de el ejercicio vamos a buscar entender algunos efectos que ocurren con las ilusiones Opticas  sus relaciones y caracteristicas, para poder utilizarlas a nuestro favor cuando sean requeridas. 
+La texturización procedural es una técnica utilizada en gráficos por computadora y diseño de juegos para crear texturas de manera algorítmica en lugar de utilizar imágenes o mapas de texturas predefinidos. En lugar de pintar o dibujar una textura manualmente, se utilizan algoritmos y procedimientos matemáticos para generar y definir las características de una textura.
 
-## Teoria y Transfondo
+Se crean algoritmos que definen las propiedades y características de una textura, como el color, el patrón, la rugosidad, el relieve, entre otros. Estos algoritmos pueden utilizar parámetros controlables, como la escala, la dirección de la luz, la densidad, etc., para generar diferentes variaciones de una textura.
 
-### Ilusiones Opticas
+Permite la generación de texturas de alta resolución sin necesidad de almacenar grandes cantidades de datos de imagen. Además, las texturas procedurales son escalables, lo que significa que se pueden ajustar fácilmente a diferentes tamaños y resoluciones sin perder calidad, pueden ser modificadas en tiempo real lo que las hace especialmente útiles en entornos de juegos y aplicaciones interactivas.
 
-Una ilusión optica es una ilusión causada por el sistema visual y caracterizada por una percepción visual que parece diferir de la realidad. 
-La mayor forma de diferenciarlas es por medio de los principios de percepcion que se usan para entenderlas, conocidos como las Leyes de Gestalt.
+Algunos ejemplos de uso de la texturización procedural incluyen la creación de paisajes generados por computadora, la generación de patrones para superficies detalladas, como rocas o madera y la simulación de materiales realistas, como metal o piel.
 
-Tambien se a de notar que algunas ilusiones se pueden dividir respecto a si varian respecto al tiempo o no.
-
-### Leyes de  Gestalt:
-
-Son principios que  buscan explicar como y cuanod nuestra mente percibe diversos componentes visuales como parte de un grupo, lo que nos ayuda a notar por que se generan las diversas ilusiones visuales.
-
-![Leyes de GESTALT](../../../../sketches/Gestalt.jpg)
-
-#### Semejanza:
-
-El principio de Semejanza permite unir elementos por medio de sus similitudes, ya sean en Color, Forma, Tamaño o en Textura, esto no solo permite agrupar objetos en grupos similares, sino que resalta aquellos objetos que no son parte de esta similitud.
-
-#### Continuidad:
-
-El ojo crear la continuidad de una linea, para seguir el camino mas suave y coherente, es util a la hora de apuntar a un elemento, o guiar la vista en una direccion.
-
-#### Cierre:
-
-Cuando Percibimos una figura que no esta completa, o esta delimitada por bordes, nuestra mente transmite una sensacion de figura completa. Este principio se junta con el de figura fondo, para mayor entendimiento.
-
-#### Proximidad:
-
-Al igual que con el principio de la semejanza tendemos a agrupar objetos segun su proximidad en objetos que comparten caracteristicas en comun: forma, color, tamaño o textura. 
-
-#### Figura Fondo:
-
-De Forma similar al principio de cierre el principio figura fondo dice que el ojo humano busca separar el objeto de su fondo, por lo que no puede percibirlo como figura y como fondo a la vez, permitiendo separar varias figuras en una misma imagen.
-
-#### Simetria y orden:
-
-Una Forma de agrupar figuras es por medio de un orden o con simetria, buscando simplificar las figuras dandoles un orden, que es lo que suele buscar el ojo, formas simples y estables.
-
-#### Direccion Comun:
-
-Este principio no estaba en un principio pero fue agregado por su importancia, donde las figuras que siguen un patron (como en el principio de la simetria) o un flujo o movimiento son percibidos a su vez como un grupo.
-
-
-## Codigo.
-
-Tenemos 2 codigos que buscan mostrar laas ilusiones escogidas de la pagina [VisualIlusions](https://michaelbach.de/ot/index.html),  con 2 ilusiones cada 1, La primera son ilusiones de movimientos "Stepping feet" y "Pidgeon Neck", la segunda con ilusiones de percepcion y profundidad, que muestran como nuestra experiencia nos hace percibir formas de tamaño diferente en figuras iguales segun su fondo, teniendo las ilusiones de "Shepard’s Rotated Tables" y "Size Constancy".
-
-### La primera implementacion:
 
 {{< details title="Código Completo, Ilusion 1" open=false >}}
 {{< highlight js >}}
