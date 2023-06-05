@@ -10,4 +10,4 @@ Permite la generación de texturas de alta resolución sin necesidad de almacena
 
 Algunos ejemplos de uso de la texturización procedural incluyen la creación de paisajes generados por computadora, la generación de patrones para superficies detalladas, como rocas o madera y la simulación de materiales realistas, como metal o piel.
 
-{{< p5-iframe ver="1.4.1" sketch="/visualcomp/sketches/Procedural.js lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" lib2="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="440" height="440" >}}
+{{< p5-iframe ver="1.4.1" sketch="/visualcomp/sketches/Procedural.js" lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" lib2="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="440" height="440" >}}
