@@ -23,7 +23,7 @@ Además de estos sistemas de color primarios, también existe el modelo de color
 let colorShader;
 
 function preload(){
-  colorShader = readShader('shader.frag');
+  colorShader = readShader('ColorBlending.frag');
 }
 
 function setup() {
