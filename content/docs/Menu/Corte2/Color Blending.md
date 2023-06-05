@@ -15,9 +15,9 @@ Utilizado en la impresión y pintura, se mezclan pigmentos o tintas de colores p
 Además de estos sistemas de color primarios, también existe el modelo de color HSL (matiz, saturación y luminosidad) y el modelo de color HSV (tono, saturación y valor), que también permiten mezclar colores y representar una amplia gama de tonalidades. Estos modelos son especialmente útiles en el diseño gráfico y la edición de imágenes.
 
 
-### Basic Blend:
+### Basic Blend
 
-{{< details title="Color Blending" open=false >}}
+{{< details title="Color Blending js" open=false >}}
 {{< highlight js >}}
 
 let colorShader;
@@ -43,5 +43,23 @@ function draw() {
 
 {{< /highlight >}}
 {{< /details >}}
+
+{{< details title="Color Blending frag" open=false >}}
+{{< highlight js >}}
+
+precision mediump float;
+
+// uniforms are emitted from the sketch
+// https://p5js.org/reference/#/p5.Shader/setUniform
+uniform vec4 uMaterial1;
+uniform vec4 uMaterial2;
+
+void main() {
+  gl_FragColor = uMaterial1 * uMaterial2;
+}
+
+{{< /highlight >}}
+{{< /details >}}
+
 
 {{< p5-iframe sketch="/visualcomp/sketches/ColorBlending.js" lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" lib2="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="540" height="540" >}}
