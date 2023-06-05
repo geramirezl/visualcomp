@@ -44,4 +44,4 @@ function draw() {
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/visualcomp/sketches/ColorBlending.js" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="540" height="540" >}}
+{{< p5-iframe sketch="/visualcomp/sketches/ColorBlending.js" lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" lib2="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="540" height="540" >}}
