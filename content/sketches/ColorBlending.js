@@ -1,23 +1,20 @@
 let colorShader;
 
 function preload(){
-  colorShader = readShader('/visualcomp/sketches/ColorBlending.frag', { varyings: Tree.color4 });
+  colorShader = readShader('shader.frag');
 }
 
 function setup() {
-  createCanvas(400, 400, WEBGL);
+  createCanvas(100, 100, WEBGL);
   shader(colorShader);
-  colorPicker1 = createColorPicker('#ed225d');
-  colorPicker1.position(0, height + 5);
-  colorPicker2 = createColorPicker('#ed225d');
-  colorPicker2.position(100, height + 5);
+  colorPicker1 = createColorPicker('#FF0000');
+  colorPicker1.position(0, height + 10);
+  colorPicker2 = createColorPicker('#0007FF');
+  colorPicker2.position(50, height + 10);
 }
 
-
-
 function draw() {
-  print(colorPicker1.color()._array)
   colorShader.setUniform('uMaterial1', colorPicker1.color()._array);
   colorShader.setUniform('uMaterial2', colorPicker2.color()._array);
-  rect(0,0,100,100)
+  rect(20, 20, 60, 60)
 }
