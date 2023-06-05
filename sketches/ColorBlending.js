@@ -1,7 +1,7 @@
 let colorShader;
 
 function preload(){
-  colorShader = readShader('shader.frag');
+  colorShader = readShader('shader.frag', { varyings: Tree.color4 });
 }
 
 function setup() {
