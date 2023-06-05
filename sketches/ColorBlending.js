@@ -16,5 +16,5 @@ function setup() {
 function draw() {
   colorShader.setUniform('uMaterial1', colorPicker1.color()._array);
   colorShader.setUniform('uMaterial2', colorPicker2.color()._array);
-  rect(20, 20, 60, 60)
+  rect(10, 10, 60, 60)
 }
