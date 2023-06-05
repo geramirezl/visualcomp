@@ -5,7 +5,7 @@ let frames2=0.5;
 
 function preload() {
   // shader adapted from here: https://thebookofshaders.com/09/
-  truchetShader = readShader('Procedural.frag', { matrices: Tree.NONE, varyings: Tree.NONE });
+  truchetShader = readShader('/visualcomp/sketches/Procedural.frag', { matrices: Tree.NONE, varyings: Tree.NONE });
 }
 
 function setup() {
