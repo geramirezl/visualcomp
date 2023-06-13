@@ -2,6 +2,7 @@ let pg;
 let truchetShader;
 let frames=0;
 let frames2=0.5;
+let detailY;
 
 function preload() {
   // shader adapted from here: https://thebookofshaders.com/09/
@@ -10,6 +11,11 @@ function preload() {
 
 function setup() {
   createCanvas(400, 400, WEBGL);
+
+  detailY = createSlider(3, 16, 3);
+  detailY.position(10, height + 5);
+  detailY.style('width', '80px');
+
   // create frame buffer object to render the procedural texture
   pg = createGraphics(400, 400, WEBGL);
   textureMode(NORMAL);
@@ -42,7 +48,7 @@ function draw() {
   frames++;
   frames2 = frames2 + 0.5;
   
-  box(150,150);
+  sphere(40, 16, detailY.value());
 }
 
 function keyPressed() {
