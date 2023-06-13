@@ -28,11 +28,7 @@ void main(void){
 
     vec2 st = gl_FragCoord.xy/u_resolution.xy;
     vec3 color = vec3(0.0);
-
-    // Modern metric brick of 215mm x 102.5mm x 65mm
-    // http://www.jaharrison.me.uk/Brickwork/Sizes.html
     st /= vec2(2.15,0.65)/1.5;
-
     // Apply the brick tiling
     st = brickTile(st,5.0);
 

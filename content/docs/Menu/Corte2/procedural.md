@@ -6,12 +6,12 @@ La texturización procedural es una técnica utilizada en gráficos por computad
 
 Se crean algoritmos que definen las propiedades y características de una textura, como el color, el patrón, la rugosidad, el relieve, entre otros. Estos algoritmos pueden utilizar parámetros controlables, como la escala, la dirección de la luz, la densidad, etc., para generar diferentes variaciones de una textura.
 
-Permite la generación de texturas de alta resolución sin necesidad de almacenar grandes cantidades de datos de imagen. Además, las texturas procedurales son escalables, lo que significa que se pueden ajustar fácilmente a diferentes tamaños y resoluciones sin perder calidad, pueden ser modificadas en tiempo real lo que las hace especialmente útiles en entornos de juegos y aplicaciones interactivas.
-
 Algunos ejemplos de uso de la texturización procedural incluyen la creación de paisajes generados por computadora, la generación de patrones para superficies detalladas, como rocas o madera y la simulación de materiales realistas, como metal o piel.
 
 {{< details title="Procedural js" open=false >}}
 {{< highlight js >}}
+
+// shader adapted from here: https://thebookofshaders.com/09/
 let pg;
 let truchetShader;
 let frames=0;
@@ -19,7 +19,6 @@ let frames2=0.5;
 let detailY;
 
 function preload() {
-  // shader adapted from here: https://thebookofshaders.com/09/
   truchetShader = readShader('/visualcomp/sketches/Procedural.frag', { matrices: Tree.NONE, varyings: Tree.NONE });
 }
 
@@ -109,11 +108,7 @@ void main(void){
 
     vec2 st = gl_FragCoord.xy/u_resolution.xy;
     vec3 color = vec3(0.0);
-
-    // Modern metric brick of 215mm x 102.5mm x 65mm
-    // http://www.jaharrison.me.uk/Brickwork/Sizes.html
     st /= vec2(2.15,0.65)/1.5;
-
     // Apply the brick tiling
     st = brickTile(st,5.0);
 
@@ -126,6 +121,16 @@ void main(void){
 {{< /highlight >}}
 {{< /details >}}
 
+El slider es para cambiar la figura del trompo a una esfera perfecta. Con cualquier tecla el `procedural` se reiniciara.
+
 {{< p5-iframe sketch="/visualcomp/sketches/Procedural.js" lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" lib2="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="440" height="440" >}}
+
+El codigo resumidamente genera la forma de un ladrillo, que pinta con un offset segun si se encuentra en una fila impar o no. Esta se `inserta` en la figura que en este caso es una esfera con el valor en el eje Y variable que nos muestra la implementacion de esta textura procedural desde un trompo hasta una esfera perfecta. Cada frame los unicos calculos que se realizan es el dibujo de los ladrillos que cada vez se van haciendo mas pequenos (el calculo es una unica division).
+
+## Conclusiones
+
+- Desplazar una figura, en este caso un ladrillo, hace parecer que la figura en cuestion esta girando. Bastante util a la hora de reducir el gasto de recursos en renderisados 3D.
+
+- Estas texturas procedurales son escalables, lo que significa que se pueden ajustar fácilmente a diferentes tamaños y resoluciones sin perder calidad, pueden ser modificadas en tiempo real lo que las hace especialmente útiles en entornos de juegos y aplicaciones interactivas.
 
 
