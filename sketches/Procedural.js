@@ -13,8 +13,8 @@ function setup() {
   // create frame buffer object to render the procedural texture
   pg = createGraphics(400, 400, WEBGL);
   textureMode(NORMAL);
-  // noStroke();
-  // pg.noStroke();
+  noStroke();
+  pg.noStroke();
   pg.textureMode(NORMAL);
   // use truchetShader to render onto pg
   pg.shader(truchetShader);
