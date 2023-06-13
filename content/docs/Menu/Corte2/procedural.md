@@ -12,24 +12,31 @@ Algunos ejemplos de uso de la texturización procedural incluyen la creación de
 
 {{< details title="Procedural js" open=false >}}
 {{< highlight js >}}
-
 let pg;
 let truchetShader;
 let frames=0;
 let frames2=0.5;
+let detailY;
 
 function preload() {
   // shader adapted from here: https://thebookofshaders.com/09/
-  truchetShader = readShader('Procedural.frag', { matrices: Tree.NONE, varyings: Tree.NONE });
+  truchetShader = readShader('/visualcomp/sketches/Procedural.frag', { matrices: Tree.NONE, varyings: Tree.NONE });
 }
 
 function setup() {
   createCanvas(400, 400, WEBGL);
+
+  detailY = createSlider(3, 16, 3);
+  detailY.position(10, height + 5);
+  detailY.style('width', '80px');
+
   // create frame buffer object to render the procedural texture
   pg = createGraphics(400, 400, WEBGL);
   textureMode(NORMAL);
-  // noStroke();
-  // pg.noStroke();
+
+  noStroke();
+  pg.noStroke();
+
   pg.textureMode(NORMAL);
   // use truchetShader to render onto pg
   pg.shader(truchetShader);
@@ -39,7 +46,7 @@ function setup() {
   // https://p5js.org/reference/#/p5.Shader/setUniform
   truchetShader.setUniform('u_zoom', 5);
   // pg clip-space quad (i.e., both x and y vertex coordinates ∈ [-1..1])
-  pg.quad(-4, -1, 1, -1, 1, 1, -1, 1);
+  pg.quad(-1, -1, 1, -1, 1, 1, -1, 1);
   // set pg as texture
   texture(pg);
 }
@@ -57,7 +64,7 @@ function draw() {
   frames++;
   frames2 = frames2 + 0.5;
   
-  box(150,150);
+  sphere(40, 16, detailY.value());
 }
 
 function keyPressed() {
@@ -71,8 +78,6 @@ function keyPressed() {
 
 {{< details title="Procedural frag" open=false >}}
 {{< highlight js >}}
-
-// Author @patriciogv ( patriciogonzalezvivo.com )
 
 #ifdef GL_ES
 precision mediump float;
@@ -112,8 +117,8 @@ void main(void){
     // Apply the brick tiling
     st = brickTile(st,5.0);
 
-    color = vec3(box(st,vec2(0.9)));
-
+    // color = vec3(box(st,vec2(0.9)));
+    color = vec3(st,0.0);
     gl_FragColor = vec4(color,1.0);
 }
 
@@ -122,3 +127,5 @@ void main(void){
 {{< /details >}}
 
 {{< p5-iframe sketch="/visualcomp/sketches/Procedural.js" lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" lib2="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="440" height="440" >}}
+
+
