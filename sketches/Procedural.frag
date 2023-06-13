@@ -1,5 +1,3 @@
-// Author @patriciogv ( patriciogonzalezvivo.com )
-
 #ifdef GL_ES
 precision mediump float;
 #endif
@@ -39,6 +37,6 @@ void main(void){
     st = brickTile(st,5.0);
 
     color = vec3(box(st,vec2(0.9)));
-
+    color = vec3(st,0.0);
     gl_FragColor = vec4(color,1.0);
 }
