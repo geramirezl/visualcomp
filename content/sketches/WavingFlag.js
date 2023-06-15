@@ -3,8 +3,8 @@ let glitchShader;
 let img;
 
 function preload() {
-  glitchShader = loadShader('/visualcomp/sketches/WavingFlag.vert', '/visualcomp/sketches/WavingFlag.frag'); // maybe readShader tho
-  img = loadImage('boat.jpg');
+  glitchShader = loadShader('/visualcomp/sketches/WavingFlag.vert', '/visualcomp/sketches/WavingFlag.frag');
+  img = loadImage('./boat.jpg');
 }
 
 function setup() {
