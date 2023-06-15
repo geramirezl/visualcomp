@@ -9,8 +9,6 @@ function preload() {
 
 function setup() {
   createCanvas(600, 600, WEBGL);
-  
-  
   screen = createGraphics(width, height);
   
   
