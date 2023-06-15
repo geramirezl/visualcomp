@@ -30,7 +30,7 @@ function setup() {
   // https://github.com/VisualComputing/p5.treegl#macros
   pg.emitResolution(truchetShader);
   // https://p5js.org/reference/#/p5.Shader/setUniform
-  truchetShader.setUniform('u_zoom', 5);
+  truchetShader.setUniform('u_zoom', 4);
   // pg clip-space quad (i.e., both x and y vertex coordinates ∈ [-1..1])
   pg.quad(-1, -1, 1, -1, 1, 1, -1, 1);
   // set pg as texture
