@@ -121,7 +121,7 @@ void main(void){
 {{< /highlight >}}
 {{< /details >}}
 
-El slider es para cambiar la figura del trompo a una esfera perfecta. Con cualquier tecla el `procedural` se reiniciara.
+El slider es para cambiar la figura del trompo a una esfera perfecta. Con cualquier tecla el `procedural` se reiniciara y puedes hacer zoom con la rueda del mouse.
 
 {{< p5-iframe sketch="/visualcomp/sketches/Procedural.js" lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" lib2="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="440" height="440" >}}
 

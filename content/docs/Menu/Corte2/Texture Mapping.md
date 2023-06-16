@@ -119,6 +119,7 @@ If it's not loading, you can check the sketch [here](https://editor.p5js.org/jgs
 
 {{< p5-iframe sketch="/visualcomp/sketches/WavingFlag.js" lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" lib2="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="600" height="600" >}}
 
+El shader se resume en la funcion `noise` que a partir de un vec2 retorna un valor flotante aleatorio que se multiplica por un valor acercado de `PI`; este valor sera utilizado para calcular un vec2 que sera las coordenadas donde pondremos nuestra textura. 
 
 ## Bibliography
 
