@@ -1,0 +1,498 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="3D proyect transformacion espacial # Introducción # El manejo de espacios 3d permite elaborar animaciones y diversos procesos complejos de manera mucho mas simple y detallada, con un mayor control del mismo
+Teoria y Transfondo # La teoria utilizada fue la mencionada en clase, sobre el picking de las librerias treegl, los arboles de posicionamiento utilizando push and pop para varias la posicion relativa, los materiales utilizables, y las figuars disponibles dentro de p5."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="3D proyect transformacion espacial # Introducción # El manejo de espacios 3d permite elaborar animaciones y diversos procesos complejos de manera mucho mas simple y detallada, con un mayor control del mismo
+Teoria y Transfondo # La teoria utilizada fue la mencionada en clase, sobre el picking de las librerias treegl, los arboles de posicionamiento utilizando push and pop para varias la posicion relativa, los materiales utilizables, y las figuars disponibles dentro de p5."><meta property="og:type" content="article"><meta property="og:url" content="https://geramirezl.github.io/visualcomp/docs/Menu/Corte2/3dProyect/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-06-19T23:57:25-05:00"><title>3d Proyect | Showcase Template</title><link rel=manifest href=/visualcomp/manifest.json><link rel=icon href=/visualcomp/favicon.png type=image/x-icon><link rel=stylesheet href=/visualcomp/book.min.4b35fed0bea034bbc19c89c71e14b73fb9c68cfcc586b9382adfb9b7b103ba06.css integrity="sha256-SzX+0L6gNLvBnInHHhS3P7nGjPzFhrk4Kt+5t7EDugY=" crossorigin=anonymous><script defer src=/visualcomp/flexsearch.min.js></script>
+<script defer src=/visualcomp/en.search.min.c54cb0b85d98bce471dc5c99b81825538ca7dcde0cb774b6ea5817733a896b49.js integrity="sha256-xUywuF2YvORx3FyZuBglU4yn3N4Mt3S26lgXczqJa0k=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/visualcomp/><span>Showcase Template</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><span>Menu</span><ul><li><input type=checkbox id=section-a24993e858734e2a47438db23047ae18 class=toggle>
+<label for=section-a24993e858734e2a47438db23047ae18 class="flex justify-between"><a href=/visualcomp/docs/Menu/Corte1/>Corte1</a></label><ul><li><a href=/visualcomp/docs/Menu/Corte1/ej1/>Ej1</a></li><li><a href=/visualcomp/docs/Menu/Corte1/ej2/>Ej2</a></li><li><a href=/visualcomp/docs/Menu/Corte1/ej3/>Ej3</a></li><li><a href=/visualcomp/docs/Menu/Corte1/ej4/>Ej4</a></li><li><a href=/visualcomp/docs/Menu/Corte1/ej5/>Ej5</a></li><li><a href=/visualcomp/docs/Menu/Corte1/ej6/>Ej6</a></li></ul></li><li><input type=checkbox id=section-043ec1151eedb9eb9d051a3192c81258 class=toggle checked>
+<label for=section-043ec1151eedb9eb9d051a3192c81258 class="flex justify-between"><a role=button>Corte2</a></label><ul><li><a href=/visualcomp/docs/Menu/Corte2/3dProyect/ class=active>3d Proyect</a></li><li><a href=/visualcomp/docs/Menu/Corte2/Color-Blending/>Color Blending</a></li><li><a href=/visualcomp/docs/Menu/Corte2/procedural/>Procedural</a></li><li><a href=/visualcomp/docs/Menu/Corte2/Texture-Mapping/>Texture Mapping</a></li></ul></li><li><input type=checkbox id=section-37fa7d2ca1a125edfd2dd33fadc1c2f9 class=toggle>
+<label for=section-37fa7d2ca1a125edfd2dd33fadc1c2f9 class="flex justify-between"><a role=button>Corte3</a></label><ul></ul></li><li><input type=checkbox id=section-388bef96d17c2b11976e72fa3dd44910 class=toggle>
+<label for=section-388bef96d17c2b11976e72fa3dd44910 class="flex justify-between"><a role=button>Members</a></label><ul><li><a href=/visualcomp/docs/Menu/Members/FabianMontes/>Fabian Montes</a></li><li><a href=/visualcomp/docs/Menu/Members/GabrielRamirez/>Gabriel Ramirez</a></li><li><a href=/visualcomp/docs/Menu/Members/JuanSierra/>Juan Sierra</a></li></ul></li></ul></li></ul><ul><li><a href=/visualcomp/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/visualcomp/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>3d Proyect</strong>
+<label for=toc-control><img src=/visualcomp/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#3d-proyect-transformacion-espacial>3D proyect transformacion espacial</a><ul><li><a href=#introducción>Introducción</a></li><li><a href=#teoria-y-transfondo>Teoria y Transfondo</a><ul><li><a href=#posicionamiento-relativo>posicionamiento relativo</a></li><li><a href=#materiales>materiales</a></li></ul></li><li><a href=#codigo>Codigo</a></li><li><a href=#resultado-del-codigo>Resultado del codigo</a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=3d-proyect-transformacion-espacial>3D proyect transformacion espacial
+<a class=anchor href=#3d-proyect-transformacion-espacial>#</a></h1><h2 id=introducción>Introducción
+<a class=anchor href=#introducci%c3%b3n>#</a></h2><p>El manejo de espacios 3d permite elaborar animaciones y diversos procesos complejos de manera mucho mas simple y detallada, con un mayor control del mismo</p><h2 id=teoria-y-transfondo>Teoria y Transfondo
+<a class=anchor href=#teoria-y-transfondo>#</a></h2><p>La teoria utilizada fue la mencionada en clase, sobre el picking de las librerias treegl, los arboles de posicionamiento utilizando push and pop para varias la posicion relativa, los materiales utilizables, y las figuars disponibles dentro de p5.</p><h3 id=posicionamiento-relativo>posicionamiento relativo
+<a class=anchor href=#posicionamiento-relativo>#</a></h3><p>nos permite variar las posiciones y ubicaciones desde nuevos puntos de referencia, como todo lo que hay dentro del tren se mueve con el, el tren es un propio punto de referencia para ellos aunque desde afuera se ve que se afecta por mas cosas su ubicacion.</p><h3 id=materiales>materiales
+<a class=anchor href=#materiales>#</a></h3><p>los materiales que se llegaron a poner utilizar y sus mezclas son los ambientales, que trabajan con la teoria de color basica, dales luz blanca y rebotaran solo una cantidad especifica, mezclandose con la luz, los emissivos que no se ven afectados por esta, y los especulares que al ser atacados por luz directa y no global la reflejan.</p><h2 id=codigo>Codigo
+<a class=anchor href=#codigo>#</a></h2><p>El codigo esta dividido en varios archivos, pero aqui se agrupo en uno, dividiendo las clases, la basica con el setup y el draw, un controlador que manipula las interacciones con el mouse y la interfaz de usuario o HUD, la clase nivel que determina como es la estructura utilizada, o lo que se muestra y sus reglas, data para guardar todo lo realizado en el juego hasta ahora, yla clase item, con sus extensiones (n llegaron a implementarse) que es lo q ue permite la creacion facil y directa de los arboles y ramas del mismo objeto con el mundo y el usuario, con todos sus valores y materiales</p><details><summary>codigo completo</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Datat</span>{
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>constructor</span>(){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>items1</span><span style=color:#f92672>=</span>[]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>items2</span><span style=color:#f92672>=</span>[]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>items3</span><span style=color:#f92672>=</span>[]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>items4</span><span style=color:#f92672>=</span>[]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>levellist</span> <span style=color:#f92672>=</span> [[<span style=color:#e6db74>&#34;mesaPlant&#34;</span>,[[<span style=color:#e6db74>&#34;maceta&#34;</span>,[<span style=color:#e6db74>&#34;plant&#34;</span>]],[<span style=color:#e6db74>&#34;caja fosforos&#34;</span>],[],[<span style=color:#e6db74>&#34;cuchara&#34;</span>],[]]],[<span style=color:#e6db74>&#34;reloj&#34;</span>,[<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>]],[[<span style=color:#e6db74>&#34;telefono&#34;</span>]],[[<span style=color:#e6db74>&#34;chimenea&#34;</span>,[]],[<span style=color:#e6db74>&#34;cuadro&#34;</span>,[[<span style=color:#e6db74>&#34;hueco&#34;</span>,[]],[<span style=color:#e6db74>&#34;foto&#34;</span>],[<span style=color:#e6db74>&#34;up&#34;</span>,<span style=color:#ae81ff>0</span>]]],[<span style=color:#e6db74>&#34;radio&#34;</span>,[<span style=color:#e6db74>&#34;pieza&#34;</span>]]],[[<span style=color:#e6db74>&#34;cortinas&#34;</span>,<span style=color:#ae81ff>1</span>],[<span style=color:#e6db74>&#34;ventana&#34;</span>,[<span style=color:#e6db74>&#34;pieza&#34;</span>]],[<span style=color:#e6db74>&#34;interruptor&#34;</span>],[<span style=color:#e6db74>&#34;jaula&#34;</span>,[<span style=color:#e6db74>&#34;harvey&#34;</span>,<span style=color:#ae81ff>0</span>],[<span style=color:#e6db74>&#34;comedero&#34;</span>,<span style=color:#ae81ff>0</span>]]],[[<span style=color:#e6db74>&#34;arriba&#34;</span>,[<span style=color:#e6db74>&#34;lavamos&#34;</span>,[<span style=color:#e6db74>&#34;fregadero&#34;</span>,<span style=color:#ae81ff>0</span>],[<span style=color:#e6db74>&#34;vaso&#34;</span>,<span style=color:#ae81ff>0</span>],[<span style=color:#e6db74>&#34;estufa&#34;</span>,<span style=color:#ae81ff>0</span>]],[<span style=color:#e6db74>&#34;puertadere&#34;</span>,<span style=color:#ae81ff>0</span>,[<span style=color:#e6db74>&#34;olla&#34;</span>]],[<span style=color:#e6db74>&#34;puertadere&#34;</span>,<span style=color:#ae81ff>0</span>,[<span style=color:#e6db74>&#34;alimento para aves&#34;</span>],[<span style=color:#e6db74>&#34;leño&#34;</span>]]]],[[<span style=color:#e6db74>&#34;luz&#34;</span>,<span style=color:#ae81ff>0</span>],<span style=color:#e6db74>&#34;pieza&#34;</span>]]
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Item</span> {
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>position</span>, <span style=color:#a6e22e>rotation</span>,<span style=color:#a6e22e>size</span>, <span style=color:#a6e22e>object</span>,<span style=color:#a6e22e>father</span>,<span style=color:#a6e22e>ambi</span>,<span style=color:#a6e22e>emissiv</span>,<span style=color:#a6e22e>espec</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>position</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>rotation</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>rotation</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>object</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>object</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>size</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>father</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>father</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>sons</span> <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>father</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>father</span>.<span style=color:#a6e22e>addSons</span>([<span style=color:#66d9ef>this</span>])
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>ambi</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>ambi</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>emissiv</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>emissiv</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>espec</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>espec</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>draw</span>(<span style=color:#a6e22e>controler</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>push</span>()
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>translate</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rotateX</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>rotation</span>.<span style=color:#a6e22e>x</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rotateY</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>rotation</span>.<span style=color:#a6e22e>y</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rotateZ</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>rotation</span>.<span style=color:#a6e22e>z</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>ambi</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>ambientMaterial</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>ambi</span>)  
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>ambientMaterial</span>(<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>emissiv</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>emissiveMaterial</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>emissiv</span>)  
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>emissiveMaterial</span>(<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>espec</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>specularMaterial</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>espec</span>)  
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>specularMaterial</span>(<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>switch</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>object</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;box&#34;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>box</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>2</span>])
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;plane&#34;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>plane</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>])
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;sphere&#34;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>sphere</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>])
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;cylinder&#34;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>cylinder</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>])
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;torus&#34;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>torus</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>])
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;cone&#34;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>cone</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>])
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;ellipsoid&#34;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>ellipsoid</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>2</span>])
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;inBox&#34;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>ambientMaterial</span>(<span style=color:#ae81ff>100</span>,<span style=color:#ae81ff>100</span>,<span style=color:#ae81ff>200</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#f92672>-</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>plane</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>])
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rotateY</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>ambientMaterial</span>(<span style=color:#ae81ff>100</span>,<span style=color:#ae81ff>200</span>,<span style=color:#ae81ff>100</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#f92672>-</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>plane</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>2</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>])
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rotateY</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>ambientMaterial</span>(<span style=color:#ae81ff>200</span>,<span style=color:#ae81ff>100</span>,<span style=color:#ae81ff>100</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#f92672>-</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>plane</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>])
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rotateY</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>ambientMaterial</span>(<span style=color:#ae81ff>100</span>,<span style=color:#ae81ff>200</span>,<span style=color:#ae81ff>200</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#f92672>-</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>plane</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>2</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>])
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rotateY</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rotateX</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>ambientMaterial</span>(<span style=color:#ae81ff>100</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#f92672>-</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>]<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>plane</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>2</span>])
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>]<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rotateX</span>(<span style=color:#a6e22e>PI</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>ambientMaterial</span>(<span style=color:#ae81ff>220</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#f92672>-</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>]<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>plane</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>],<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>2</span>])
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>1</span>]<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>rotateX</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;&#34;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>default</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>scale</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>model</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>object</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>sons</span>.<span style=color:#a6e22e>forEach</span>(<span style=color:#a6e22e>son</span> =&gt; <span style=color:#a6e22e>son</span>.<span style=color:#a6e22e>draw</span>(<span style=color:#a6e22e>controler</span>) )
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>pop</span>()
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>addSons</span>(<span style=color:#a6e22e>sons</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>sons</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>sons</span>.<span style=color:#a6e22e>concat</span>(<span style=color:#a6e22e>sons</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>print</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>sons</span>)
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>clicks</span>(<span style=color:#a6e22e>controller</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>controller</span>.<span style=color:#a6e22e>valid</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>pointerPicking</span>(<span style=color:#a6e22e>controler</span>.<span style=color:#a6e22e>mousyX</span>,<span style=color:#a6e22e>controler</span>.<span style=color:#a6e22e>mousyY</span>,{<span style=color:#a6e22e>size</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>[<span style=color:#ae81ff>0</span>],
+</span></span><span style=display:flex><span>                     <span style=color:#a6e22e>shape</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>CIRCLE</span>}
+</span></span><span style=display:flex><span>                   )){
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Level</span>{
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>constructor</span>(){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>level</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>Room</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>data</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Datat</span>()
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>levelinventory</span> <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>levelSetup</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>initialitation</span>(<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>initialitation</span>(<span style=color:#a6e22e>number</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>switch</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>level</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>0</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>1</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>items1</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>levelinventory</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>items2</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>levelinventory</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>3</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>items3</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>levelinventory</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>4</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>items4</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>levelinventory</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>switch</span>(<span style=color:#a6e22e>number</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>0</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>1</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>levelinventory</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>items1</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>levelinventory</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>items2</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>3</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>levelinventory</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>items3</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>4</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>levelinventory</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>items4</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>level</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>number</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>loadCube</span>();
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>loadCube</span>(){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>Room</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Item</span>(<span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>), <span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>),[<span style=color:#ae81ff>400</span>,<span style=color:#ae81ff>250</span>,<span style=color:#ae81ff>400</span>], <span style=color:#e6db74>&#34;inBox&#34;</span>,<span style=color:#66d9ef>null</span>,<span style=color:#66d9ef>null</span>,<span style=color:#66d9ef>null</span>,<span style=color:#66d9ef>null</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>bos</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Item</span>(<span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>175</span>,<span style=color:#ae81ff>100</span>,<span style=color:#ae81ff>0</span>), <span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>360</span>,<span style=color:#ae81ff>0</span>),[<span style=color:#ae81ff>50</span>,<span style=color:#ae81ff>25</span>,<span style=color:#ae81ff>50</span>], <span style=color:#e6db74>&#34;&#34;</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>Room</span>,<span style=color:#66d9ef>null</span>,<span style=color:#66d9ef>null</span>,<span style=color:#66d9ef>null</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>mesa</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Item</span>(<span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>), <span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>),[<span style=color:#ae81ff>50</span>,<span style=color:#ae81ff>25</span>,<span style=color:#ae81ff>50</span>], <span style=color:#e6db74>&#34;box&#34;</span>,<span style=color:#a6e22e>bos</span>,<span style=color:#a6e22e>color</span>(<span style=color:#ae81ff>150</span>,<span style=color:#ae81ff>100</span>,<span style=color:#ae81ff>100</span>),<span style=color:#66d9ef>null</span>,<span style=color:#66d9ef>null</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>madera</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Item</span>(<span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>0</span>,<span style=color:#f92672>-</span><span style=color:#ae81ff>10</span>,<span style=color:#ae81ff>0</span>), <span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>),[<span style=color:#ae81ff>75</span>,<span style=color:#ae81ff>15</span>,<span style=color:#ae81ff>75</span>], <span style=color:#e6db74>&#34;box&#34;</span>,<span style=color:#a6e22e>bos</span>,<span style=color:#a6e22e>color</span>(<span style=color:#ae81ff>200</span>,<span style=color:#ae81ff>200</span>,<span style=color:#ae81ff>100</span>),<span style=color:#66d9ef>null</span>,<span style=color:#66d9ef>null</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>lamp</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Item</span>(<span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>0</span>,<span style=color:#f92672>-</span><span style=color:#ae81ff>25</span>,<span style=color:#ae81ff>0</span>), <span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>),[<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>], <span style=color:#e6db74>&#34;&#34;</span>,<span style=color:#a6e22e>madera</span>,<span style=color:#66d9ef>null</span>,<span style=color:#66d9ef>null</span>,<span style=color:#66d9ef>null</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>base</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Item</span>(<span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>), <span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>),[<span style=color:#ae81ff>15</span>,<span style=color:#ae81ff>25</span>,<span style=color:#ae81ff>15</span>], <span style=color:#e6db74>&#34;ellipsoid&#34;</span>,<span style=color:#a6e22e>lamp</span>,<span style=color:#a6e22e>color</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>255</span>,<span style=color:#ae81ff>0</span>),<span style=color:#66d9ef>null</span>,<span style=color:#66d9ef>null</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>lit</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Item</span>(<span style=color:#a6e22e>createVector</span>(<span style=color:#ae81ff>0</span>,<span style=color:#f92672>-</span><span style=color:#ae81ff>25</span>,<span style=color:#ae81ff>0</span>), <span style=color:#a6e22e>createVector</span>(<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>PI</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>),[<span style=color:#ae81ff>25</span>,<span style=color:#ae81ff>50</span>,<span style=color:#ae81ff>25</span>], <span style=color:#e6db74>&#34;cone&#34;</span>,<span style=color:#a6e22e>lamp</span>,<span style=color:#66d9ef>null</span>,<span style=color:#a6e22e>color</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>255</span>,<span style=color:#ae81ff>0</span>),<span style=color:#66d9ef>null</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>draw</span>(<span style=color:#a6e22e>controler</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>Room</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>Room</span>.<span style=color:#a6e22e>draw</span>(<span style=color:#a6e22e>controler</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>clicks</span>(<span style=color:#a6e22e>controler</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>Room</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>Room</span>.<span style=color:#a6e22e>clicks</span>(<span style=color:#a6e22e>controler</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SceneControl</span>{
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>constructor</span>(){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>delay</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>changingScene</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>actScene</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>nextScene</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>escenes</span> <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#39;Start&#39;</span>]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>escenesT</span> <span style=color:#f92672>=</span> [[<span style=color:#ae81ff>5</span>]]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>cam1</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createCamera</span>()
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyX</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>mouseX</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyY</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>mouseY</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>xx</span> <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>yy</span> <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>zz</span> <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>Levels</span><span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Level</span>()
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>valid</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>inventory</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>setCamera</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>cam1</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>cam1</span>.<span style=color:#a6e22e>setPosition</span>(<span style=color:#f92672>-</span><span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>100</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>cam1</span>.<span style=color:#a6e22e>lookAt</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>draw</span>(){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>Levels</span>.<span style=color:#a6e22e>draw</span>(<span style=color:#66d9ef>this</span>)
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//this.changeview();
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>waiting</span>()
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mouseControl</span>();
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>Levels</span>.<span style=color:#a6e22e>clicks</span>(<span style=color:#66d9ef>this</span>)
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>changeScene</span>(<span style=color:#a6e22e>scene</span>){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>number</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>typeof</span> <span style=color:#a6e22e>scene</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;string&#34;</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>number</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>escenes</span>.<span style=color:#a6e22e>indexOf</span>(<span style=color:#a6e22e>scene</span>)
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>number</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>scene</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>waiting</span>(){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>delay</span> <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>){
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//this.cam.pan(0.01)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>mouseControl</span>(){
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyX</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyX</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>movedX</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyY</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyY</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>movedY</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyX</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyX</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>width</span><span style=color:#f92672>-</span><span style=color:#ae81ff>2</span><span style=color:#f92672>?</span><span style=color:#a6e22e>width</span><span style=color:#f92672>:</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyX</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyY</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyY</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>height</span><span style=color:#f92672>-</span><span style=color:#ae81ff>2</span><span style=color:#f92672>?</span><span style=color:#a6e22e>height</span><span style=color:#f92672>:</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyY</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyX</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyX</span><span style=color:#f92672>&lt;</span><span style=color:#ae81ff>0</span><span style=color:#f92672>?</span><span style=color:#ae81ff>0</span><span style=color:#f92672>:</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyX</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyY</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyY</span><span style=color:#f92672>&lt;</span><span style=color:#ae81ff>0</span><span style=color:#f92672>?</span><span style=color:#ae81ff>0</span><span style=color:#f92672>:</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyY</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>beginHUD</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>push</span>()
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>stroke</span>(<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>ambientMaterial</span>(<span style=color:#ae81ff>100</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>push</span>()
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>inventory</span>){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>translate</span>(<span style=color:#f92672>-</span><span style=color:#ae81ff>200</span>,<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>width</span><span style=color:#f92672>-</span><span style=color:#ae81ff>50</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>50</span>,<span style=color:#ae81ff>50</span>);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//triangle(width-50,0,50,50);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>ambientMaterial</span>(<span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>translate</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyX</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyY</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>beginShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>10</span>,<span style=color:#ae81ff>25</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>15</span>,<span style=color:#ae81ff>19</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>19</span>,<span style=color:#ae81ff>25</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>25</span>,<span style=color:#ae81ff>19</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>19</span>,<span style=color:#ae81ff>15</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>25</span>,<span style=color:#ae81ff>10</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>endShape</span>(<span style=color:#a6e22e>CLOSE</span>);
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>pop</span>()
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>endHUD</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>pointLight</span>(<span style=color:#ae81ff>250</span>, <span style=color:#ae81ff>250</span>, <span style=color:#ae81ff>250</span>, <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyX</span>,<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>mousyY</span>,<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>changeview</span>(){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>keye</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>keyIsDown</span>(<span style=color:#a6e22e>LEFT_ARROW</span>)){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>keye</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>keyIsDown</span>(<span style=color:#a6e22e>RIGHT_ARROW</span>)){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>keye</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>3</span>
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>keyIsDown</span>(<span style=color:#a6e22e>UP_ARROW</span>)){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>keye</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>keyIsDown</span>(<span style=color:#a6e22e>DOWN_ARROW</span>)){
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>keye</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>print</span>(<span style=color:#a6e22e>keye</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>4</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span><span style=color:#f92672>&gt;=</span><span style=color:#ae81ff>100</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span><span style=color:#f92672>-</span><span style=color:#ae81ff>100</span>;
+</span></span><span style=display:flex><span>      }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>before</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span><span style=color:#f92672>-</span><span style=color:#ae81ff>5</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>before</span> <span style=color:#f92672>+</span><span style=color:#ae81ff>4</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>keye</span>)<span style=color:#f92672>%</span><span style=color:#ae81ff>4</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>switch</span>(<span style=color:#a6e22e>keye</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>1</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span><span style=color:#f92672>&lt;</span><span style=color:#ae81ff>0</span>){
+</span></span><span style=display:flex><span>          <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span><span style=color:#f92672>=</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span><span style=color:#f92672>+</span><span style=color:#ae81ff>4</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>          
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>3</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>%</span> <span style=color:#ae81ff>4</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>+</span><span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>print</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>switch</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span>){
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>0</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>cam1</span>.<span style=color:#a6e22e>setPosition</span>(<span style=color:#f92672>-</span><span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>100</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>1</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>cam1</span>.<span style=color:#a6e22e>setPosition</span>(<span style=color:#f92672>-</span><span style=color:#ae81ff>100</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>cam1</span>.<span style=color:#a6e22e>setPosition</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#f92672>-</span><span style=color:#ae81ff>100</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>3</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>cam1</span>.<span style=color:#a6e22e>setPosition</span>(<span style=color:#ae81ff>100</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>default</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>cam1</span>.<span style=color:#a6e22e>setPosition</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>100</span>,<span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>print</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span>)
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>cam1</span>.<span style=color:#a6e22e>lookAt</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//this.cam1.setPosition(this.xx,this.yy,this.zz)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>locked</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>()
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>700</span>, <span style=color:#ae81ff>500</span>, <span style=color:#a6e22e>WEBGL</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>controler</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>SceneControl</span>()
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>requestPointerLock</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>10</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>()
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>lights</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>controler</span>.<span style=color:#a6e22e>draw</span>()
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mouseClicked</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>locked</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>locked</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>requestPointerLock</span>();
+</span></span><span style=display:flex><span>  } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>exitPointerLock</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>locked</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mouseWheel</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//comment to enable page scrolling
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>keyPressed</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>controler</span>.<span style=color:#a6e22e>changeview</span>();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>}</span></span></code></pre></div></div></details><h2 id=resultado-del-codigo>Resultado del codigo
+<a class=anchor href=#resultado-del-codigo>#</a></h2><p>en esta muestra del codigo se busca crear una habitacion cerrada con algunos items dentro, donde dependiendo de como se muevan con las teclas apunta a una pared, los items no fueron agregados por problemas con el modelador, pero se muestra como se manejan los colores desde la propia creacion del item, sin necesidad de configuracion extra.</p><p>cada objeto detecta cuando se le pone el mouse encima aunque no tienen actualmente una interaccion</p><iframe id=CubeScape style=width:740px;height:540px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script src=/visualcomp/sketches/CubeScape.js></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://geramirezl.github.io/visualcomp/commit/4230dd3696c02b453729408db700579c45998585 title='Last modified by FabianMontes | June 20, 2023' target=_blank rel=noopener><img src=/visualcomp/svg/calendar.svg class=book-icon alt=Calendar>
+<span>June 20, 2023</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#3d-proyect-transformacion-espacial>3D proyect transformacion espacial</a><ul><li><a href=#introducción>Introducción</a></li><li><a href=#teoria-y-transfondo>Teoria y Transfondo</a><ul><li><a href=#posicionamiento-relativo>posicionamiento relativo</a></li><li><a href=#materiales>materiales</a></li></ul></li><li><a href=#codigo>Codigo</a></li><li><a href=#resultado-del-codigo>Resultado del codigo</a></li></ul></li></ul></nav></div></aside></main></body></html>
