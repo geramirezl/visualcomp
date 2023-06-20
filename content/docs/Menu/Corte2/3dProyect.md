@@ -500,4 +500,4 @@ en esta muestra del codigo se busca crear una habitacion cerrada con algunos ite
 
 cada objeto detecta cuando se le pone el mouse encima aunque no tienen actualmente una interaccion
 
-{{< p5-iframe sketch="/visualcomp/sketches/CubeScape.js" width="740" height="540" >}}
+{{< p5-iframe sketch="/visualcomp/sketches/CubeScape.js" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="740" height="540" >}}
